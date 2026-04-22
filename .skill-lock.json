@@ -341,7 +341,7 @@
       "source": "skillssh/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/skillssh/skills.git",
-       "skillPath": "skills/agent-tools/SKILL.md",
+      "skillPath": "skills/agent-tools/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-04-20T09:39:21.195Z",
       "updatedAt": "2026-04-20T09:39:21.195Z"
@@ -498,6 +498,15 @@
       "skillFolderHash": "c909448e712a6c909f4060a6852486f17e52409f",
       "installedAt": "2026-04-22T08:34:07.871Z",
       "updatedAt": "2026-04-22T08:34:07.871Z"
+    },
+    "cloudflare": {
+      "source": "cloudflare/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cloudflare/skills.git",
+      "skillPath": "skills/cloudflare/SKILL.md",
+      "skillFolderHash": "b49af211f0b24c94bc62d45cdfc53155fb940f6e",
+      "installedAt": "2026-04-22T10:00:55.265Z",
+      "updatedAt": "2026-04-22T10:00:55.265Z"
     }
   },
   "dismissed": {
