@@ -499,6 +499,33 @@
       "skillFolderHash": "c7ab574e006997d98e8a2d8fb7a1db0d2477b180",
       "installedAt": "2026-04-21T09:12:10.391Z",
       "updatedAt": "2026-04-21T09:12:10.391Z"
+    },
+    "lead-magnets": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/lead-magnets/SKILL.md",
+      "skillFolderHash": "d0c62b22e1f6a3eb4b1d1b818873ce17353ff7ba",
+      "installedAt": "2026-04-22T08:32:14.833Z",
+      "updatedAt": "2026-04-22T08:32:14.833Z"
+    },
+    "sales-enablement": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/sales-enablement/SKILL.md",
+      "skillFolderHash": "c9328b14f509321cb9e8c1be71130be02b21b858",
+      "installedAt": "2026-04-22T08:33:01.860Z",
+      "updatedAt": "2026-04-22T08:33:01.860Z"
+    },
+    "21st-dev-builder-v2": {
+      "source": "trin-zenityx/21st-dev-builder-v2",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/trin-zenityx/21st-dev-builder-v2.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "c909448e712a6c909f4060a6852486f17e52409f",
+      "installedAt": "2026-04-22T08:34:07.871Z",
+      "updatedAt": "2026-04-22T08:34:07.871Z"
     }
   },
   "dismissed": {
