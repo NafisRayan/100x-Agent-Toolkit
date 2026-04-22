@@ -69,7 +69,7 @@
       "source": "vercel-labs/agent-skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
-      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillPath": "skills/vercel-react-best-practices/SKILL.md",
       "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
       "installedAt": "2026-04-20T08:44:17.944Z",
       "updatedAt": "2026-04-20T09:25:04.434Z"
@@ -106,7 +106,7 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
-      "skillPath": "plugins/frontend-mobile-development/skills/tailwind-design-system/SKILL.md",
+      "skillPath": "skills/tailwind-design-system/SKILL.md",
       "skillFolderHash": "a8532caa4b6284a92c686bc9346c274e6e66aaa5",
       "installedAt": "2026-04-20T08:45:32.514Z",
       "updatedAt": "2026-04-20T09:25:35.877Z"
@@ -134,7 +134,7 @@
       "source": "currents-dev/playwright-best-practices-skill",
       "sourceType": "github",
       "sourceUrl": "https://github.com/currents-dev/playwright-best-practices-skill.git",
-      "skillPath": "SKILL.md",
+      "skillPath": "skills/playwright-best-practices/SKILL.md",
       "skillFolderHash": "ef329e7e65149918e1ff0eed2cf7d2e6e6f9eb5b",
       "installedAt": "2026-04-20T08:47:14.341Z",
       "updatedAt": "2026-04-20T08:47:14.341Z"
@@ -143,7 +143,7 @@
       "source": "wshobson/agents",
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
-      "skillPath": "plugins/javascript-typescript/skills/nodejs-backend-patterns/SKILL.md",
+      "skillPath": "skills/nodejs-backend-patterns/SKILL.md",
       "skillFolderHash": "079c9e24dc821881da383213c07fdbb51f04728c",
       "installedAt": "2026-04-20T08:47:27.103Z",
       "updatedAt": "2026-04-20T09:28:02.852Z"
@@ -236,7 +236,7 @@
       "source": "expo/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/expo/skills.git",
-      "skillPath": "plugins/expo/skills/building-native-ui/SKILL.md",
+      "skillPath": "skills/building-native-ui/SKILL.md",
       "skillFolderHash": "0078663cbdc42e388d2eb9c291dda1a0774eee29",
       "installedAt": "2026-04-20T09:27:18.837Z",
       "updatedAt": "2026-04-20T09:27:18.837Z"
@@ -245,7 +245,7 @@
       "source": "better-auth/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/better-auth/skills.git",
-      "skillPath": "better-auth/best-practices/SKILL.md",
+      "skillPath": "skills/better-auth-best-practices/SKILL.md",
       "skillFolderHash": "",
       "pluginName": "auth-skills",
       "installedAt": "2026-04-20T09:28:35.245Z",
@@ -314,7 +314,7 @@
       "source": "squirrelscan/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/squirrelscan/skills.git",
-      "skillPath": "audit-website/SKILL.md",
+      "skillPath": "skills/audit-website/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-04-20T09:38:59.801Z",
       "updatedAt": "2026-04-20T09:38:59.801Z"
@@ -341,7 +341,7 @@
       "source": "skillssh/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/skillssh/skills.git",
-      "skillPath": "tools/agent-tools/SKILL.md",
+       "skillPath": "skills/agent-tools/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-04-20T09:39:21.195Z",
       "updatedAt": "2026-04-20T09:39:21.195Z"
@@ -458,7 +458,7 @@
       "source": "local",
       "sourceType": "local",
       "sourceUrl": "file:///C:/Users/BS00861/.agents/skills/duckduckgo-search",
-      "skillPath": "SKILL.md",
+      "skillPath": "skills/duckduckgo-search/SKILL.md",
       "skillFolderHash": "",
       "installedAt": "2026-04-20T18:13:00.000Z",
       "updatedAt": "2026-04-20T18:13:00.000Z"
@@ -494,7 +494,7 @@
       "source": "trin-zenityx/21st-dev-builder-v2",
       "sourceType": "github",
       "sourceUrl": "https://github.com/trin-zenityx/21st-dev-builder-v2.git",
-      "skillPath": "SKILL.md",
+      "skillPath": "skills/21st-dev-builder-v2/SKILL.md",
       "skillFolderHash": "c909448e712a6c909f4060a6852486f17e52409f",
       "installedAt": "2026-04-22T08:34:07.871Z",
       "updatedAt": "2026-04-22T08:34:07.871Z"
