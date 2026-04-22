@@ -290,34 +290,6 @@
       "installedAt": "2026-04-20T09:37:51.808Z",
       "updatedAt": "2026-04-20T09:37:51.808Z"
     },
-    "firecrawl": {
-      "source": "firecrawl/cli",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/firecrawl/cli.git",
-      "skillPath": "skills/firecrawl-cli/SKILL.md",
-      "skillFolderHash": "",
-      "pluginName": "firecrawl",
-      "installedAt": "2026-04-20T09:37:59.116Z",
-      "updatedAt": "2026-04-20T09:37:59.116Z"
-    },
-    "firecrawl-scrape": {
-      "source": "firecrawl/cli",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/firecrawl/cli.git",
-      "skillPath": "skills/firecrawl-scrape/SKILL.md",
-      "skillFolderHash": "",
-      "installedAt": "2026-04-20T09:38:13.899Z",
-      "updatedAt": "2026-04-20T09:38:13.899Z"
-    },
-    "firecrawl-agent": {
-      "source": "firecrawl/cli",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/firecrawl/cli.git",
-      "skillPath": "skills/firecrawl-agent/SKILL.md",
-      "skillFolderHash": "",
-      "installedAt": "2026-04-20T09:38:21.605Z",
-      "updatedAt": "2026-04-20T09:38:21.605Z"
-    },
     "programmatic-seo": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
