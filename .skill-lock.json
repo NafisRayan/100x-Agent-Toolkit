@@ -507,6 +507,16 @@
       "skillFolderHash": "b49af211f0b24c94bc62d45cdfc53155fb940f6e",
       "installedAt": "2026-04-22T10:00:55.265Z",
       "updatedAt": "2026-04-22T10:00:55.265Z"
+    },
+    "docx": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/docx/SKILL.md",
+      "skillFolderHash": "a0d216202f9793a78da44cf96aabe48f42e627ac",
+      "pluginName": "document-skills",
+      "installedAt": "2026-04-22T13:43:11.389Z",
+      "updatedAt": "2026-04-22T13:43:11.389Z"
     }
   },
   "dismissed": {
