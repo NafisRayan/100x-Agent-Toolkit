@@ -620,6 +620,15 @@
       "skillFolderHash": "",
       "installedAt": "2026-04-23T10:50:00.000Z",
       "updatedAt": "2026-04-23T10:50:00.000Z"
+    },
+    "karpathy-guidelines": {
+      "source": "local",
+      "sourceType": "local",
+      "sourceUrl": "file:///C:/Users/BS00861/.agents/skills/karpathy-guidelines",
+      "skillPath": "skills/karpathy-guidelines/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-04-23T12:02:00.000Z",
+      "updatedAt": "2026-04-23T12:02:00.000Z"
     }
   },
   "dismissed": {
