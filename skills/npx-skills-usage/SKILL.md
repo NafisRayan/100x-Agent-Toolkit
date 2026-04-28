@@ -79,7 +79,7 @@ API docs, syntax guides, tool documentation (office docs)
 ### Install a Skill
 
 ```bash
-npx skills add <skill-name>
+npx skills add <skill-name> -y -g
 ```
 
 Fetches the `SKILL.md` from GitHub and installs it into your agent's config directory:
@@ -90,13 +90,13 @@ Fetches the `SKILL.md` from GitHub and installs it into your agent's config dire
 ### List Installed Skills
 
 ```bash
-npx skills list
+npx skills list -y -g
 ```
 
 ### Remove a Skill
 
 ```bash
-npx skills remove <skill-name>
+npx skills remove <skill-name> -y -g
 ```
 
 Deletes the skill from the local skills folder.
@@ -104,7 +104,7 @@ Deletes the skill from the local skills folder.
 ### Update Skills
 
 ```bash
-npx skills update
+npx skills update -y -g
 ```
 
 Updates all installed skills to latest versions.
