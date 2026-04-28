@@ -801,16 +801,25 @@
       "installedAt": "2026-04-23T12:30:00.000Z",
       "updatedAt": "2026-04-23T12:30:00.000Z"
     },
-    "using-agent-skills": {
-      "source": "addyosmani/agent-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
-      "skillPath": "skills/using-agent-skills/SKILL.md",
-      "skillFolderHash": "",
-      "installedAt": "2026-04-23T12:30:00.000Z",
-      "updatedAt": "2026-04-23T12:30:00.000Z"
-    }
-  },
+     "using-agent-skills": {
+       "source": "addyosmani/agent-skills",
+       "sourceType": "github",
+       "sourceUrl": "https://github.com/addyosmani/agent-skills.git",
+       "skillPath": "skills/using-agent-skills/SKILL.md",
+       "skillFolderHash": "",
+       "installedAt": "2026-04-23T12:30:00.000Z",
+       "updatedAt": "2026-04-23T12:30:00.000Z"
+     },
+     "global-skills-manager": {
+       "source": "local",
+       "sourceType": "local",
+       "sourceUrl": "file:///C:/Users/BS00861/.agents/skills/global-skills-manager",
+       "skillPath": "skills/global-skills-manager/SKILL.md",
+       "skillFolderHash": "",
+       "installedAt": "2026-04-28T12:11:23.000Z",
+       "updatedAt": "2026-04-28T12:11:23.000Z"
+     }
+   },
   "dismissed": {
     "findSkillsPrompt": true
   },
