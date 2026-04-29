@@ -216,6 +216,24 @@
       "skillFolderHash": "",
       "installedAt": "2026-04-29T15:05:09.253Z",
       "updatedAt": "2026-04-29T15:05:09.253Z"
+    },
+    "yaml": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/json-render.git",
+      "skillPath": "skills/yaml/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-04-29T15:15:36.287Z",
+      "updatedAt": "2026-04-29T15:15:36.287Z"
+    },
+    "zustand": {
+      "source": "vercel-labs/json-render",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/json-render.git",
+      "skillPath": "skills/zustand/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-04-29T15:15:36.927Z",
+      "updatedAt": "2026-04-29T15:15:36.927Z"
     }
   },
   "dismissed": {}
