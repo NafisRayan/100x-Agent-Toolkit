@@ -17,6 +17,64 @@
 				"API_KEY": "643266c5567130d0872d1ce7d47c8f3383e68bb0d4907b8b2c84adfa4a3cc726"
 			},
 			"type": "stdio"
+		},
+		"playwright": {
+			"command": "npx",
+			"args": [
+				"@playwright/mcp@latest"
+			],
+			"type": "stdio"
+		},
+		"chrome-devtools": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@anthropic-ai/chrome-devtools-mcp@latest"
+			],
+			"type": "stdio"
+		},
+		"context7": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@upstash/context7-mcp@latest"
+			],
+			"type": "stdio"
+		},
+		"storybook-mcp": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@anthropic-ai/mcp-remote@latest",
+				"REPLACE_WITH_YOUR_STORYBOOK_URL/mcp"
+			],
+			"type": "stdio",
+			"_comment": "Replace REPLACE_WITH_YOUR_STORYBOOK_URL with your actual Storybook URL (e.g. https://your-storybook.vercel.app/mcp)"
+		},
+		"firecrawl": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@anthropic-ai/mcp-remote@latest",
+				"https://mcp.firecrawl.dev"
+			],
+			"env": {
+				"FIRECRAWL_API_KEY": "REPLACE_WITH_YOUR_FIRECRAWL_API_KEY"
+			},
+			"type": "stdio",
+			"_comment": "Get API key from https://firecrawl.dev"
+		},
+		"vercel": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@vercel/mcp@latest"
+			],
+			"env": {
+				"VERCEL_API_TOKEN": "REPLACE_WITH_YOUR_VERCEL_TOKEN"
+			},
+			"type": "stdio",
+			"_comment": "Get token from https://vercel.com/account/tokens"
 		}
 	},
 	"inputs": []
