@@ -64,6 +64,16 @@
 			"type": "stdio",
 			"_comment": "Get API key from https://firecrawl.dev"
 		},
+		"typescript-lsp": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@anthropic-ai/mcp-lsp@latest",
+				"--language=typescript",
+				"--command=typescript-language-server --stdio"
+			],
+			"type": "stdio"
+		},
 		"vercel": {
 			"command": "npx",
 			"args": [
