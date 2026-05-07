@@ -118,3 +118,76 @@ Plugin agents do not support `hooks`, `mcpServers`, or `permissionMode` frontmat
 3. Add a **Composition** block at the bottom (Invoke directly when / Invoke via / Do not invoke from another persona).
 4. Add the persona to the table at the top of this file.
 5. If the persona enables a new orchestration pattern, document it in `references/orchestration-patterns.md` rather than inventing the pattern in the persona file itself.
+
+---
+
+## Full Agent Catalog
+
+The following agents were imported from [lst97/claude-code-sub-agents](https://github.com/lst97/claude-code-sub-agents) and organized by category.
+
+### Business
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [product-manager](business/product-manager.md) | Product vision, strategy, roadmaps, cross-functional leadership | sonnet |
+
+### Data & AI
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [ai-engineer](data-ai/ai-engineer.md) | LLM applications, RAG systems, vector search, agentic workflows | sonnet |
+| [data-engineer](data-ai/data-engineer.md) | ETL/ELT pipelines, Spark, Airflow, Kafka, data warehouses | sonnet |
+| [data-scientist](data-ai/data-scientist.md) | Advanced SQL, BigQuery, statistical analysis, data insights | sonnet |
+| [database-optimizer](data-ai/database-optimizer.md) | Query optimization, indexing, schema design, performance profiling | sonnet |
+| [graphql-architect](data-ai/graphql-architect.md) | GraphQL schema design, Apollo Federation, resolver optimization | sonnet |
+| [ml-engineer](data-ai/ml-engineer.md) | MLOps, model deployment, CI/CD for ML, model monitoring | sonnet |
+| [prompt-engineer](data-ai/prompt-engineer.md) | Advanced prompting, agentic workflows, ethical AI design | sonnet |
+
+### Development
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [backend-architect](development/backend-architect.md) | System architecture, microservices, API design, database schema | sonnet |
+| [dx-optimizer](development/dx-optimizer.md) | Developer tooling, workflow automation, onboarding, CI/CD | sonnet |
+| [frontend-developer](development/frontend-developer.md) | React components, TypeScript, responsive design, accessibility | sonnet |
+| [full-stack-developer](development/full-stack-developer.md) | End-to-end web apps, frontend + backend + database | sonnet |
+| [golang-pro](development/golang-pro.md) | Go microservices, concurrency patterns, performance profiling | sonnet |
+| [legacy-modernizer](development/legacy-modernizer.md) | Incremental refactoring, framework migration, monolith decomposition | sonnet |
+| [mobile-developer](development/mobile-developer.md) | React Native, Flutter, offline sync, push notifications | sonnet |
+| [nextjs-pro](development/nextjs-pro.md) | SSR/SSG/ISR, App Router, performance optimization, SEO | sonnet |
+| [python-pro](development/python-pro.md) | Advanced Python, async/await, design patterns, pytest | sonnet |
+| [react-pro](development/react-pro.md) | React Hooks, state management, memoization, code splitting | sonnet |
+| [typescript-pro](development/typescript-pro.md) | Advanced types, generics, conditional types, architectural design | sonnet |
+| [ui-designer](development/ui-designer.md) | Visual design, design systems, prototyping, accessibility | sonnet |
+| [ux-designer](development/ux-designer.md) | User research, information architecture, usability testing | sonnet |
+
+### Infrastructure
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [cloud-architect](infrastructure/cloud-architect.md) | AWS/Azure/GCP, Terraform, FinOps, serverless, multi-cloud | sonnet |
+| [deployment-engineer](infrastructure/deployment-engineer.md) | CI/CD pipelines, Docker, Kubernetes, GitOps, observability | sonnet |
+| [devops-incident-responder](infrastructure/devops-incident-responder.md) | Production incident response, RCA, log analysis, K8s debugging | sonnet |
+| [incident-responder](infrastructure/incident-responder.md) | SRE incident command, crisis communication, blameless postmortems | sonnet |
+| [performance-engineer](infrastructure/performance-engineer.md) | Full-stack performance, load testing, caching, Core Web Vitals | sonnet |
+
+### Quality & Testing
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [debugger](quality-testing/debugger.md) | Systematic debugging, test failure analysis, root cause investigation | sonnet |
+| [qa-expert](quality-testing/qa-expert.md) | Test planning, manual/automated testing, defect management | sonnet |
+| [test-automator](quality-testing/test-automator.md) | Test automation frameworks, CI/CD integration, E2E testing | haiku |
+
+### Security
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [security-auditor](security/security-auditor.md) | Penetration testing, SAST/DAST, OWASP, threat modeling | sonnet |
+
+### Specialization
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [api-documenter](specialization/api-documenter.md) | OpenAPI 3.0 specs, Postman collections, multi-language examples | haiku |
+| [documentation-expert](specialization/documentation-expert.md) | Technical writing, style guides, user manuals, knowledge bases | haiku |
+
+### Orchestration
+| Agent | Description | Model |
+|-------|-------------|-------|
+| [agent-organizer](agent-organizer.md) | Multi-agent team assembly, task delegation, workflow planning | haiku |
+
+**Note**: 3 agents listed in the source repo returned 404 and were not imported: `architect-reviewer`, `code-reviewer-pro`, `electron-pro`, `postgresql-pglite-pro`.

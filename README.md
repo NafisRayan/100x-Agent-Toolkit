@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **88 specialized skills**, **4 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **88 specialized skills**, **37+ expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -34,11 +34,19 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   │   └── evals/         # Evaluation test cases
 │   └── ...
 │
-├── agents/                # 4 expert agent personas
+├── agents/                # 37+ expert agent personas
 │   ├── code-reviewer.md   # Senior Staff Engineer perspective
 │   ├── security-auditor.md# Security Engineer perspective
 │   ├── test-engineer.md   # QA Engineer perspective
-│   └── beast mode 3.1.md  # Autonomous agent instructions
+│   ├── beast mode 3.1.md  # Autonomous agent instructions
+│   ├── agent-organizer.md # Multi-agent orchestration planner
+│   ├── business/          # Product management
+│   ├── data-ai/           # Data, ML, AI agents
+│   ├── development/       # Frontend, backend, language specialists
+│   ├── infrastructure/    # Cloud, DevOps, incident response
+│   ├── quality-testing/   # QA, testing, debugging
+│   ├── security/          # Security auditing
+│   └── specialization/    # API docs, technical writing
 │
 ├── commands/               # 7 slash command definitions
 │   ├── spec.md            # Define requirements
@@ -208,13 +216,20 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 
 ## Agent Personas
 
-| Persona | Role | Best For |
-|---------|------|----------|
-| **code-reviewer** | Senior Staff Engineer | Five-axis review before merge |
-| **security-auditor** | Security Engineer | OWASP-style vulnerability audit |
-| **test-engineer** | QA Engineer | Test strategy, coverage analysis |
+The system includes **37+ agent personas** organized by domain:
 
-Personas are designed as Claude Code subagents. Use the Agent tool with `subagent_type: <persona-name>` to invoke them.
+| Category | Agents |
+|----------|--------|
+| **Core** (root) | `code-reviewer`, `security-auditor`, `test-engineer`, `beast mode 3.1`, `agent-organizer` |
+| **Business** | `product-manager` |
+| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `prompt-engineer` |
+| **Development** | `backend-architect`, `dx-optimizer`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer` |
+| **Quality & Testing** | `debugger`, `qa-expert`, `test-automator` |
+| **Security** | `security-auditor` |
+| **Specialization** | `api-documenter`, `documentation-expert` |
+
+See [agents/README.md](agents/README.md) for the full catalog with descriptions.
 
 ---
 
