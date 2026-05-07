@@ -14,7 +14,7 @@
 				"@21st-dev/magic@latest"
 			],
 			"env": {
-				"API_KEY": "643266c5567130d0872d1ce7d47c8f3383e68bb0d4907b8b2c84adfa4a3cc726"
+				"API_KEY": "${21ST_DEV_API_KEY}"
 			},
 			"type": "stdio"
 		},
