@@ -180,6 +180,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### Meta & Dev Tools
 | Skill | Description |
 |-------|-------------|
+| `enhance-prompt` | Transform vague UI ideas into polished, Stitch-optimized prompts |
 | `writing-skills` | Create and edit skill definitions |
 | `skill-creator` | Build new skills with evaluation |
 | `find-skills` | Discover skills for specific tasks |
