@@ -1,0 +1,143 @@
+{
+  "version": 3,
+  "skills": {
+    "gsap": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/heygen-com/hyperframes.git",
+      "skillPath": "skills/gsap/SKILL.md",
+      "skillFolderHash": "3da6bb712feada2675b91ed7a1167f46b41a3cab",
+      "installedAt": "2026-05-07T12:45:36.912Z",
+      "updatedAt": "2026-05-07T12:45:36.912Z"
+    },
+    "sales-enablement": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/sales-enablement/SKILL.md",
+      "skillFolderHash": "c9328b14f509321cb9e8c1be71130be02b21b858",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-05-07T12:46:43.494Z",
+      "updatedAt": "2026-05-07T12:46:43.494Z"
+    },
+    "business-analyst": {
+      "source": "aj-geddes/claude-code-bmad-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/aj-geddes/claude-code-bmad-skills.git",
+      "skillPath": "bmad-skills/business-analyst/SKILL.md",
+      "skillFolderHash": "00c6e07370ecafa2b1f4d84f93d7fd14c3c1a878",
+      "installedAt": "2026-05-07T12:47:17.314Z",
+      "updatedAt": "2026-05-07T12:47:17.314Z"
+    },
+    "marketing-psychology": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/marketing-psychology/SKILL.md",
+      "skillFolderHash": "ec8b7c10f5707ab69cd6e658a75480cd3e18ceef",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-05-07T12:48:27.326Z",
+      "updatedAt": "2026-05-07T12:48:27.326Z"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "skillFolderHash": "d333a589b3cd513296c419ee6911903be8c9865b",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-05-07T12:48:54.652Z",
+      "updatedAt": "2026-05-07T12:48:54.652Z"
+    },
+    "shadcn": {
+      "source": "shadcn/ui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/shadcn/ui.git",
+      "skillPath": "skills/shadcn/SKILL.md",
+      "skillFolderHash": "a8404703769866faf15bee897c9ae6e252ac2d35",
+      "installedAt": "2026-05-07T12:50:28.772Z",
+      "updatedAt": "2026-05-07T12:50:28.772Z"
+    },
+    "documentation-writer": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/github/awesome-copilot.git",
+      "skillPath": "skills/documentation-writer/SKILL.md",
+      "skillFolderHash": "016d8040a3f91c8360b1003e74fbf29f34c283f5",
+      "installedAt": "2026-05-07T12:55:04.478Z",
+      "updatedAt": "2026-05-07T12:55:04.478Z"
+    },
+    "figma-implement-design": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/figma/mcp-server-guide.git",
+      "skillPath": "skills/figma-implement-design/SKILL.md",
+      "skillFolderHash": "dc027370467ccd0488b3aa587532a58742748497",
+      "installedAt": "2026-05-07T13:11:04.878Z",
+      "updatedAt": "2026-05-07T13:11:04.878Z"
+    },
+    "figma-use": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/figma/mcp-server-guide.git",
+      "skillPath": "skills/figma-use/SKILL.md",
+      "skillFolderHash": "a5cd80a7036085ed7a0b34e528258936aafb1c12",
+      "installedAt": "2026-05-07T13:11:04.883Z",
+      "updatedAt": "2026-05-07T13:11:04.883Z"
+    },
+    "figma-generate-library": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/figma/mcp-server-guide.git",
+      "skillPath": "skills/figma-generate-library/SKILL.md",
+      "skillFolderHash": "a76a0c16c21efe1c4f28a46b84fa392fea475468",
+      "installedAt": "2026-05-07T13:11:04.886Z",
+      "updatedAt": "2026-05-07T13:11:04.886Z"
+    },
+    "figma-generate-design": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/figma/mcp-server-guide.git",
+      "skillPath": "skills/figma-generate-design/SKILL.md",
+      "skillFolderHash": "250408be92c75f65f0ada5964047f9687a42b7be",
+      "installedAt": "2026-05-07T13:11:04.890Z",
+      "updatedAt": "2026-05-07T13:11:04.890Z"
+    },
+    "figma-use-figjam": {
+      "source": "figma/mcp-server-guide",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/figma/mcp-server-guide.git",
+      "skillPath": "skills/figma-use-figjam/SKILL.md",
+      "skillFolderHash": "632d3341ab38d5ecb903cb69ebbc793d2e9acb78",
+      "installedAt": "2026-05-07T13:11:04.893Z",
+      "updatedAt": "2026-05-07T13:11:04.893Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-05-07T13:11:08.577Z",
+      "updatedAt": "2026-05-07T13:11:08.577Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "dexto",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}
