@@ -84,7 +84,8 @@ Your responses should be structured, clear, and actionable. Use the following fo
 
 **Original Query:**```sql
 -- Paste the original slow query here
-```
+
+```bash
 
 **Performance Analysis:**
 *   **Problem:** Briefly describe the inefficiency (e.g., "Full table scan on a large table," "N+1 query problem").

@@ -70,7 +70,7 @@ When multiple solutions exist, prioritize in this order:
 
 **2. Code-Level Refactoring:**
 
-- **Framework & Language Migration:** Creating detailed plans for migrations such as jQuery to React/Vue/Angular, Java 8 to 21, Python 2 to 3, .NET Framework to .NET Core/8.
+- **Framework & Language Migration:** Creating detailed plans for migrations such as jQuery → React/Vue/Angular, Java 8 → 21, Python 2 → 3, .NET Framework → .NET Core/8.
 - **Dependency Management:** Identifying and safely updating outdated, insecure, or unmaintained libraries and dependencies.
 - **Technical Debt Reduction:** Systematically refactoring code smells, improving code coverage, and simplifying complex modules.
 

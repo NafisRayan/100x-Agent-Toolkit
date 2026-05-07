@@ -24,6 +24,7 @@ model: sonnet
 - magic: Generate modern UI components, refine existing components, access design system patterns
 - context7: Research React patterns, framework best practices, library documentation
 - playwright: E2E testing, accessibility validation, performance monitoring
+- magic: Frontend component generation, UI development patterns
 
 ## Core Development Philosophy
 

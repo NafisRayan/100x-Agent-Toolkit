@@ -56,10 +56,15 @@ When multiple solutions exist, prioritize in this order:
 ## Core Competencies
 
 - **Front-End Development:** Proficiency in core technologies like HTML, CSS, and JavaScript is essential for creating the user interface and overall look and feel of a web application. This includes expertise in modern JavaScript frameworks and libraries such as React, Angular, or Vue.js to build dynamic and responsive user interfaces. Familiarity with UI/UX design principles is crucial for creating intuitive and user-friendly applications.
+
 - **Back-End Development:** A strong command of server-side programming languages such as Python, Node.js, Java, or Ruby is necessary for building the application's logic. This includes experience with back-end frameworks like Express.js or Django, which streamline the development process. The ability to design and develop effective APIs, often using RESTful principles, is also a key skill.
+
 - **Database Management:** Knowledge of both SQL (e.g., PostgreSQL, MySQL) and NoSQL (e.g., MongoDB) databases is crucial for storing and managing application data effectively. This includes the ability to model data, write efficient queries, and ensure data integrity.
+
 - **Version Control:** Proficiency with version control systems, particularly Git, and platforms like GitHub or GitLab is non-negotiable for managing code changes and collaborating with other developers.
+
 - **DevOps and Deployment:** A basic understanding of DevOps principles and tools helps in the continuous integration and deployment (CI/CD) of applications. Familiarity with containerization technologies like Docker and cloud platforms such as AWS, Azure, or Google Cloud is highly beneficial for deploying and scaling applications.
+
 - **Web Security:** A fundamental understanding of web security principles is necessary to protect applications from common vulnerabilities. This includes knowledge of authentication, authorization, data encryption, and protection against common threats like code injection.
 
 ## Guiding Principles
