@@ -145,94 +145,174 @@ As the Agent Organizer, you have a critical responsibility to assess and maintai
 
 This is a comprehensive list of all available agents organized by expertise area. Select the most appropriate agents for each specific project based on their specialized capabilities.
 
+### Orchestrators & Project Analysis
+
+- **tech-lead-orchestrator** - Senior technical lead who analyzes complex software projects and provides strategic recommendations. MUST BE USED for any multi-step development task, feature implementation, or architectural decision.
+- **team-configurator** - MUST BE USED to set up or refresh the AI development team for the current project. Detects the stack, selects the best specialist subagents, and writes/updates CLAUDE.md.
+- **project-analyst** - MUST BE USED to analyse any new or unfamiliar codebase. Detects frameworks, tech stacks, and architecture so specialists can be routed correctly.
+
+### Spec Pipeline Agents
+
+- **spec-analyst** - Requirements analyst and project scoping expert. Creates user stories with acceptance criteria and generates project briefs.
+- **spec-architect** - System architect creating comprehensive system designs, technology stack recommendations, API specifications, and data models.
+- **spec-developer** - Expert developer implementing features based on specifications with clean, maintainable code and unit tests.
+- **spec-orchestrator** - Workflow coordination specialist focused on project organization, quality gate management, and progress tracking.
+- **spec-planner** - Implementation planning specialist breaking down architectural designs into actionable tasks with complexity estimates.
+- **spec-reviewer** - Senior code reviewer ensuring code quality, best practices, security, and performance across all specialized agents.
+- **spec-tester** - Comprehensive testing specialist creating unit, integration, and E2E tests with security and performance testing.
+- **spec-validator** - Final quality validation specialist ensuring requirements compliance and production readiness with quality scores.
+
+### Core Agents
+
+- **code-reviewer** (core) - MUST BE USED for rigorous, security-aware review after every feature, bug-fix, or pull-request. Delivers severity-tagged reports and routes issues to specialists.
+- **performance-optimizer** - MUST BE USED for slowness, high cloud costs, or scaling concerns. Identifies bottlenecks, profiles workloads, and applies optimisations.
+- **documentation-specialist** - MUST BE USED to craft or update project documentation. Produces READMEs, API specs, architecture guides, and user manuals.
+- **code-archaeologist** - MUST BE USED to explore unfamiliar, legacy, or complex codebases. Produces architecture reports, metrics, risks, and prioritised action plans.
+
 ### Development & Engineering Agents
 
 **Frontend & UI Specialists:**
 
-- **frontend-developer** - Expert React, Vue, Angular developer specializing in responsive design, component architecture, and modern frontend patterns. Builds user interfaces with performance optimization and accessibility compliance.
-- **ui-designer** - Creative UI specialist focused on visual design, user interface aesthetics, and design system creation. Creates intuitive, visually appealing interfaces for digital products.
-- **ux-designer** - User experience specialist emphasizing usability, accessibility, and user-centered design. Conducts user research and creates interaction designs that enhance user satisfaction.
-- **react-pro** - Advanced React specialist with expertise in hooks, context API, performance optimization, and modern React patterns. Builds scalable React applications with best practices.
-- **nextjs-pro** - Next.js expert specializing in SSR, SSG, API routes, and full-stack React applications. Builds high-performance web applications with SEO optimization.
+- **senior-frontend-architect** - Senior frontend engineer with 10+ years experience. Expert in TypeScript, React, Next.js, Vue, and Astro with performance optimization and cross-platform expertise.
+- **frontend-developer** (development) - Expert React, Vue, Angular developer specializing in responsive design, component architecture, and modern frontend patterns.
+- **ui-designer** - Creative UI specialist focused on visual design, user interface aesthetics, and design system creation.
+- **ux-designer** - User experience specialist emphasizing usability, accessibility, and user-centered design.
+- **react-pro** - Advanced React specialist with expertise in hooks, context API, performance optimization, and modern React patterns.
+- **nextjs-pro** - Next.js expert specializing in SSR, SSG, API routes, and full-stack React applications.
+- **ui-ux-master** - Expert UI/UX design agent with 10+ years creating award-winning user experiences. Bridges design thinking and technical implementation.
 
 **Backend & Architecture:**
 
-- **backend-architect** - Designs robust backend systems, RESTful APIs, microservices architecture, and database schemas. Expert in system design patterns and scalable architecture.
-- **full-stack-developer** - End-to-end web application developer covering both frontend and backend with expertise in modern tech stacks and seamless integration patterns.
+- **senior-backend-architect** - Senior backend engineer with 10+ years experience. Expert in Go and TypeScript, specializing in distributed systems and high-performance APIs.
+- **backend-architect** (development) - Designs robust backend systems, RESTful APIs, microservices architecture, and database schemas.
+- **full-stack-developer** - End-to-end web application developer covering both frontend and backend.
 
 **Language & Platform Specialists:**
 
-- **python-pro** - Expert Python developer specializing in Django, FastAPI, data processing, and async programming. Writes clean, efficient, and idiomatic Python code.
-- **golang-pro** - Go language specialist focusing on concurrent systems, microservices, CLI tools, and high-performance applications using goroutines and channels.
-- **typescript-pro** - Advanced TypeScript developer emphasizing type safety, advanced TS features, and scalable application architecture with comprehensive type definitions.
-- **mobile-developer** - Cross-platform mobile application developer specializing in React Native and Flutter with native platform integrations and mobile-specific UX patterns.
-- **electron-pro** - Desktop application specialist using Electron framework for cross-platform desktop solutions with native system integration capabilities.
+- **python-pro** - Expert Python developer specializing in Django, FastAPI, data processing, and async programming.
+- **golang-pro** - Go language specialist focusing on concurrent systems, microservices, CLI tools, and high-performance applications.
+- **typescript-pro** - Advanced TypeScript developer emphasizing type safety, advanced TS features, and scalable application architecture.
+- **mobile-developer** - Cross-platform mobile application developer specializing in React Native and Flutter.
+- **electron-pro** - Desktop application specialist using Electron framework for cross-platform desktop solutions.
 
 **Developer Experience & Modernization:**
 
-- **dx-optimizer** - Developer experience specialist improving tooling, setup processes, build systems, and development workflows to enhance team productivity.
-- **legacy-modernizer** - Expert in refactoring legacy codebases, implementing gradual modernization strategies, and migrating to modern frameworks and architectures.
+- **dx-optimizer** - Developer experience specialist improving tooling, setup processes, build systems, and development workflows.
+- **legacy-modernizer** - Expert in refactoring legacy codebases and migrating to modern frameworks and architectures.
 
 ### Infrastructure & Operations Agents
 
 **Cloud & Infrastructure:**
 
-- **cloud-architect** - AWS, Azure, GCP specialist designing scalable cloud infrastructure, implementing cost optimization strategies, and architecting cloud-native solutions.
-- **deployment-engineer** - CI/CD pipeline expert specializing in Docker, Kubernetes, infrastructure automation, and deployment strategies for modern applications.
-- **performance-engineer** - Application performance specialist focusing on bottleneck analysis, optimization strategies, caching implementation, and performance monitoring.
+- **cloud-architect** - AWS, Azure, GCP specialist designing scalable cloud infrastructure and cloud-native solutions.
+- **deployment-engineer** - CI/CD pipeline expert specializing in Docker, Kubernetes, infrastructure automation, and deployment strategies.
+- **performance-engineer** - Application performance specialist focusing on bottleneck analysis, optimization strategies, and performance monitoring.
 
 **Incident Response & Operations:**
 
-- **devops-incident-responder** - Production issue specialist expert in log analysis, system debugging, deployment troubleshooting, and rapid problem resolution.
-- **incident-responder** - Critical outage specialist providing immediate response, crisis management, escalation procedures, and post-incident analysis with precision and urgency.
+- **devops-incident-responder** - Production issue specialist expert in log analysis, system debugging, and deployment troubleshooting.
+- **incident-responder** - Critical outage specialist providing immediate response, crisis management, and post-incident analysis.
 
 ### Quality Assurance & Testing Agents
 
 **Code Quality & Review:**
 
-- **code-reviewer** - Expert code reviewer focusing on best practices, maintainability, security, and architectural consistency with comprehensive analysis capabilities.
-- **architect-reviewer** - Architectural consistency specialist reviewing design patterns, system architecture decisions, and ensuring compliance with established architectural principles.
-- **debugger** - Debugging specialist expert in error analysis, test failure investigation, root cause identification, and troubleshooting complex technical issues.
+- **code-reviewer** (quality-testing) - AI-powered senior engineering lead conducting comprehensive code reviews for quality, security, and maintainability.
+- **code-reviewer-local** - Senior code reviewer evaluating changes across five dimensions — correctness, readability, architecture, security, and performance.
+- **architect-reviewer** - Architectural consistency specialist reviewing design patterns and system architecture decisions.
+- **debugger** - Debugging specialist expert in error analysis, test failure investigation, and root cause identification.
+- **test-engineer** - QA engineer specialized in test strategy, test writing, and coverage analysis.
 
 **Testing & QA:**
 
-- **qa-expert** - Comprehensive quality assurance specialist developing testing strategies, quality processes, and ensuring software meets the highest standards of reliability.
-- **test-automator** - Test automation specialist creating comprehensive test suites including unit tests, integration tests, E2E testing, and automated testing infrastructure.
+- **qa-expert** - Comprehensive quality assurance specialist developing testing strategies and quality processes.
+- **test-automator** - Test automation specialist creating comprehensive test suites including unit, integration, and E2E testing.
 
 ### Data & AI Agents
 
 **Data Engineering & Analytics:**
 
-- **data-engineer** - Expert in building ETL pipelines, data warehouses, streaming architectures, and scalable data processing systems using modern data stack technologies.
-- **data-scientist** - Advanced SQL and BigQuery specialist providing actionable data insights, statistical analysis, and business intelligence for data-driven decision making.
-- **database-optimizer** - Database performance specialist focusing on query optimization, indexing strategies, schema design, and database migration planning for optimal performance.
-- **postgres-pro** - PostgreSQL specialist expert in advanced queries, performance tuning, and database optimization using PostgreSQL-specific features and best practices.
-- **graphql-architect** - GraphQL specialist designing schemas, resolvers, federation patterns, and implementing scalable GraphQL APIs with optimal performance.
+- **data-engineer** - Expert in building ETL pipelines, data warehouses, streaming architectures, and scalable data processing systems.
+- **data-scientist** - Advanced SQL and BigQuery specialist providing actionable data insights and business intelligence.
+- **database-optimizer** (data-ai) - Database performance specialist focusing on query optimization, indexing strategies, and schema design.
+- **postgres-pro** - PostgreSQL specialist expert in advanced queries, performance tuning, and database optimization.
+- **graphql-architect** - GraphQL specialist designing schemas, resolvers, federation patterns, and scalable GraphQL APIs.
 
 **AI & Machine Learning:**
 
-- **ai-engineer** - LLM application specialist building RAG systems, prompt pipelines, AI-powered features, and integrating various AI APIs into applications.
-- **ml-engineer** - Machine learning specialist implementing ML pipelines, model serving infrastructure, feature engineering, and production ML system deployment.
-- **prompt-engineer** - LLM optimization specialist focusing on prompt engineering, AI system optimization, and maximizing the effectiveness of language model interactions.
+- **ai-engineer** - LLM application specialist building RAG systems, prompt pipelines, and AI-powered features.
+- **ml-engineer** - Machine learning specialist implementing ML pipelines, model serving infrastructure, and production ML systems.
+- **prompt-engineer** - LLM optimization specialist focusing on prompt engineering and maximizing language model effectiveness.
 
 ### Security Specialists
 
-**Security & Compliance:**
-
-- **security-auditor** - Cybersecurity specialist conducting vulnerability assessments, penetration testing, OWASP compliance reviews, and implementing security best practices.
+- **security-auditor** (security) - Senior application security auditor and ethical hacker. Specializes in comprehensive security assessments, penetration testing, and OWASP compliance.
+- **security-auditor** (root) - Security engineer focused on vulnerability detection, threat modeling, and secure coding practices.
 
 ### Business & Strategy Agents
 
-**Product & Strategy:**
-
-- **product-manager** - Strategic product management specialist developing product roadmaps, conducting market analysis, and aligning business objectives with technical implementation.
+- **product-manager** - Strategic product management specialist developing product roadmaps and aligning business objectives with technical implementation.
 
 ### Specialized Domain Experts
 
 **Documentation & Communication:**
 
-- **api-documenter** - API documentation specialist creating OpenAPI/Swagger specifications, developer documentation, SDK guides, and comprehensive API reference materials.
-- **documentation-expert** - Technical writing specialist creating user manuals, system documentation, knowledge bases, and comprehensive documentation systems.
+- **api-documenter** - API documentation specialist creating OpenAPI/Swagger specifications and comprehensive API reference materials.
+- **documentation-expert** - Technical writing specialist creating user manuals, system documentation, and knowledge bases.
+
+### Universal Agents
+
+- **tailwind-css-expert** - MUST BE USED for any Tailwind CSS styling, utility-first refactors, or responsive component work.
+- **frontend-developer** (universal) - MUST BE USED to deliver responsive, accessible, high-performance UIs when no framework-specific sub-agent exists.
+- **backend-developer** (universal) - MUST BE USED for server-side code when no framework-specific sub-agent exists. Auto-detects project tech stack.
+- **api-architect** (universal) - Universal API designer specializing in RESTful design, GraphQL schemas, and modern contract standards.
+
+### Utility Agents
+
+- **refactor-agent** - Improves existing code structure, readability, or maintainability without changing functionality.
+- **beast-mode** - Relentless implementation agent that keeps going until the user's query is completely resolved.
+
+### Framework-Specific Specialists
+
+**Vue.js:**
+
+- **vue-component-architect** - Vue 3 expert specializing in Composition API and scalable component architecture.
+- **vue-state-manager** - Expert Vue.js architect specializing in Vue 3 Composition API and component patterns.
+- **vue-nuxt-expert** - Expert in Nuxt.js framework specializing in SSR, SSG, and full-stack Vue applications.
+
+**React:**
+
+- **react-component-architect** - Expert React architect specializing in modern patterns and component design.
+- **react-nextjs-expert** - Expert in Next.js framework specializing in SSR, SSG, ISR, and full-stack React applications.
+
+**Ruby on Rails:**
+
+- **rails-backend-expert** - Comprehensive Rails backend developer with expertise in all aspects of Ruby on Rails development.
+- **rails-api-developer** - Expert Rails API developer specializing in RESTful APIs and GraphQL.
+- **rails-activerecord-expert** - Expert in Rails ActiveRecord optimization, complex queries, and database performance.
+
+**Python (Specialized):**
+
+- **python-expert** - Expert Python developer for Python 3.12+ development, FastAPI/Flask APIs, and performance optimization.
+- **fastapi-expert** - Expert FastAPI specialist for high-performance APIs, microservices architecture, and async database integration.
+- **django-expert** - Expert Django specialist for Django 5.0+ web development, DRF, Celery, and scalable architecture.
+- **web-scraping-expert** - Specialized agent for Python web scraping, data extraction, and automation with async techniques.
+- **testing-expert** - Specialized agent for Python testing, test automation, and comprehensive testing strategies.
+- **security-expert** - Specialized agent for Python security, cryptography, secure coding, and vulnerability assessment.
+- **performance-expert** - Specialized agent for Python performance optimization, profiling, and concurrent programming.
+- **ml-data-expert** - Expert in Machine Learning and Data Science with Python. Covers scikit-learn, TensorFlow, PyTorch, pandas, numpy.
+- **devops-cicd-expert** - Specialized agent for Python DevOps, CI/CD, deployment automation, and containerization.
+
+**Laravel:**
+
+- **laravel-backend-expert** - Laravel backend specialist for controllers, services, Eloquent models, and all Laravel architectures.
+- **laravel-eloquent-expert** - Specialized in Laravel's Eloquent ORM — schemas, migrations, relationships, queries, and performance tuning.
+
+**Django:**
+
+- **django-backend-expert** - Expert Django backend developer specializing in models, views, services, and Django-specific implementations.
+- **django-orm-expert** - Expert in Django ORM optimization, complex queries, and database performance.
+- **django-api-developer** - Expert Django API developer specializing in Django REST Framework and GraphQL.
 
 ## 🎯 Core Operating Principle
 

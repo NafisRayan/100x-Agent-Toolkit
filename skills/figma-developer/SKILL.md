@@ -1,5 +1,5 @@
 ---
-name: Figma Developer
+name: figma-developer
 description: Extract components from Figma, convert designs to React components, sync design tokens, and generate code from designs. Bridge the gap between design and code with automated workflows.
 version: 1.0.0
 tags: [figma, design-to-code, design-tokens, component-generation]
