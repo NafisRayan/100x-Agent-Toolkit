@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **88 specialized skills**, **37+ expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skills**, **86 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 88 specialized skill workflows
+├── skills/                # 100 specialized skill workflows
 │   ├── <skill-name>/
 │   │   ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │   │   ├── references/    # Domain-specific documentation
@@ -34,7 +34,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   │   └── evals/         # Evaluation test cases
 │   └── ...
 │
-├── agents/                # 37+ expert agent personas
+├── agents/                # 86 expert agent personas
 │   ├── code-reviewer.md   # Senior Staff Engineer perspective
 │   ├── security-auditor.md# Security Engineer perspective
 │   ├── test-engineer.md   # QA Engineer perspective
@@ -63,6 +63,11 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   ├── performance-checklist.md
 │   ├── accessibility-checklist.md
 │   └── orchestration-patterns.md
+│
+├── docs/
+│   ├── best-practices.md    # Crafting high-impact Claude Code sub-agents
+│   ├── creating-agents.md   # Tutorial for creating Claude agents
+│   └── dependencies.md      # Context7 MCP dependency setup
 │
 ├── mcps/
 │   └── mcp.json           # 9 MCP server configurations
@@ -189,7 +194,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `enhance-prompt` | Transform vague UI ideas into polished, Stitch-optimized prompts |
-| `writing-skills` | Create and edit skill definitions |
 | `skill-creator` | Build new skills with evaluation |
 | `find-skills` | Discover skills for specific tasks |
 | `agent-browser` | Browser automation for AI agents |
@@ -216,20 +220,28 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 
 ## Agent Personas
 
-The system includes **37+ agent personas** organized by domain:
+The system includes **86 expert agent personas** organized by domain:
 
 | Category | Agents |
 |----------|--------|
-| **Core** (root) | `code-reviewer`, `security-auditor`, `test-engineer`, `beast mode 3.1`, `agent-organizer` |
+| **Core** | `code-reviewer`, `security-auditor`, `test-engineer`, `code-archaeologist`, `documentation-specialist`, `performance-optimizer` |
+| **Beast Mode** | `beast mode 3.1` |
+| **Orchestrators** | `agent-organizer`, `project-analyst`, `team-configurator`, `tech-lead-orchestrator` |
+| **Spec Agents** | `spec-analyst`, `spec-architect`, `spec-developer`, `spec-orchestrator`, `spec-planner`, `spec-reviewer`, `spec-tester`, `spec-validator` |
 | **Business** | `product-manager` |
-| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `prompt-engineer` |
-| **Development** | `backend-architect`, `dx-optimizer`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer` |
+| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Frontend** | `senior-frontend-architect` |
+| **Backend** | `senior-backend-architect` |
 | **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer` |
-| **Quality & Testing** | `debugger`, `qa-expert`, `test-automator` |
+| **Quality & Testing** | `architect-review`, `code-reviewer`, `debugger`, `qa-expert`, `test-automator` |
 | **Security** | `security-auditor` |
+| **UI/UX** | `ui-ux-master` |
+| **Universal** | `api-architect`, `backend-developer`, `frontend-developer`, `tailwind-css-expert` |
+| **Utility** | `refactor-agent` |
 | **Specialization** | `api-documenter`, `documentation-expert` |
-
-See [agents/README.md](agents/README.md) for the full catalog with descriptions.
+| **Specialized (by tech)** | `django/` (3 agents), `laravel/` (2), `python/` (9), `rails/` (3), `react/` (2), `vue/` (3) |
+| **Local** | `code-reviewer-local` |
 
 ---
 
@@ -275,7 +287,7 @@ Five domain checklists in `references/` that skills reference for best practices
 2. Add workflow steps, verification gates, and anti-rationalization sections.
 3. Optionally add `references/`, `scripts/`, `assets/`, or `evals/` subdirectories.
 4. Register the skill in AGENTS.md under the appropriate category.
-5. Use the `writing-skills` skill for detailed guidance.
+5. Use the `skill-creator` skill for detailed guidance.
 
 ---
 
