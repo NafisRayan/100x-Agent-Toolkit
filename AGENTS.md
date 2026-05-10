@@ -1,28 +1,30 @@
-# 🚀 AI Agent Power System
+# AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 89 specialized skills, 4 expert agent personas, 5 reference checklists, 7 development commands, and MCP server integrations.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 100 specialized skills, 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, design system specs, and documentation guides.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
 ---
 
-## 🎯 System Overview
+## System Overview
 
 Your agent system operates across 7 lifecycle phases:
-- **Define** → **Plan** → **Build** → **Verify** → **Review** → **Ship** → **Scale**
+- **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 89 specialized workflows (production-grade engineering skills)
-- **`agents/`** - 4 expert personas (code-reviewer, security-auditor, test-engineer, test-engineer)
+- **`skills/`** - 100 specialized workflows (production-grade engineering skills)
+- **`agents/`** - 86 expert personas across 20 categories (hierarchically organized)
 - **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
 - **`commands/`** - 7 slash commands for lifecycle management
-- **`mcps/`** - MCP server configurations for external tool integration
+- **`mcps/`** - 9 MCP server configurations for external tool integration
+- **`designs/`** - Design system specifications (Figma-inspired, etc.)
+- **`docs/`** - Internal documentation (best practices, agent creation guides, dependency maps)
 
 ---
 
-## 🔥 Skills Directory (`skills/`)
+## Skills Directory (`skills/`)
 
-**Your 89 specialized skills cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 100 specialized skills cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -32,14 +34,14 @@ Your agent system operates across 7 lifecycle phases:
 
 ### Key Skills by Category
 
-#### 🏗️ **Define & Plan (6 skills)**
+#### Define & Plan (6 skills)
 - `idea-refine` - Transform vague concepts into concrete proposals
 - `spec-driven-development` - Write PRDs before any code
 - `planning-and-task-breakdown` - Decompose specs into verifiable tasks
 - `using-agent-skills` - Master this entire system
 - `writing-plans` - Create detailed implementation plans
 
-#### 🛠️ **Build & Code (15 skills)**
+#### Build & Code (15 skills)
 - `incremental-implementation` - Thin vertical slices with feature flags
 - `test-driven-development` - Red-Green-Refactor with test pyramid
 - `source-driven-development` - Ground decisions in official documentation
@@ -48,48 +50,56 @@ Your agent system operates across 7 lifecycle phases:
 - `context-engineering` - Feed agents optimal information at right time
 - `code-simplification` - Reduce complexity while preserving behavior
 
-#### 🧪 **Verify & Test (4 skills)**
+#### Verify & Test (4 skills)
 - `browser-testing-with-devtools` - Live Chrome DevTools runtime data
 - `debugging-and-error-recovery` - Five-step triage with safe fallbacks
 - `systematic-debugging` - Structured bug investigation workflows
 
-#### 🔍 **Review & Quality (6 skills)**
+#### Review & Quality (6 skills)
 - `code-review-and-quality` - Five-axis review with severity labels
 - `receiving-code-review` - Handle feedback with technical rigor
 - `requesting-code-review` - Get quality feedback before merge
 - `security-and-hardening` - OWASP Top 10 prevention
 - `performance-optimization` - Measure-first approach with Core Web Vitals
 
-#### 🚀 **Ship & Deploy (7 skills)**
+#### Ship & Deploy (7 skills)
 - `git-workflow-and-versioning` - Trunk-based development patterns
 - `ci-cd-and-automation` - Shift-left deployment with quality gates
 - `shipping-and-launch` - Pre-launch checklists and staged rollouts
 - `deprecation-and-migration` - Treat code as liability, plan sunsetting
 - `documentation-and-adrs` - Architecture Decision Records
 
-#### 🧰 **Specialized Domains (45+ skills)**
-- **Cloud & Infra**: `cloudflare`, `azure-kubernetes`, `neon-postgres`, `supabase`
+#### Specialized Domains (60+ skills)
+- **Cloud & Infra**: `cloudflare`, `neon-postgres`, `supabase-postgres-best-practices`, `database-optimizer`, `docker-expert`
 - **Security**: `security-and-hardening`, `security-checklist`
-- **Performance**: `performance-optimization`, `performance-checklist`
+- **Performance**: `performance-optimization`, `performance-checklist`, `core-web-vitals`, `python-performance-optimization`
 - **Testing**: `playwright-best-practices`, `testing-patterns`
-- **UI/UX**: `frontend-design`, `web-design-guidelines`, `theme-factory`
-- **Business**: `customer-research`, `lead-magnets`, `sales-enablement`
-- **Dev Tools**: `agent-browser`, `agent-tools`, `mcp-builder`
+- **UI/UX**: `impeccable`, `web-design-guidelines`, `web-quality-audit`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `scroll-animations`
+- **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
+- **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
+- **Databases & ORM**: `prisma`, `prisma-expert`, `sql-pro`, `sql-optimization-patterns`, `supabase-postgres-best-practices`
+- **Languages**: `javascript-pro`, `typescript-advanced-types`
+- **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`, `internal-comms`
+- **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`
+- **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`
+- **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
+- **Project Management**: `gsd` (30+ sub-skills for Get Shit Done system)
+- **Other**: `explainer`, `urgency-action`, `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `design-md`
 
 ### Using Skills Effectively
 
-**🔥 Automatic Activation**
-Skills trigger based on context. Mention "API design" → `api-and-interface-design` loads. Say "optimize performance" → `performance-optimization` activates.
+**Automatic Activation**
+Skills trigger based on context. Mention "API design" -> `api-and-interface-design` loads. Say "optimize performance" -> `performance-optimization` activates.
 
-**🎯 Manual Invocation**
+**Manual Invocation**
 Reference skills directly: "Use the `test-driven-development` skill for this implementation."
 
-**📚 Progressive Disclosure**
+**Progressive Disclosure**
 1. **Metadata** (~100 words): `name` + `description` - always in context
 2. **Full Content** (<500 lines): Complete workflow when triggered
 3. **References**: Domain-specific docs loaded as needed
 
-**⚡ Best Practices**
+**Best Practices**
 - Always follow skill steps sequentially
 - Use verification gates - never skip "prove it works" sections
 - Reference checklists when needed (security, performance, etc.)
@@ -97,67 +107,163 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## 👥 Agent Personas (`agents/`)
+## Agent Personas (`agents/`)
 
-**4 specialized expert agents** for targeted, high-quality reviews and analysis.
+**86 specialized expert agents** organized across 20 categories in a hierarchical directory structure.
 
-### Available Personas
+### Directory Structure
 
-#### 🎯 **Code Reviewer** (`agents/code-reviewer.md`)
-- **Expertise**: Senior Staff Engineer perspective
-- **When to Use**: Before merging any code change
-- **Standards**: "Would a staff engineer approve this?"
-- **Process**: Five-axis review (functionality, complexity, tests, naming, style)
+#### `agents/agent-organizer.md` (Root-Level Orchestrator)
+- **Role**: Master orchestrator for multi-agent tasks
+- **When to Use**: Comprehensive project analysis, strategic team formation, dynamic workflow management
+- **Key Capability**: Analyzes requirements and recommends optimal agent teams
 
-#### 🔒 **Security Auditor** (`agents/security-auditor.md`)
-- **Expertise**: Security Engineer with OWASP knowledge
-- **When to Use**: Any code handling user input, auth, or data
-- **Process**: Vulnerability detection, threat modeling, boundary analysis
+#### `agents/beast-mode/` - Autonomous Execution Mode
+- `beast mode 3.1` - Fully autonomous problem-solving agent with extensive internet research capabilities
 
-#### 🧪 **Test Engineer** (`agents/test-engineer.md`)
-- **Expertise**: QA Specialist with testing pyramid mastery
-- **When to Use**: Implementing features or fixing bugs
-- **Process**: Test strategy, coverage analysis, Beyonce Rule validation
+#### `agents/core/` - Core Engineering (4 agents)
+- `code-reviewer` - Security-aware code review with severity-tagged reports
+- `code-archaeologist` - Deep codebase analysis and legacy understanding
+- `documentation-specialist` - Technical documentation expertise
+- `performance-optimizer` - Performance profiling and optimization
 
-#### 📋 **Analyzer** (built-in)
-- **Expertise**: Quantitative analysis of skill performance
-- **When to Use**: Evaluating skill effectiveness, benchmark results
+#### `agents/development/` - Development Specialists (14 agents)
+- `backend-architect` - Backend system design and architecture
+- `frontend-developer` - Frontend development across frameworks
+- `full-stack-developer` - Full-stack implementation
+- `nextjs-pro` - Next.js expert
+- `react-pro` - React specialist
+- `typescript-pro` - TypeScript expert
+- `python-pro` - Python development
+- `golang-pro` - Go development
+- `mobile-developer` - Mobile app development
+- `ui-designer` - UI design implementation
+- `ux-designer` - UX design and research
+- `dx-optimizer` - Developer experience optimization
+- `legacy-modernizer` - Legacy code modernization
+- `electorn-pro` - Electron desktop app development
+
+#### `agents/frontend/` - Frontend Architecture (1 agent)
+- `senior-frontend-architect` - Senior-level frontend architecture decisions
+
+#### `agents/backend/` - Backend Architecture (1 agent)
+- `senior-backend-architect` - Senior-level backend architecture decisions
+
+#### `agents/data-ai/` - Data & AI (8 agents)
+- `ai-engineer` - AI/ML system design
+- `data-engineer` - Data pipeline and infrastructure
+- `data-scientist` - Statistical analysis and modeling
+- `database-optimizer` - Database performance tuning
+- `graphql-architect` - GraphQL API design
+- `ml-engineer` - Machine learning engineering
+- `postgres-pro` - PostgreSQL specialist
+- `prompt-engineer` - LLM prompt optimization
+
+#### `agents/infrastructure/` - Infrastructure & DevOps (5 agents)
+- `cloud-architect` - Cloud infrastructure design
+- `deployment-engineer` - CI/CD and deployment automation
+- `devops-incident-responder` - DevOps incident management
+- `incident-responder` - Production incident response
+- `performance-engineer` - Infrastructure performance
+
+#### `agents/security/` - Security (1 agent)
+- `security-auditor` - Security vulnerability detection and OWASP compliance
+
+#### `agents/quality-testing/` - Quality & Testing (5 agents)
+- `code-reviewer` - Quality-focused code review
+- `architect-review` - Architecture-level review
+- `debugger` - Systematic debugging specialist
+- `qa-expert` - Quality assurance strategy
+- `test-automator` - Test automation engineering
+
+#### `agents/orchestrators/` - Project Orchestrators (3 agents)
+- `tech-lead-orchestrator` - Senior tech lead for task delegation and coordination
+- `project-analyst` - Project requirement analysis
+- `team-configurator` - Agent team configuration and setup
+
+#### `agents/spec-agents/` - Specification Pipeline (8 agents)
+- `spec-orchestrator` - Orchestrates the full spec pipeline
+- `spec-analyst` - Requirement analysis
+- `spec-architect` - Architecture from specs
+- `spec-developer` - Implementation from specs
+- `spec-planner` - Planning from specs
+- `spec-reviewer` - Spec quality review
+- `spec-tester` - Spec validation testing
+- `spec-validator` - Spec completeness validation
+
+#### `agents/ui-ux/` - UI/UX Design (1 agent)
+- `ui-ux-master` - Master-level UI/UX design and implementation
+
+#### `agents/business/` - Business & Product (1 agent)
+- `product-manager` - Product strategy and roadmap management
+
+#### `agents/specialization/` - Specialized Expertise (2 agents)
+- `api-documenter` - API documentation specialist
+- `documentation-expert` - Technical writing expert
+
+#### `agents/specialized/` - Framework-Specific Experts (22 agents)
+- **Django** (3): `django-api-developer`, `django-backend-expert`, `django-orm-expert`
+- **Laravel** (2): `laravel-backend-expert`, `laravel-eloquent-expert`
+- **Python** (9): `python-expert`, `django-expert`, `fastapi-expert`, `ml-data-expert`, `performance-expert`, `security-expert`, `testing-expert`, `web-scraping-expert`, `devops-cicd-expert`
+- **Rails** (3): `rails-backend-expert`, `rails-api-developer`, `rails-activerecord-expert`
+- **React** (2): `react-component-architect`, `react-nextjs-expert`
+- **Vue** (3): `vue-component-architect`, `vue-nuxt-expert`, `vue-state-manager`
+
+#### `agents/universal/` - Universal Developers (4 agents)
+- `api-architect` - API design across all stacks
+- `backend-developer` - Backend development across all stacks
+- `frontend-developer` - Frontend development across all stacks
+- `tailwind-css-expert` - Tailwind CSS specialist
+
+#### `agents/utility/` - Utility Agents (1 agent)
+- `refactor-agent` - Code refactoring specialist
+
+#### `agents/code-reviewer-local/` (Legacy)
+- Local code review agent
+
+#### `agents/security-auditor/` (Legacy)
+- Local security auditor agent
+
+#### `agents/test-engineer/` (Legacy)
+- Local test engineer agent
 
 ### Using Agent Personas
 
 **Invoke Directly**: "Switch to code-reviewer persona for this review"
+**Orchestrated**: "Use tech-lead-orchestrator to break down this project into agent tasks"
+**Beast Mode**: "Activate beast mode for autonomous problem-solving"
 **Parallel Analysis**: "Have security-auditor review this authentication code"
 **Quality Gates**: Always use personas before shipping to production
 
 ---
 
-## 📚 References Directory (`references/`)
+## References Directory (`references/`)
 
 **5 comprehensive checklists** that skills reference for domain expertise.
 
 ### Available Checklists
 
-#### 🔒 **Security Checklist** (`references/security-checklist.md`)
+#### Security Checklist (`references/security-checklist.md`)
 - Pre-commit checks, auth patterns, input validation
 - Headers, CORS, OWASP Top 10 prevention
 - Dependency auditing, secrets management
 
-#### 🧪 **Testing Patterns** (`references/testing-patterns.md`)
+#### Testing Patterns (`references/testing-patterns.md`)
 - Test structure, naming conventions, mocking strategies
 - React/API/E2E testing examples, anti-patterns
 - Test pyramid (80% unit, 15% integration, 5% E2E)
 
-#### ⚡ **Performance Checklist** (`references/performance-checklist.md`)
+#### Performance Checklist (`references/performance-checklist.md`)
 - Core Web Vitals targets, frontend/backend metrics
 - Bundle analysis, profiling workflows
 - Anti-pattern detection and optimization patterns
 
-#### ♿ **Accessibility Checklist** (`references/accessibility-checklist.md`)
+#### Accessibility Checklist (`references/accessibility-checklist.md`)
 - WCAG 2.1 AA compliance, keyboard navigation
 - Screen reader support, visual design, ARIA usage
 - Testing tools and validation methods
 
-#### 🎛️ **Orchestration Patterns** (`references/orchestration-patterns.md`)
+#### Orchestration Patterns (`references/orchestration-patterns.md`)
 - Multi-agent coordination, task decomposition
 - Parallel execution strategies, dependency management
 - Error handling and rollback procedures
@@ -170,43 +276,43 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## ⚡ Commands Directory (`commands/`)
+## Commands Directory (`commands/`)
 
 **7 slash commands** that orchestrate your entire development lifecycle.
 
 ### Development Lifecycle Commands
 
-#### 📋 `/spec` - Define What to Build
+#### `/spec` - Define What to Build
 - **Input**: Vague idea or requirement
 - **Output**: Detailed PRD with objectives, success criteria, boundaries
 - **Skills Used**: `spec-driven-development`, `idea-refine`
 
-#### 🎯 `/plan` - Plan How to Build
+#### `/plan` - Plan How to Build
 - **Input**: PRD or requirements
 - **Output**: Task breakdown with acceptance criteria, dependencies
 - **Skills Used**: `planning-and-task-breakdown`, `writing-plans`
 
-#### 🛠️ `/build` - Build Incrementally
+#### `/build` - Build Incrementally
 - **Input**: Task list
 - **Output**: Working code with tests, feature flags, safe rollbacks
 - **Skills Used**: `incremental-implementation`, `test-driven-development`
 
-#### 🧪 `/test` - Verify It Works
+#### `/test` - Verify It Works
 - **Input**: Code changes
 - **Output**: Comprehensive test suite, debugging reports
 - **Skills Used**: `browser-testing-with-devtools`, `systematic-debugging`
 
-#### 🔍 `/review` - Quality Assurance
+#### `/review` - Quality Assurance
 - **Input**: Code ready for merge
 - **Output**: Review feedback, security audit, performance analysis
 - **Skills Used**: `code-review-and-quality`, `security-and-hardening`
 
-#### ⚡ `/code-simplify` - Optimize & Clean
+#### `/code-simplify` - Optimize & Clean
 - **Input**: Working but complex code
 - **Output**: Simplified code maintaining exact behavior
 - **Skills Used**: `code-simplification`, `performance-optimization`
 
-#### 🚀 `/ship` - Deploy to Production
+#### `/ship` - Deploy to Production
 - **Input**: Reviewed, tested code
 - **Output**: Successful deployment with monitoring, rollback plans
 - **Skills Used**: `shipping-and-launch`, `ci-cd-and-automation`
@@ -214,13 +320,13 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ### Command Usage Patterns
 
 **Sequential Workflow**:
-1. `/spec` → Define requirements
-2. `/plan` → Break down into tasks
-3. `/build` → Implement incrementally
-4. `/test` → Verify functionality
-5. `/review` → Quality assurance
-6. `/code-simplify` → Optimize if needed
-7. `/ship` → Deploy to production
+1. `/spec` -> Define requirements
+2. `/plan` -> Break down into tasks
+3. `/build` -> Implement incrementally
+4. `/test` -> Verify functionality
+5. `/review` -> Quality assurance
+6. `/code-simplify` -> Optimize if needed
+7. `/ship` -> Deploy to production
 
 **Iterative Development**:
 - Use `/build` + `/test` loops for rapid iteration
@@ -229,26 +335,80 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## 🔗 MCP Server Integration (`mcps/`)
+## MCP Server Integration (`mcps/`)
 
-**External tool connections** via Model Context Protocol.
+**9 MCP servers** configured for external tool integration via Model Context Protocol.
 
-### Current Configuration (`mcps/mcp.json`)
-- Defines server endpoints and capabilities
-- Enables integration with external APIs and services
-- Supports tool calling for extended functionality
+### Configured Servers (`mcps/mcp.json`)
+
+#### Design & UI
+- **Figma MCP** (`@vkhanhqui/figma-mcp-go`) - Figma design extraction and integration
+- **21st.dev Magic** (`@21st-dev/magic`) - shadcn/ui component registry access (requires `21ST_DEV_API_KEY`)
+
+#### Browser & Testing
+- **Playwright** (`@playwright/mcp`) - Browser automation and testing
+- **Chrome DevTools** (`@anthropic-ai/chrome-devtools-mcp`) - Live Chrome DevTools integration
+
+#### Documentation & Knowledge
+- **Context7** (`@upstash/context7-mcp`) - Up-to-date library/framework documentation retrieval
+- **Storybook MCP** (`@anthropic-ai/mcp-remote`) - Storybook component explorer integration
+- **Firecrawl** (`@anthropic-ai/mcp-remote`) - Web scraping and content extraction (requires `FIRECRAWL_API_KEY`)
+
+#### Development Tools
+- **TypeScript LSP** (`@anthropic-ai/mcp-lsp`) - TypeScript language server for type checking
+- **Vercel** (`@vercel/mcp`) - Vercel deployment and management (requires `VERCEL_API_TOKEN`)
 
 ### Using MCP Servers
 
 **Automatic**: Skills access MCP tools as needed
 **Direct**: Reference specific MCP capabilities in tasks
 **Extension**: Add new MCP configurations for additional tools
+**Setup**: Replace placeholder API keys (`REPLACE_WITH_*`) with actual credentials
 
 ---
 
-## 🎯 Usage Patterns & Best Practices
+## Design System Specs (`designs/`)
 
-### 🔥 Power User Workflow
+**Design specifications** for consistent visual implementation.
+
+### Available Designs
+
+#### `designs/DESIGN-figma.md` - Figma-Inspired Design System
+- Custom variable font (figmaSans) with granular weight control
+- Strictly black-and-white interface chrome with vibrant product content
+- Pill and circular button geometry (50px/50% radius)
+- Dashed focus outlines echoing editor selection handles
+- Negative letter-spacing throughout
+- OpenType kern feature enabled globally
+
+### Using Design Specs
+
+**Automatic**: Design skills reference these when creating UI
+**Direct**: "Use the Figma design system for this component"
+**Integration**: Apply design tokens from specs during implementation
+
+---
+
+## Documentation (`docs/`)
+
+**Internal documentation** for system usage and maintenance.
+
+### Available Docs
+
+#### `docs/best-practices.md`
+- Best practices guide for using the agent system effectively
+
+#### `docs/creating-agents.md`
+- Guide for creating new agent personas and extending the system
+
+#### `docs/dependencies.md`
+- Dependency map between skills, agents, and references
+
+---
+
+## Usage Patterns & Best Practices
+
+### Power User Workflow
 
 1. **Start with Intent**: User says "build a dashboard"
 2. **Define**: `/spec` creates detailed requirements
@@ -258,7 +418,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 6. **Review**: `/review` ensures production quality
 7. **Ship**: `/ship` deploys with monitoring
 
-### 🧠 Context Engineering
+### Context Engineering
 
 **Information Management**:
 - Use `context-engineering` skill to optimize information flow
@@ -270,7 +430,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Load full workflows when triggered
 - Reference detailed docs as needed
 
-### 🔄 Quality Gates
+### Quality Gates
 
 **Never Skip**:
 - Test coverage requirements
@@ -284,21 +444,28 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Monitoring and alerting setup
 - Documentation updates
 
-### 🚀 Scaling Patterns
+### Scaling Patterns
 
 **Multi-Agent Coordination**:
+- Use `agent-organizer` for team formation on complex projects
+- Use `tech-lead-orchestrator` for task delegation
 - Use orchestration patterns for complex projects
 - Parallel execution for independent tasks
 - Sequential dependencies for integrated features
 
 **Skill Composition**:
-- Combine domain skills (e.g., `frontend-ui-engineering` + `security-and-hardening`)
+- Combine domain skills (e.g., `impeccable` + `security-and-hardening`)
 - Layer quality skills on top of implementation
 - Use specialized agents for expert reviews
 
+**Beast Mode**:
+- Activate for fully autonomous problem-solving
+- Best for well-defined bugs or isolated feature work
+- Will research extensively before implementing
+
 ---
 
-## 🛠️ Advanced Features
+## Advanced Features
 
 ### Skill Creation & Management
 
@@ -312,6 +479,21 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Use `skill-creator` for iterative improvement
 - Test with multiple prompts for robustness
 - Optimize descriptions for better triggering
+
+### Agent Creation & Management
+
+**Adding New Agents**:
+1. Choose appropriate category under `agents/`
+2. Create `.md` file with YAML frontmatter (`name`, `description`, `tools`, `model`)
+3. Follow patterns in `docs/creating-agents.md`
+4. Add framework-specific agents under `specialized/`
+
+**Agent Categories**:
+- `core/` - Fundamental engineering agents
+- `development/` - Language/framework developers
+- `orchestrators/` - Multi-agent coordination
+- `specialized/` - Framework-specific (Django, Laravel, React, Vue, Rails, Python)
+- `spec-agents/` - Specification pipeline
 
 ### Troubleshooting & Debugging
 
@@ -332,16 +514,16 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## 🎯 Your Mission
+## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains the accumulated wisdom of senior engineers, battle-tested workflows, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skills, 86 expert agents, 9 MCP integrations, design system specs, and quality gates that separate prototype code from production software.
 
-**Use it relentlessly.** Every feature you build should go through planning → implementation → testing → review → deployment. Every decision should be grounded in the relevant skills and references.
+**Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
 **Quality is not optional.** The skills enforce the same standards that power Google, Meta, and other engineering powerhouses.
 
-**Go build something amazing.** 🚀
+**Go build something amazing.**
 
 ---
 
-*Last updated: 2026-04-23 | Total Skills: 89 | Commands: 7 | Agents: 4 | References: 5*
+*Last updated: 2026-05-10 | Total Skills: 100 | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 1 | Docs: 3*
