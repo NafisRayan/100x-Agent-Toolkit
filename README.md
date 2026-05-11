@@ -1,4 +1,4 @@
-# AI Agent Power System
+# 100x Agent Toolkit
 
 A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skills**, **86 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
@@ -82,7 +82,9 @@ Personas do not call other personas. Commands orchestrate the composition.
 
 This repository is a **skill bundle** — it configures your AI agent (Claude Code, Cursor, Copilot, etc.) with domain expertise, workflows, and quality gates.
 
-1. Clone the repository into your agent's workspace (or copy `AGENTS.md` to the root of your project).
+1. Clone the repository and rename the folder to `.agents`, then place it in your home directory:
+   - **Windows**: `C:\Users\<YourUsername>\.agents`
+   - **macOS / Linux**: `~/.agents`
 2. The `AGENTS.md` file is the entry point — your agent reads it on startup and gains access to all skills, personas, and commands.
 3. Slash commands guide your lifecycle:
    - `/spec` → define what to build
