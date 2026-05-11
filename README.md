@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **99 specialized skills**, **86 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows** (100 core + 68 GSD sub-skills), **86 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 99 specialized skill workflows
+├── skills/                # 100 specialized skill workflows (100 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation
@@ -73,7 +73,13 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   └── mcp.json           # 9 MCP server configurations
 │
 └── designs/
-    └── DESIGN-figma.md    # Design system specification
+    ├── DESIGN-figma.md    # Figma-inspired design system
+    ├── DESIGN-airbnb.md   # Airbnb design system
+    ├── DESIGN-apple.md    # Apple design system
+    ├── DESIGN-stripe.md   # Stripe design system
+    ├── DESIGN-notion.md   # Notion design system
+    ├── DESIGN-vercel.md   # Vercel design system
+    └── ... (24 total: airbnb, apple, binance, bmw, claude, cursor, expo, figma, framer, meta, minimax, mongodb, notion, nvidia, pinterest, revolut, stripe, supabase, superhuman, uber, vercel, warp, webflow, xai)
 ```
 
 ---
@@ -259,7 +265,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `git-master` | Complete Git expertise for all operations |
 | `caveman` | Ultra-compressed communication mode |
 | `grill-me` | Interview user about a plan or design |
-| `gsd` | Get Shit Done project management (30+ sub-skills) |
+| `gsd` | Get Shit Done project management (68 sub-skills) |
 
 ---
 
@@ -289,7 +295,7 @@ The system includes **86 expert agent personas** organized by domain:
 | **Spec Agents** | `spec-analyst`, `spec-architect`, `spec-developer`, `spec-orchestrator`, `spec-planner`, `spec-reviewer`, `spec-tester`, `spec-validator` |
 | **Business** | `product-manager` |
 | **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer` |
-| **Development** | `backend-architect`, `dx-optimizer`, `electorn-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
 | **Frontend** | `senior-frontend-architect` |
 | **Backend** | `senior-backend-architect` |
 | **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer` |

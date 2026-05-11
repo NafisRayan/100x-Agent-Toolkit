@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 99 specialized skills, 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, design system specs, and documentation guides.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 99 specialized workflows (production-grade engineering skills)
+- **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
 - **`agents/`** - 86 expert personas across 20 categories (hierarchically organized)
 - **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
 - **`commands/`** - 7 slash commands for lifecycle management
@@ -24,7 +24,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 99 specialized skills cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 168 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -79,7 +79,7 @@ Your agent system operates across 7 lifecycle phases:
 - **SEO**: `seo`, `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
-- **Project Management**: `gsd` (30+ sub-skills for Get Shit Done system)
+- **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 commands + 7 references + 16 workflows)
 - **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
@@ -137,7 +137,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - `ux-designer` - UX design and research
 - `dx-optimizer` - Developer experience optimization
 - `legacy-modernizer` - Legacy code modernization
-- `electorn-pro` - Electron desktop app development
+- `electron-pro` - Electron desktop app development
 
 #### `agents/frontend/` - Frontend Architecture (1 agent)
 - `senior-frontend-architect` - Senior-level frontend architecture decisions
@@ -369,6 +369,8 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ### Available Designs
 
+**24 design system specifications** covering major brand design languages.
+
 #### `designs/DESIGN-figma.md` - Figma-Inspired Design System
 - Custom variable font (figmaSans) with granular weight control
 - Strictly black-and-white interface chrome with vibrant product content
@@ -376,6 +378,23 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Dashed focus outlines echoing editor selection handles
 - Negative letter-spacing throughout
 - OpenType kern feature enabled globally
+
+#### Additional Design Specifications
+
+| Design | Brand | Design | Brand |
+|--------|-------|--------|-------|
+| `DESIGN-airbnb` | Airbnb | `DESIGN-apple` | Apple |
+| `DESIGN-binance` | Binance | `DESIGN-bmw` | BMW |
+| `DESIGN-claude` | Claude (Anthropic) | `DESIGN-cursor` | Cursor |
+| `DESIGN-expo` | Expo | `DESIGN-framer` | Framer |
+| `DESIGN-meta` | Meta | `DESIGN-minimax` | MiniMax |
+| `DESIGN-mongodb` | MongoDB | `DESIGN-notion` | Notion |
+| `DESIGN-nvidia` | NVIDIA | `DESIGN-pinterest` | Pinterest |
+| `DESIGN-revolut` | Revolut | `DESIGN-stripe` | Stripe |
+| `DESIGN-supabase` | Supabase | `DESIGN-superhuman` | Superhuman |
+| `DESIGN-uber` | Uber | `DESIGN-vercel` | Vercel |
+| `DESIGN-warp` | Warp | `DESIGN-webflow` | Webflow |
+| `DESIGN-xai` | xAI | | |
 
 ### Using Design Specs
 
@@ -511,7 +530,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 99 skills, 86 expert agents, 9 MCP integrations, design system specs, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 86 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -521,4 +540,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-11 | Total Skills: 99 | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 1 | Docs: 3*
+*Last updated: 2026-05-11 | Total Skills: 168 (100 core + 68 GSD) | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*
