@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skills**, **86 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **99 specialized skills**, **86 expert agent personas**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,13 +25,13 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 100 specialized skill workflows
-│   ├── <skill-name>/
-│   │   ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
-│   │   ├── references/    # Domain-specific documentation
-│   │   ├── scripts/       # Automation scripts (Python, JS, Shell)
-│   │   ├── assets/        # Starter projects, templates, images
-│   │   └── evals/         # Evaluation test cases
+├── skills/                # 99 specialized skill workflows
+│   └── <skill-name>/
+│       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
+│       ├── references/    # Domain-specific documentation
+│       ├── scripts/       # Automation scripts (Python, JS, Shell)
+│       ├── assets/        # Starter projects, templates, images
+│       └── evals/         # Evaluation test cases
 │   └── ...
 │
 ├── agents/                # 86 expert agent personas
@@ -102,11 +102,10 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### Define & Plan
 | Skill | Description |
 |-------|-------------|
-| `spec-driven-development` | Write PRDs before any code |
+| `brainstorming` | Explore intent and requirements before implementation |
 | `planning-and-task-breakdown` | Decompose specs into verifiable tasks |
 | `writing-plans` | Create detailed implementation plans |
 | `executing-plans` | Execute written plans with checkpoints |
-| `brainstorming` | Explore intent and requirements before implementation |
 
 ### Build & Code
 | Skill | Description |
@@ -115,22 +114,38 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `test-driven-development` | Red-Green-Refactor with test pyramid |
 | `source-driven-development` | Ground decisions in official documentation |
 | `subagent-driven-development` | Execute plans with independent sub-agents |
-| `incremental-implementation` | Safe rollbacks and progressive delivery |
+| `karpathy-guidelines` | Behavioral guidelines to reduce LLM coding mistakes |
 
 ### Web & Frontend
 | Skill | Description |
 |-------|-------------|
 | `nextjs-developer` | Next.js 14+ App Router, RSC, Server Actions |
 | `next-best-practices` | File conventions, RSC boundaries, data patterns |
+| `vercel-react-best-practices` | React/Next.js performance optimization |
 | `shadcn` | Component management for shadcn/ui |
+| `motion` | React animations with Motion (bundle-optimized) |
 | `motion-framer` | React animations (Framer Motion / Motion) |
+| `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
 | `tailwind-design-system` | Tailwind CSS design tokens and component libraries |
 | `responsive-design` | Container queries, fluid typography, grid |
 | `web-design-guidelines` | UI code review against design best practices |
+| `web-quality-audit` | Comprehensive web quality audit |
 | `ui-ux-pro-max` | 50+ styles, 161 color palettes, 57 font pairings |
 | `scroll-animations` | Scroll-triggered animations and parallax |
 | `21st-dev-builder-v2` | Build with 1400+ shadcn/ui components |
+| `impeccable` | Critique, polish, and improve frontend interfaces |
+| `design-system` | Design-system driven by specification files |
+| `accessibility` | WCAG 2.2 audit and compliance |
+| `building-native-ui` | Expo Router native app development |
+| `mobile-developer` | React Native and Expo mobile development |
+| `vercel-react-native-skills` | React Native performance and best practices |
+| `mui` | Material-UI v7 component patterns |
+
+### Automation & Workflow
+| Skill | Description |
+|-------|-------------|
+| `n8n-code-javascript` | JavaScript Code node patterns for n8n workflows |
 
 ### Backend & API
 | Skill | Description |
@@ -138,8 +153,9 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `fastapi-expert` | Async Python APIs with FastAPI + Pydantic V2 |
 | `nodejs-express-server` | Production-ready Express.js servers |
 | `nodejs-backend-patterns` | Express/Fastify middleware, auth, API design |
+| `nodejs-best-practices` | Node.js development principles and decision-making |
 | `nestjs-best-practices` | NestJS architecture and DI patterns |
-| `api-and-interface-design` | Contract-first APIs with boundary validation |
+| `shopify-expert` | Shopify themes, apps, and Storefront API |
 
 ### Database
 | Skill | Description |
@@ -157,17 +173,19 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `cloudflare` | Workers, Pages, D1, R2, KV, AI, Agents SDK |
 | `docker-expert` | Multi-stage builds, orchestration, security hardening |
 | `vite` | Build tool config, plugin API, SSR, Rolldown |
+| `migrate-to-vinext` | Migrate Next.js projects to vinext (Vite-based) |
 
 ### Quality & Testing
 | Skill | Description |
 |-------|-------------|
 | `systematic-debugging` | Structured bug investigation |
 | `verification-before-completion` | Run commands before claiming success |
-| `code-review-and-quality` | Five-axis review with severity labels |
 | `receiving-code-review` | Handle feedback with technical rigor |
 | `requesting-code-review` | Get quality feedback before merge |
-| `security-and-hardening` | OWASP Top 10 prevention |
-| `performance-optimization` | Measure-first Core Web Vitals improvement |
+| `best-practices` | Modern web development best practices |
+| `performance` | Measure-first Core Web Vitals improvement |
+| `core-web-vitals` | Optimize LCP, INP, CLS |
+| `ultrareview` | Multi-agent parallel code review |
 
 ### 3D & Graphics
 | Skill | Description |
@@ -181,8 +199,10 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `code-documenter` | Docstrings, OpenAPI specs, JSDoc, doc sites |
 | `docs-writing` | Diataxis framework, Stripe-style clarity |
+| `documentation-writer` | Diátaxis expert technical writing |
+| `doc-coauthoring` | Structured workflow for co-authoring docs |
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
-| `readme-creator` | Tailored READMEs for any project type |
+| `design-md` | Synthesize design systems into DESIGN.md files |
 
 ### Office & Productivity
 | Skill | Description |
@@ -192,17 +212,54 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `xlsx` | Spreadsheet creation, editing, data cleaning |
 | `pdf` | PDF read, merge, split, OCR, form filling |
 
+### Business
+| Skill | Description |
+|-------|-------------|
+| `business-analyst` | Product discovery and requirements analysis |
+| `sales-enablement` | Sales collateral, pitch decks, demo scripts |
+| `marketing-psychology` | Behavioral science applied to marketing |
+| `brag-document` | Work accomplishments reports and self-reviews |
+| `internal-comms` | Internal communications writing |
+
+### Design & Creativity
+| Skill | Description |
+|-------|-------------|
+| `figma-developer` | Figma to React component conversion |
+| `canvas-design` | Visual art in .png and .pdf documents |
+| `algorithmic-art` | Generative art and creative coding with p5.js |
+| `theme-factory` | Styling artifacts with pre-set themes |
+
+### Languages
+| Skill | Description |
+|-------|-------------|
+| `javascript-pro` | Modern ES2023+ JavaScript patterns |
+| `typescript-advanced-types` | Generics, conditional types, mapped types |
+| `python-performance-optimization` | Profile and optimize Python code |
+
+### SEO
+| Skill | Description |
+|-------|-------------|
+| `seo` | Search engine visibility optimization |
+| `seo-audit` | Diagnose SEO issues on websites |
+
 ### Meta & Dev Tools
 | Skill | Description |
 |-------|-------------|
-| `enhance-prompt` | Transform vague UI ideas into polished, Stitch-optimized prompts |
+| `enhance-prompt` | Transform vague UI ideas into polished prompts |
 | `skill-creator` | Build new skills with evaluation |
 | `find-skills` | Discover skills for specific tasks |
 | `agent-browser` | Browser automation for AI agents |
 | `mcp-builder` | Build MCP server integrations |
 | `context7` | Retrieve up-to-date library docs |
+| `duckduckgo-search` | Web search without API keys |
 | `using-git-worktrees` | Isolated workspace for feature work |
+| `using-superpowers` | Find and use skills effectively |
 | `dispatching-parallel-agents` | Run independent tasks concurrently |
+| `finishing-a-development-branch` | Guide completion of dev work |
+| `git-master` | Complete Git expertise for all operations |
+| `caveman` | Ultra-compressed communication mode |
+| `grill-me` | Interview user about a plan or design |
+| `gsd` | Get Shit Done project management (30+ sub-skills) |
 
 ---
 
@@ -210,13 +267,13 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 
 | Command | Purpose | Skills Used |
 |---------|---------|-------------|
-| `/spec` | Define what to build (PRD) | `spec-driven-development`, `idea-refine` |
+| `/spec` | Define what to build (PRD) | `brainstorming`, `planning-and-task-breakdown` |
 | `/plan` | Plan how to build (task breakdown) | `planning-and-task-breakdown`, `writing-plans` |
 | `/build` | Build incrementally with feature flags | `incremental-implementation`, `test-driven-development` |
-| `/test` | Verify with comprehensive test suite | `browser-testing-with-devtools`, `systematic-debugging` |
-| `/review` | Quality assurance before merge | `code-review-and-quality`, `security-and-hardening` |
-| `/code-simplify` | Reduce complexity while preserving behavior | `code-simplification`, `performance-optimization` |
-| `/ship` | Deploy with monitoring and rollback | `shipping-and-launch`, `ci-cd-and-automation` |
+| `/test` | Verify with comprehensive test suite | `systematic-debugging`, `verification-before-completion` |
+| `/review` | Quality assurance before merge | `best-practices`, `performance` |
+| `/code-simplify` | Reduce complexity while preserving behavior | `karpathy-guidelines`, `performance` |
+| `/ship` | Deploy with monitoring and rollback | `git-master`, `finishing-a-development-branch` |
 
 ---
 
@@ -232,7 +289,7 @@ The system includes **86 expert agent personas** organized by domain:
 | **Spec Agents** | `spec-analyst`, `spec-architect`, `spec-developer`, `spec-orchestrator`, `spec-planner`, `spec-reviewer`, `spec-tester`, `spec-validator` |
 | **Business** | `product-manager` |
 | **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer` |
-| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Development** | `backend-architect`, `dx-optimizer`, `electorn-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
 | **Frontend** | `senior-frontend-architect` |
 | **Backend** | `senior-backend-architect` |
 | **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer` |

@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 100 specialized skills, 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, design system specs, and documentation guides.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 99 specialized skills, 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, design system specs, and documentation guides.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 100 specialized workflows (production-grade engineering skills)
+- **`skills/`** - 99 specialized workflows (production-grade engineering skills)
 - **`agents/`** - 86 expert personas across 20 categories (hierarchically organized)
 - **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
 - **`commands/`** - 7 slash commands for lifecycle management
@@ -24,7 +24,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 100 specialized skills cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 99 specialized skills cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -34,62 +34,58 @@ Your agent system operates across 7 lifecycle phases:
 
 ### Key Skills by Category
 
-#### Define & Plan (6 skills)
-- `idea-refine` - Transform vague concepts into concrete proposals
-- `spec-driven-development` - Write PRDs before any code
+#### Define & Plan (4 skills)
+- `brainstorming` - Explore intent, requirements, and design before implementation
 - `planning-and-task-breakdown` - Decompose specs into verifiable tasks
-- `using-agent-skills` - Master this entire system
 - `writing-plans` - Create detailed implementation plans
+- `executing-plans` - Execute written plans with review checkpoints
 
-#### Build & Code (15 skills)
+#### Build & Code (6 skills)
 - `incremental-implementation` - Thin vertical slices with feature flags
 - `test-driven-development` - Red-Green-Refactor with test pyramid
 - `source-driven-development` - Ground decisions in official documentation
-- `frontend-ui-engineering` - Component architecture & responsive design
-- `api-and-interface-design` - Contract-first APIs with boundary validation
-- `context-engineering` - Feed agents optimal information at right time
-- `code-simplification` - Reduce complexity while preserving behavior
+- `subagent-driven-development` - Execute plans with independent sub-agents
+- `dispatching-parallel-agents` - Run independent tasks concurrently
+- `karpathy-guidelines` - Behavioral guidelines to reduce LLM coding mistakes
 
 #### Verify & Test (4 skills)
-- `browser-testing-with-devtools` - Live Chrome DevTools runtime data
-- `debugging-and-error-recovery` - Five-step triage with safe fallbacks
 - `systematic-debugging` - Structured bug investigation workflows
-
-#### Review & Quality (6 skills)
-- `code-review-and-quality` - Five-axis review with severity labels
+- `verification-before-completion` - Run commands before claiming success
 - `receiving-code-review` - Handle feedback with technical rigor
 - `requesting-code-review` - Get quality feedback before merge
-- `security-and-hardening` - OWASP Top 10 prevention
-- `performance-optimization` - Measure-first approach with Core Web Vitals
 
-#### Ship & Deploy (7 skills)
-- `git-workflow-and-versioning` - Trunk-based development patterns
-- `ci-cd-and-automation` - Shift-left deployment with quality gates
-- `shipping-and-launch` - Pre-launch checklists and staged rollouts
-- `deprecation-and-migration` - Treat code as liability, plan sunsetting
-- `documentation-and-adrs` - Architecture Decision Records
+#### Review & Quality (3 skills)
+- `best-practices` - Modern web development best practices for security and quality
+- `performance` - Measure-first approach with Core Web Vitals improvement
+- `core-web-vitals` - Optimize LCP, INP, CLS for better page experience
 
-#### Specialized Domains (60+ skills)
+#### Ship & Deploy (3 skills)
+- `git-master` - Complete Git expertise for all git operations
+- `finishing-a-development-branch` - Guide completion of development work
+- `using-git-worktrees` - Isolated workspace for feature work
+
+#### Specialized Domains (70+ skills)
 - **Cloud & Infra**: `cloudflare`, `neon-postgres`, `supabase-postgres-best-practices`, `database-optimizer`, `docker-expert`
-- **Security**: `security-and-hardening`, `security-checklist`
-- **Performance**: `performance-optimization`, `performance-checklist`, `core-web-vitals`, `python-performance-optimization`
-- **Testing**: `playwright-best-practices`, `testing-patterns`
-- **UI/UX**: `impeccable`, `web-design-guidelines`, `web-quality-audit`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `scroll-animations`
+- **Performance**: `performance`, `core-web-vitals`, `python-performance-optimization`
+- **Accessibility**: `accessibility`, `web-design-guidelines`, `web-quality-audit`
+- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `scroll-animations`
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
+- **Automation & Workflow**: `n8n-code-javascript`
 - **Databases & ORM**: `prisma`, `prisma-expert`, `sql-pro`, `sql-optimization-patterns`, `supabase-postgres-best-practices`
 - **Languages**: `javascript-pro`, `typescript-advanced-types`
 - **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`, `internal-comms`
-- **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`
+- **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`
+- **SEO**: `seo`, `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Project Management**: `gsd` (30+ sub-skills for Get Shit Done system)
-- **Other**: `explainer`, `urgency-action`, `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `design-md`
+- **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
 
 **Automatic Activation**
-Skills trigger based on context. Mention "API design" -> `api-and-interface-design` loads. Say "optimize performance" -> `performance-optimization` activates.
+Skills trigger based on context. Mention "API design" -> `fastapi-expert` loads. Say "optimize performance" -> `performance` activates.
 
 **Manual Invocation**
 Reference skills directly: "Use the `test-driven-development` skill for this implementation."
@@ -285,7 +281,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `/spec` - Define What to Build
 - **Input**: Vague idea or requirement
 - **Output**: Detailed PRD with objectives, success criteria, boundaries
-- **Skills Used**: `spec-driven-development`, `idea-refine`
+- **Skills Used**: `brainstorming`, `planning-and-task-breakdown`
 
 #### `/plan` - Plan How to Build
 - **Input**: PRD or requirements
@@ -300,22 +296,22 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `/test` - Verify It Works
 - **Input**: Code changes
 - **Output**: Comprehensive test suite, debugging reports
-- **Skills Used**: `browser-testing-with-devtools`, `systematic-debugging`
+- **Skills Used**: `systematic-debugging`, `verification-before-completion`
 
 #### `/review` - Quality Assurance
 - **Input**: Code ready for merge
 - **Output**: Review feedback, security audit, performance analysis
-- **Skills Used**: `code-review-and-quality`, `security-and-hardening`
+- **Skills Used**: `best-practices`, `performance`
 
 #### `/code-simplify` - Optimize & Clean
 - **Input**: Working but complex code
 - **Output**: Simplified code maintaining exact behavior
-- **Skills Used**: `code-simplification`, `performance-optimization`
+- **Skills Used**: `karpathy-guidelines`, `performance`
 
 #### `/ship` - Deploy to Production
 - **Input**: Reviewed, tested code
 - **Output**: Successful deployment with monitoring, rollback plans
-- **Skills Used**: `shipping-and-launch`, `ci-cd-and-automation`
+- **Skills Used**: `git-master`, `finishing-a-development-branch`
 
 ### Command Usage Patterns
 
@@ -421,7 +417,6 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ### Context Engineering
 
 **Information Management**:
-- Use `context-engineering` skill to optimize information flow
 - Load relevant references proactively
 - Maintain clean, focused context windows
 
@@ -454,7 +449,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Sequential dependencies for integrated features
 
 **Skill Composition**:
-- Combine domain skills (e.g., `impeccable` + `security-and-hardening`)
+- Combine domain skills (e.g., `impeccable` + `best-practices`)
 - Layer quality skills on top of implementation
 - Use specialized agents for expert reviews
 
@@ -503,7 +498,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Test with explicit skill reference
 
 **Performance Issues**:
-- Use `performance-optimization` skill
+- Use `performance` skill
 - Check bundle sizes and loading patterns
 - Profile with browser dev tools
 
@@ -516,7 +511,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skills, 86 expert agents, 9 MCP integrations, design system specs, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 99 skills, 86 expert agents, 9 MCP integrations, design system specs, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -526,4 +521,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-10 | Total Skills: 100 | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 1 | Docs: 3*
+*Last updated: 2026-05-11 | Total Skills: 99 | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 1 | Docs: 3*
