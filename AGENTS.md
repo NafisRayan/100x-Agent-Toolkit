@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 86 expert agent personas across 20 categories, 5 reference checklists, 7 development commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 5 reference checklists, 84 slash commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -13,12 +13,13 @@ Your agent system operates across 7 lifecycle phases:
 
 ### Core Architecture
 - **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
-- **`agents/`** - 86 expert personas across 20 categories (hierarchically organized)
+- **`agents/`** - 142 expert personas across 23 categories (hierarchically organized)
 - **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
-- **`commands/`** - 7 slash commands for lifecycle management
+- **`commands/`** - 84 slash commands for lifecycle management
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`designs/`** - Design system specifications (Figma-inspired, etc.)
 - **`docs/`** - Internal documentation (best practices, agent creation guides, dependency maps)
+- **`rules/`** - Language-specific coding rules and conventions (angular, arkts, cpp, csharp, dart, fsharp, golang, java, kotlin, perl, php, python, rust, swift, typescript, web, zh)
 
 ---
 
@@ -105,7 +106,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Agent Personas (`agents/`)
 
-**86 specialized expert agents** organized across 20 categories in a hierarchical directory structure.
+**142 specialized expert agents** organized across 23 categories in a hierarchical directory structure.
 
 ### Directory Structure
 
@@ -117,13 +118,22 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `agents/beast-mode/` - Autonomous Execution Mode
 - `beast mode 3.1` - Fully autonomous problem-solving agent with extensive internet research capabilities
 
-#### `agents/core/` - Core Engineering (4 agents)
+#### `agents/core/` - Core Engineering (13 agents)
 - `code-reviewer` - Security-aware code review with severity-tagged reports
 - `code-archaeologist` - Deep codebase analysis and legacy understanding
 - `documentation-specialist` - Technical documentation expertise
 - `performance-optimizer` - Performance profiling and optimization
+- `a11y-architect` - WCAG 2.2 accessibility compliance for Web and Native platforms
+- `architect` - Software architecture specialist for system design and scalability
+- `code-architect` - Feature architecture design with implementation blueprints
+- `code-explorer` - Deep codebase analysis tracing execution paths and dependencies
+- `code-simplifier` - Code simplification and maintainability improvement
+- `comment-analyzer` - Code comment accuracy and maintainability analysis
+- `conversation-analyzer` - Conversation transcript analysis for hook behaviors
+- `planner` - Expert planning specialist for complex features and refactoring
+- `type-design-analyzer` - Type design analysis for encapsulation and invariants
 
-#### `agents/development/` - Development Specialists (14 agents)
+#### `agents/development/` - Development Specialists (15 agents)
 - `backend-architect` - Backend system design and architecture
 - `frontend-developer` - Frontend development across frameworks
 - `full-stack-developer` - Full-stack implementation
@@ -138,6 +148,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - `dx-optimizer` - Developer experience optimization
 - `legacy-modernizer` - Legacy code modernization
 - `electron-pro` - Electron desktop app development
+- `harmonyos-app-resolver` - HarmonyOS/ArkTS/ArkUI development expert
 
 #### `agents/frontend/` - Frontend Architecture (1 agent)
 - `senior-frontend-architect` - Senior-level frontend architecture decisions
@@ -145,7 +156,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `agents/backend/` - Backend Architecture (1 agent)
 - `senior-backend-architect` - Senior-level backend architecture decisions
 
-#### `agents/data-ai/` - Data & AI (8 agents)
+#### `agents/data-ai/` - Data & AI (11 agents)
 - `ai-engineer` - AI/ML system design
 - `data-engineer` - Data pipeline and infrastructure
 - `data-scientist` - Statistical analysis and modeling
@@ -154,28 +165,42 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - `ml-engineer` - Machine learning engineering
 - `postgres-pro` - PostgreSQL specialist
 - `prompt-engineer` - LLM prompt optimization
+- `gan-evaluator` - GAN Harness evaluator agent for testing live applications
+- `gan-generator` - GAN Harness generator agent for iterative feature implementation
+- `gan-planner` - GAN Harness planner agent for product specification expansion
 
-#### `agents/infrastructure/` - Infrastructure & DevOps (5 agents)
+#### `agents/infrastructure/` - Infrastructure & DevOps (9 agents)
 - `cloud-architect` - Cloud infrastructure design
 - `deployment-engineer` - CI/CD and deployment automation
 - `devops-incident-responder` - DevOps incident management
 - `incident-responder` - Production incident response
 - `performance-engineer` - Infrastructure performance
+- `harness-optimizer` - Agent harness configuration optimization
+- `homelab-architect` - Home and small-lab network architecture design
+- `network-architect` - Enterprise and multi-site network architecture
+- `network-troubleshooter` - Network connectivity and routing diagnostics
 
 #### `agents/security/` - Security (1 agent)
 - `security-auditor` - Security vulnerability detection and OWASP compliance
+- `security-reviewer` - Security vulnerability detection and remediation specialist
 
-#### `agents/quality-testing/` - Quality & Testing (5 agents)
+#### `agents/quality-testing/` - Quality & Testing (9 agents)
 - `code-reviewer` - Quality-focused code review
 - `architect-review` - Architecture-level review
 - `debugger` - Systematic debugging specialist
 - `qa-expert` - Quality assurance strategy
 - `test-automator` - Test automation engineering
+- `e2e-runner` - End-to-end testing with Vercel Agent Browser and Playwright
+- `pr-test-analyzer` - Pull request test coverage quality review
+- `silent-failure-hunter` - Silent failure and swallowed error detection
+- `tdd-guide` - Test-Driven Development specialist
 
-#### `agents/orchestrators/` - Project Orchestrators (3 agents)
+#### `agents/orchestrators/` - Project Orchestrators (5 agents)
 - `tech-lead-orchestrator` - Senior tech lead for task delegation and coordination
 - `project-analyst` - Project requirement analysis
 - `team-configurator` - Agent team configuration and setup
+- `chief-of-staff` - Multi-channel communication triage and management
+- `loop-operator` - Autonomous agent loop monitoring and intervention
 
 #### `agents/spec-agents/` - Specification Pipeline (8 agents)
 - `spec-orchestrator` - Orchestrates the full spec pipeline
@@ -193,9 +218,12 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `agents/business/` - Business & Product (1 agent)
 - `product-manager` - Product strategy and roadmap management
 
-#### `agents/specialization/` - Specialized Expertise (2 agents)
+#### `agents/specialization/` - Specialized Expertise (5 agents)
 - `api-documenter` - API documentation specialist
 - `documentation-expert` - Technical writing expert
+- `doc-updater` - Documentation and codemap update specialist
+- `docs-lookup` - Context7-based documentation lookup specialist
+- `seo-specialist` - Technical SEO audits and optimization specialist
 
 #### `agents/specialized/` - Framework-Specific Experts (22 agents)
 - **Django** (3): `django-api-developer`, `django-backend-expert`, `django-orm-expert`
@@ -211,8 +239,43 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - `frontend-developer` - Frontend development across all stacks
 - `tailwind-css-expert` - Tailwind CSS specialist
 
-#### `agents/utility/` - Utility Agents (1 agent)
+#### `agents/utility/` - Utility Agents (2 agents)
 - `refactor-agent` - Code refactoring specialist
+- `refactor-cleaner` - Dead code cleanup and consolidation specialist
+
+#### `agents/build-resolvers/` - Build Error Resolvers (9 agents)
+- `build-error-resolver` - Build and TypeScript error resolution specialist
+- `cpp-build-resolver` - C++ build, CMake, and compilation error resolution
+- `dart-build-resolver` - Dart/Flutter build and analysis error resolution
+- `go-build-resolver` - Go build, vet, and compilation error resolution
+- `java-build-resolver` - Java/Maven/Gradle build and dependency error resolution
+- `kotlin-build-resolver` - Kotlin/Gradle build and compilation error resolution
+- `pytorch-build-resolver` - PyTorch runtime, CUDA, and training error resolution
+- `rust-build-resolver` - Rust build, cargo, and borrow checker error resolution
+- `swift-build-resolver` - Swift/Xcode build and dependency error resolution
+
+#### `agents/opensource/` - Open Source Pipeline (3 agents)
+- `opensource-forker` - Fork projects for open-sourcing, strips secrets and credentials
+- `opensource-sanitizer` - Verify open-source forks are fully sanitized before release
+- `opensource-packager` - Generate complete open-source packaging for sanitized projects
+
+#### `agents/reviewers/` - Language-Specific Reviewers (16 agents)
+- `cpp-reviewer` - Expert C++ code reviewer (memory safety, modern C++, concurrency)
+- `csharp-reviewer` - Expert C# code reviewer (.NET conventions, async, nullable types)
+- `database-reviewer` - PostgreSQL query optimization, schema design, and security
+- `fastapi-reviewer` - FastAPI async correctness, dependency injection, Pydantic schemas
+- `flutter-reviewer` - Flutter/Dart widget best practices, state management, performance
+- `fsharp-reviewer` - Expert F# code reviewer (functional idioms, type safety, pattern matching)
+- `go-reviewer` - Expert Go code reviewer (idiomatic Go, concurrency, error handling)
+- `healthcare-reviewer` - Healthcare application clinical safety, PHI compliance, data integrity
+- `java-reviewer` - Expert Java/Spring Boot code reviewer (layered architecture, JPA, security)
+- `kotlin-reviewer` - Kotlin/Android/KMP idiomatic patterns, coroutines, Compose
+- `mle-reviewer` - Production ML engineering reviewer (data contracts, training, serving)
+- `network-config-reviewer` - Router/switch configuration security and correctness
+- `python-reviewer` - Expert Python code reviewer (PEP 8, type hints, security)
+- `rust-reviewer` - Expert Rust code reviewer (ownership, lifetimes, unsafe, idiomatic patterns)
+- `swift-reviewer` - Expert Swift code reviewer (protocol-oriented design, ARC, Swift Concurrency)
+- `typescript-reviewer` - Expert TypeScript/JavaScript reviewer (type safety, async, security)
 
 #### `agents/code-reviewer-local/` (Legacy)
 - Local code review agent
@@ -274,7 +337,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Commands Directory (`commands/`)
 
-**7 slash commands** that orchestrate your entire development lifecycle.
+**84 slash commands** that orchestrate your entire development lifecycle.
 
 ### Development Lifecycle Commands
 
@@ -312,6 +375,108 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - **Input**: Reviewed, tested code
 - **Output**: Successful deployment with monitoring, rollback plans
 - **Skills Used**: `git-master`, `finishing-a-development-branch`
+
+### Extended Commands (77 additional)
+
+#### Build & Fix
+- `/build-fix` - Resolve build errors and TypeScript issues
+- `/cpp-build` - Fix C++/CMake build errors
+- `/dart-build` - Fix Dart/Flutter build errors (alias: `/flutter-build`)
+- `/go-build` - Fix Go build errors
+- `/gradle-build` - Fix Gradle build errors
+- `/java-build` - Fix Java/Maven/Gradle build errors
+- `/kotlin-build` - Fix Kotlin/Gradle build errors
+- `/rust-build` - Fix Rust/Cargo build errors
+- `/swift-build` - Fix Swift/Xcode build errors
+
+#### Code Review
+- `/code-review` - Run comprehensive code review
+- `/cpp-review` - C++ code review
+- `/fastapi-review` - FastAPI code review
+- `/flutter-review` - Flutter/Dart code review
+- `/go-review` - Go code review
+- `/kotlin-review` - Kotlin code review
+- `/python-review` - Python code review
+- `/rust-review` - Rust code review
+- `/review-pr` - Review a pull request
+- `/pr` - Create a pull request
+
+#### Testing
+- `/cpp-test` - Run C++ tests
+- `/e2e` - Run end-to-end tests
+- `/flutter-test` - Run Flutter tests
+- `/go-test` - Run Go tests
+- `/kotlin-test` - Run Kotlin tests
+- `/rust-test` - Run Rust tests
+- `/tdd` - Test-Driven Development workflow
+- `/test-coverage` - Check test coverage
+
+#### Security & Quality
+- `/security` - Security audit
+- `/security-scan` - Run security scanning
+- `/quality-gate` - Enforce quality gates
+- `/verify` - Verify completed work
+
+#### Project Management
+- `/project-init` - Initialize a new project
+- `/projects` - List projects
+- `/setup-pm` - Setup project management
+- `/checkpoint` - Create/save checkpoints
+- `/save-session` - Save current session
+- `/resume-session` - Resume a saved session
+- `/sessions` - List sessions
+- `/jira` - Jira integration
+
+#### Feature Development
+- `/feature-dev` - Develop a feature end-to-end
+- `/plan-prd` - Plan from a PRD
+- `/prp-prd` - PRP pipeline: PRD creation
+- `/prp-plan` - PRP pipeline: planning
+- `/prp-implement` - PRP pipeline: implementation
+- `/prp-pr` - PRP pipeline: pull request
+- `/prp-commit` - PRP pipeline: commit
+- `/gan-build` - GAN Harness: build
+- `/gan-design` - GAN Harness: design
+
+#### Multi-Agent Orchestration
+- `/orchestrate` - Orchestrate multi-agent workflow
+- `/multi-plan` - Multi-agent planning
+- `/multi-execute` - Multi-agent execution
+- `/multi-frontend` - Multi-agent frontend work
+- `/multi-backend` - Multi-agent backend work
+- `/multi-workflow` - Multi-agent workflow
+
+#### Agent Loop & Learning
+- `/loop-start` - Start an agent loop
+- `/loop-status` - Check loop status
+- `/santa-loop` - Santa loop workflow
+- `/learn` - Learn from interactions
+- `/learn-eval` - Evaluate learning
+
+#### Tools & Utilities
+- `/aside` - Side task handling
+- `/auto-update` - Auto-update system
+- `/evolve` - Evolve the codebase
+- `/eval` - Run evaluations
+- `/promote` - Promote changes
+- `/prune` - Prune unused code
+- `/refactor-clean` - Refactor and clean code
+- `/model-route` - Model routing configuration
+- `/pm2` - PM2 process management
+- `/hookify` - Generate hooks from conversations
+- `/hookify-configure` - Configure hooks
+- `/hookify-help` - Hook help
+- `/hookify-list` - List hooks
+- `/instinct-export` - Export instincts
+- `/instinct-import` - Import instincts
+- `/instinct-status` - Check instinct status
+- `/skill-create` - Create a new skill
+- `/skill-health` - Check skill health
+- `/update-codemaps` - Update code maps
+- `/update-docs` - Update documentation
+- `/harness-audit` - Audit agent harness
+- `/ecc-guide` - ECC guide
+- `/ecc-guide` - ECC guide
 
 ### Command Usage Patterns
 
@@ -530,7 +695,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 86 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -540,4 +705,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-11 | Total Skills: 168 (100 core + 68 GSD) | Commands: 7 | Agents: 86 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*
+*Last updated: 2026-05-12 | Total Skills: 168 (100 core + 68 GSD) | Commands: 84 | Agents: 142 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*

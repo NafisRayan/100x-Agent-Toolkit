@@ -150,6 +150,8 @@ This is a comprehensive list of all available agents organized by expertise area
 - **tech-lead-orchestrator** - Senior technical lead who analyzes complex software projects and provides strategic recommendations. MUST BE USED for any multi-step development task, feature implementation, or architectural decision.
 - **team-configurator** - MUST BE USED to set up or refresh the AI development team for the current project. Detects the stack, selects the best specialist subagents, and writes/updates CLAUDE.md.
 - **project-analyst** - MUST BE USED to analyse any new or unfamiliar codebase. Detects frameworks, tech stacks, and architecture so specialists can be routed correctly.
+- **chief-of-staff** - Personal communication chief of staff that triages email, Slack, LINE, and Messenger. Classifies messages and generates draft replies.
+- **loop-operator** - Operate autonomous agent loops, monitor progress, and intervene safely when loops stall.
 
 ### Spec Pipeline Agents
 
@@ -168,6 +170,15 @@ This is a comprehensive list of all available agents organized by expertise area
 - **performance-optimizer** - MUST BE USED for slowness, high cloud costs, or scaling concerns. Identifies bottlenecks, profiles workloads, and applies optimisations.
 - **documentation-specialist** - MUST BE USED to craft or update project documentation. Produces READMEs, API specs, architecture guides, and user manuals.
 - **code-archaeologist** - MUST BE USED to explore unfamiliar, legacy, or complex codebases. Produces architecture reports, metrics, risks, and prioritised action plans.
+- **a11y-architect** - Accessibility Architect specializing in WCAG 2.2 compliance for Web and Native platforms. Use when designing UI components or auditing for inclusive user experiences.
+- **architect** - Software architecture specialist for system design, scalability, and technical decision-making. Use when planning new features or making architectural decisions.
+- **code-architect** - Designs feature architectures by analyzing existing codebase patterns and providing implementation blueprints.
+- **code-explorer** - Deeply analyzes codebase features by tracing execution paths, mapping architecture layers, and documenting dependencies.
+- **code-simplifier** - Simplifies and refines code for clarity, consistency, and maintainability while preserving behavior.
+- **comment-analyzer** - Analyzes code comments for accuracy, completeness, maintainability, and comment rot risk.
+- **conversation-analyzer** - Analyzes conversation transcripts to find behaviors worth preventing with hooks.
+- **planner** - Expert planning specialist for complex features and refactoring. Automatically activated for planning tasks.
+- **type-design-analyzer** - Analyze type design for encapsulation, invariant expression, usefulness, and enforcement.
 
 ### Development & Engineering Agents
 
@@ -194,6 +205,7 @@ This is a comprehensive list of all available agents organized by expertise area
 - **typescript-pro** - Advanced TypeScript developer emphasizing type safety, advanced TS features, and scalable application architecture.
 - **mobile-developer** - Cross-platform mobile application developer specializing in React Native and Flutter.
 - **electron-pro** - Desktop application specialist using Electron framework for cross-platform desktop solutions.
+- **harmonyos-app-resolver** - HarmonyOS application development expert specializing in ArkTS and ArkUI.
 
 **Developer Experience & Modernization:**
 
@@ -207,6 +219,10 @@ This is a comprehensive list of all available agents organized by expertise area
 - **cloud-architect** - AWS, Azure, GCP specialist designing scalable cloud infrastructure and cloud-native solutions.
 - **deployment-engineer** - CI/CD pipeline expert specializing in Docker, Kubernetes, infrastructure automation, and deployment strategies.
 - **performance-engineer** - Application performance specialist focusing on bottleneck analysis, optimization strategies, and performance monitoring.
+- **harness-optimizer** - Analyzes and improves agent harness configuration for reliability, cost, and throughput.
+- **homelab-architect** - Designs home and small-lab network plans from hardware inventory, goals, and operator experience level.
+- **network-architect** - Designs enterprise or multi-site network architecture from requirements.
+- **network-troubleshooter** - Diagnoses network connectivity, routing, DNS, interface, and policy symptoms.
 
 **Incident Response & Operations:**
 
@@ -227,6 +243,10 @@ This is a comprehensive list of all available agents organized by expertise area
 
 - **qa-expert** - Comprehensive quality assurance specialist developing testing strategies and quality processes.
 - **test-automator** - Test automation specialist creating comprehensive test suites including unit, integration, and E2E testing.
+- **e2e-runner** - End-to-end testing specialist using Vercel Agent Browser with Playwright fallback.
+- **pr-test-analyzer** - Review pull request test coverage quality and completeness.
+- **silent-failure-hunter** - Review code for silent failures, swallowed errors, bad fallbacks, and missing error propagation.
+- **tdd-guide** - Test-Driven Development specialist enforcing write-tests-first methodology.
 
 ### Data & AI Agents
 
@@ -243,11 +263,15 @@ This is a comprehensive list of all available agents organized by expertise area
 - **ai-engineer** - LLM application specialist building RAG systems, prompt pipelines, and AI-powered features.
 - **ml-engineer** - Machine learning specialist implementing ML pipelines, model serving infrastructure, and production ML systems.
 - **prompt-engineer** - LLM optimization specialist focusing on prompt engineering and maximizing language model effectiveness.
+- **gan-evaluator** - GAN Harness evaluator agent for testing live applications.
+- **gan-generator** - GAN Harness generator agent for iterative feature implementation.
+- **gan-planner** - GAN Harness planner agent for product specification expansion.
 
 ### Security Specialists
 
 - **security-auditor** (security) - Senior application security auditor and ethical hacker. Specializes in comprehensive security assessments, penetration testing, and OWASP compliance.
 - **security-auditor** (root) - Security engineer focused on vulnerability detection, threat modeling, and secure coding practices.
+- **security-reviewer** - Security vulnerability detection and remediation specialist. Flags secrets, SSRF, injection, unsafe crypto, and OWASP Top 10 vulnerabilities.
 
 ### Business & Strategy Agents
 
@@ -259,6 +283,9 @@ This is a comprehensive list of all available agents organized by expertise area
 
 - **api-documenter** - API documentation specialist creating OpenAPI/Swagger specifications and comprehensive API reference materials.
 - **documentation-expert** - Technical writing specialist creating user manuals, system documentation, and knowledge bases.
+- **doc-updater** - Documentation and codemap update specialist. Runs /update-codemaps and /update-docs.
+- **docs-lookup** - Context7 MCP-based documentation lookup specialist. Use for docs/API/setup questions.
+- **seo-specialist** - SEO specialist for technical SEO audits, on-page optimization, structured data, and Core Web Vitals.
 
 ### Universal Agents
 
@@ -270,6 +297,7 @@ This is a comprehensive list of all available agents organized by expertise area
 ### Utility Agents
 
 - **refactor-agent** - Improves existing code structure, readability, or maintainability without changing functionality.
+- **refactor-cleaner** - Dead code cleanup and consolidation specialist. Runs analysis tools to identify and safely remove dead code.
 - **beast-mode** - Relentless implementation agent that keeps going until the user's query is completely resolved.
 
 ### Framework-Specific Specialists
@@ -313,6 +341,43 @@ This is a comprehensive list of all available agents organized by expertise area
 - **django-backend-expert** - Expert Django backend developer specializing in models, views, services, and Django-specific implementations.
 - **django-orm-expert** - Expert in Django ORM optimization, complex queries, and database performance.
 - **django-api-developer** - Expert Django API developer specializing in Django REST Framework and GraphQL.
+
+### Build Error Resolvers
+
+- **build-error-resolver** - Build and TypeScript error resolution specialist. Fixes build/type errors with minimal diffs.
+- **cpp-build-resolver** - C++ build, CMake, and compilation error resolution specialist.
+- **dart-build-resolver** - Dart/Flutter build, analysis, and dependency error resolution specialist.
+- **go-build-resolver** - Go build, vet, and compilation error resolution specialist.
+- **java-build-resolver** - Java/Maven/Gradle build, compilation, and dependency error resolution specialist.
+- **kotlin-build-resolver** - Kotlin/Gradle build, compilation, and dependency error resolution specialist.
+- **pytorch-build-resolver** - PyTorch runtime, CUDA, and training error resolution specialist.
+- **rust-build-resolver** - Rust build, cargo, and borrow checker error resolution specialist.
+- **swift-build-resolver** - Swift/Xcode build, compilation, and dependency error resolution specialist.
+
+### Open Source Pipeline
+
+- **opensource-forker** - Fork projects for open-sourcing. Strips secrets, credentials, replaces internal references.
+- **opensource-sanitizer** - Verify open-source forks are fully sanitized before release. Scans for leaked secrets and PII.
+- **opensource-packager** - Generate complete open-source packaging including CLAUDE.md, README, LICENSE, CONTRIBUTING.md.
+
+### Language-Specific Reviewers
+
+- **cpp-reviewer** - Expert C++ code reviewer (memory safety, modern C++, concurrency).
+- **csharp-reviewer** - Expert C# code reviewer (.NET conventions, async, nullable types).
+- **database-reviewer** - PostgreSQL query optimization, schema design, and security.
+- **fastapi-reviewer** - FastAPI async correctness, dependency injection, Pydantic schemas.
+- **flutter-reviewer** - Flutter/Dart widget best practices, state management, performance.
+- **fsharp-reviewer** - Expert F# code reviewer (functional idioms, type safety, pattern matching).
+- **go-reviewer** - Expert Go code reviewer (idiomatic Go, concurrency, error handling).
+- **healthcare-reviewer** - Healthcare application clinical safety, PHI compliance, data integrity.
+- **java-reviewer** - Expert Java/Spring Boot code reviewer (layered architecture, JPA, security).
+- **kotlin-reviewer** - Kotlin/Android/KMP idiomatic patterns, coroutines, Compose.
+- **mle-reviewer** - Production ML engineering reviewer (data contracts, training, serving).
+- **network-config-reviewer** - Router/switch configuration security and correctness.
+- **python-reviewer** - Expert Python code reviewer (PEP 8, type hints, security).
+- **rust-reviewer** - Expert Rust code reviewer (ownership, lifetimes, unsafe, idiomatic patterns).
+- **swift-reviewer** - Expert Swift code reviewer (protocol-oriented design, ARC, Swift Concurrency).
+- **typescript-reviewer** - Expert TypeScript/JavaScript reviewer (type safety, async, security).
 
 ## 🎯 Core Operating Principle
 

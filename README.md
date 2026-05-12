@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows** (100 core + 68 GSD sub-skills), **86 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **7 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **84 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -34,7 +34,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 │       └── evals/         # Evaluation test cases
 │   └── ...
 │
-├── agents/                # 86 expert agent personas
+├── agents/                # 142 expert agent personas
 │   ├── code-reviewer.md   # Senior Staff Engineer perspective
 │   ├── security-auditor.md# Security Engineer perspective
 │   ├── test-engineer.md   # QA Engineer perspective
@@ -48,7 +48,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   ├── security/          # Security auditing
 │   └── specialization/    # API docs, technical writing
 │
-├── commands/               # 7 slash command definitions
+├── commands/               # 84 slash command definitions
 │   ├── spec.md            # Define requirements
 │   ├── plan.md            # Break down into tasks
 │   ├── build.md           # Implement incrementally
@@ -63,6 +63,25 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   ├── performance-checklist.md
 │   ├── accessibility-checklist.md
 │   └── orchestration-patterns.md
+│
+├── rules/                  # Language-specific coding rules
+│   ├── angular/            # Angular rules
+│   ├── arkts/              # ArkTS/HarmonyOS rules
+│   ├── cpp/                # C++ rules
+│   ├── csharp/             # C# rules
+│   ├── dart/               # Dart rules
+│   ├── fsharp/             # F# rules
+│   ├── golang/             # Go rules
+│   ├── java/               # Java rules
+│   ├── kotlin/             # Kotlin rules
+│   ├── perl/               # Perl rules
+│   ├── php/                # PHP rules
+│   ├── python/             # Python rules
+│   ├── rust/               # Rust rules
+│   ├── swift/              # Swift rules
+│   ├── typescript/         # TypeScript rules
+│   ├── web/                # Web rules
+│   └── zh/                 # Chinese language rules
 │
 ├── docs/
 │   ├── best-practices.md    # Crafting high-impact Claude Code sub-agents
@@ -271,6 +290,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 
 ## Slash Commands
 
+### Lifecycle Commands
 | Command | Purpose | Skills Used |
 |---------|---------|-------------|
 | `/spec` | Define what to build (PRD) | `brainstorming`, `planning-and-task-breakdown` |
@@ -278,34 +298,154 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `/build` | Build incrementally with feature flags | `incremental-implementation`, `test-driven-development` |
 | `/test` | Verify with comprehensive test suite | `systematic-debugging`, `verification-before-completion` |
 | `/review` | Quality assurance before merge | `best-practices`, `performance` |
-| `/code-simplify` | Reduce complexity while preserving behavior | `karpathy-guidelines`, `performance` |
+| `/code_simplify` | Reduce complexity while preserving behavior | `karpathy-guidelines`, `performance` |
 | `/ship` | Deploy with monitoring and rollback | `git-master`, `finishing-a-development-branch` |
+
+### Build & Fix
+| Command | Purpose |
+|---------|---------|
+| `/build-fix` | Resolve build errors and TypeScript issues |
+| `/cpp-build` | Fix C++/CMake build errors |
+| `/dart-build` | Fix Dart/Flutter build errors (alias: `/flutter-build`) |
+| `/go-build` | Fix Go build errors |
+| `/gradle-build` | Fix Gradle build errors |
+| `/java-build` | Fix Java/Maven/Gradle build errors |
+| `/kotlin-build` | Fix Kotlin/Gradle build errors |
+| `/rust-build` | Fix Rust/Cargo build errors |
+| `/swift-build` | Fix Swift/Xcode build errors |
+
+### Code Review
+| Command | Purpose |
+|---------|---------|
+| `/code-review` | Run comprehensive code review |
+| `/cpp-review` | C++ code review |
+| `/fastapi-review` | FastAPI code review |
+| `/flutter-review` | Flutter/Dart code review |
+| `/go-review` | Go code review |
+| `/kotlin-review` | Kotlin code review |
+| `/python-review` | Python code review |
+| `/rust-review` | Rust code review |
+| `/review-pr` | Review a pull request |
+| `/pr` | Create a pull request |
+
+### Testing
+| Command | Purpose |
+|---------|---------|
+| `/cpp-test` | Run C++ tests |
+| `/e2e` | Run end-to-end tests |
+| `/flutter-test` | Run Flutter tests |
+| `/go-test` | Run Go tests |
+| `/kotlin-test` | Run Kotlin tests |
+| `/rust-test` | Run Rust tests |
+| `/tdd` | Test-Driven Development workflow |
+| `/test-coverage` | Check test coverage |
+
+### Security & Quality
+| Command | Purpose |
+|---------|---------|
+| `/security` | Security audit |
+| `/security-scan` | Run security scanning |
+| `/quality-gate` | Enforce quality gates |
+| `/verify` | Verify completed work |
+
+### Project Management
+| Command | Purpose |
+|---------|---------|
+| `/project-init` | Initialize a new project |
+| `/projects` | List projects |
+| `/setup-pm` | Setup project management |
+| `/checkpoint` | Create/save checkpoints |
+| `/save-session` | Save current session |
+| `/resume-session` | Resume a saved session |
+| `/sessions` | List sessions |
+| `/jira` | Jira integration |
+
+### Feature Development
+| Command | Purpose |
+|---------|---------|
+| `/feature-dev` | Develop a feature end-to-end |
+| `/plan-prd` | Plan from a PRD |
+| `/prp-prd` | PRP pipeline: PRD creation |
+| `/prp-plan` | PRP pipeline: planning |
+| `/prp-implement` | PRP pipeline: implementation |
+| `/prp-pr` | PRP pipeline: pull request |
+| `/prp-commit` | PRP pipeline: commit |
+| `/gan-build` | GAN Harness: build |
+| `/gan-design` | GAN Harness: design |
+
+### Multi-Agent Orchestration
+| Command | Purpose |
+|---------|---------|
+| `/orchestrate` | Orchestrate multi-agent workflow |
+| `/multi-plan` | Multi-agent planning |
+| `/multi-execute` | Multi-agent execution |
+| `/multi-frontend` | Multi-agent frontend work |
+| `/multi-backend` | Multi-agent backend work |
+| `/multi-workflow` | Multi-agent workflow |
+
+### Agent Loop & Learning
+| Command | Purpose |
+|---------|---------|
+| `/loop-start` | Start an agent loop |
+| `/loop-status` | Check loop status |
+| `/santa-loop` | Santa loop workflow |
+| `/learn` | Learn from interactions |
+| `/learn-eval` | Evaluate learning |
+
+### Tools & Utilities
+| Command | Purpose |
+|---------|---------|
+| `/aside` | Side task handling |
+| `/auto-update` | Auto-update system |
+| `/evolve` | Evolve the codebase |
+| `/eval` | Run evaluations |
+| `/promote` | Promote changes |
+| `/prune` | Prune unused code |
+| `/refactor-clean` | Refactor and clean code |
+| `/model-route` | Model routing configuration |
+| `/pm2` | PM2 process management |
+| `/hookify` | Generate hooks from conversations |
+| `/hookify-configure` | Configure hooks |
+| `/hookify-help` | Hook help |
+| `/hookify-list` | List hooks |
+| `/instinct-export` | Export instincts |
+| `/instinct-import` | Import instincts |
+| `/instinct-status` | Check instinct status |
+| `/skill-create` | Create a new skill |
+| `/skill-health` | Check skill health |
+| `/update-codemaps` | Update code maps |
+| `/update-docs` | Update documentation |
+| `/harness-audit` | Audit agent harness |
+| `/ecc-guide` | ECC guide |
 
 ---
 
 ## Agent Personas
 
-The system includes **86 expert agent personas** organized by domain:
+The system includes **142 expert agent personas** organized by domain:
 
 | Category | Agents |
 |----------|--------|
-| **Core** | `code-reviewer`, `security-auditor`, `test-engineer`, `code-archaeologist`, `documentation-specialist`, `performance-optimizer` |
+| **Core** | `code-reviewer`, `security-auditor`, `test-engineer`, `code-archaeologist`, `documentation-specialist`, `performance-optimizer`, `a11y-architect`, `architect`, `code-architect`, `code-explorer`, `code-simplifier`, `comment-analyzer`, `conversation-analyzer`, `planner`, `type-design-analyzer` |
 | **Beast Mode** | `beast mode 3.1` |
-| **Orchestrators** | `agent-organizer`, `project-analyst`, `team-configurator`, `tech-lead-orchestrator` |
+| **Orchestrators** | `agent-organizer`, `project-analyst`, `team-configurator`, `tech-lead-orchestrator`, `chief-of-staff`, `loop-operator` |
 | **Spec Agents** | `spec-analyst`, `spec-architect`, `spec-developer`, `spec-orchestrator`, `spec-planner`, `spec-reviewer`, `spec-tester`, `spec-validator` |
 | **Business** | `product-manager` |
-| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer` |
-| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
+| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer`, `gan-evaluator`, `gan-generator`, `gan-planner` |
+| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `harmonyos-app-resolver`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
 | **Frontend** | `senior-frontend-architect` |
 | **Backend** | `senior-backend-architect` |
-| **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer` |
-| **Quality & Testing** | `architect-review`, `code-reviewer`, `debugger`, `qa-expert`, `test-automator` |
-| **Security** | `security-auditor` |
+| **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer`, `harness-optimizer`, `homelab-architect`, `network-architect`, `network-troubleshooter` |
+| **Quality & Testing** | `architect-review`, `code-reviewer`, `debugger`, `qa-expert`, `test-automator`, `e2e-runner`, `pr-test-analyzer`, `silent-failure-hunter`, `tdd-guide` |
+| **Security** | `security-auditor`, `security-reviewer` |
 | **UI/UX** | `ui-ux-master` |
 | **Universal** | `api-architect`, `backend-developer`, `frontend-developer`, `tailwind-css-expert` |
-| **Utility** | `refactor-agent` |
-| **Specialization** | `api-documenter`, `documentation-expert` |
+| **Utility** | `refactor-agent`, `refactor-cleaner` |
+| **Specialization** | `api-documenter`, `documentation-expert`, `doc-updater`, `docs-lookup`, `seo-specialist` |
 | **Specialized (by tech)** | `django/` (3 agents), `laravel/` (2), `python/` (9), `rails/` (3), `react/` (2), `vue/` (3) |
+| **Build Resolvers** | `build-error-resolver`, `cpp-build-resolver`, `dart-build-resolver`, `go-build-resolver`, `java-build-resolver`, `kotlin-build-resolver`, `pytorch-build-resolver`, `rust-build-resolver`, `swift-build-resolver` |
+| **Open Source** | `opensource-forker`, `opensource-sanitizer`, `opensource-packager` |
+| **Reviewers** | `cpp-reviewer`, `csharp-reviewer`, `database-reviewer`, `fastapi-reviewer`, `flutter-reviewer`, `fsharp-reviewer`, `go-reviewer`, `healthcare-reviewer`, `java-reviewer`, `kotlin-reviewer`, `mle-reviewer`, `network-config-reviewer`, `python-reviewer`, `rust-reviewer`, `swift-reviewer`, `typescript-reviewer` |
 | **Local** | `code-reviewer-local` |
 
 ---
