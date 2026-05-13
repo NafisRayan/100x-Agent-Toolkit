@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 5 reference checklists, 84 slash commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 5 reference checklists, 86 slash commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -15,11 +15,11 @@ Your agent system operates across 7 lifecycle phases:
 - **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
 - **`agents/`** - 142 expert personas across 23 categories (hierarchically organized)
 - **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
-- **`commands/`** - 84 slash commands for lifecycle management
+- **`commands/`** - 86 slash commands for lifecycle management
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`designs/`** - Design system specifications (Figma-inspired, etc.)
 - **`docs/`** - Internal documentation (best practices, agent creation guides, dependency maps)
-- **`rules/`** - Language-specific coding rules and conventions (angular, arkts, cpp, csharp, dart, fsharp, golang, java, kotlin, perl, php, python, rust, swift, typescript, web, zh)
+- **`rules/`** - Language-specific coding rules and conventions (angular, arkts, common, cpp, csharp, dart, fsharp, golang, java, kotlin, perl, php, python, rust, swift, typescript, web, zh)
 
 ---
 
@@ -60,8 +60,7 @@ Your agent system operates across 7 lifecycle phases:
 - `performance` - Measure-first approach with Core Web Vitals improvement
 - `core-web-vitals` - Optimize LCP, INP, CLS for better page experience
 
-#### Ship & Deploy (3 skills)
-- `git-master` - Complete Git expertise for all git operations
+#### Ship & Deploy (2 skills)
 - `finishing-a-development-branch` - Guide completion of development work
 - `using-git-worktrees` - Isolated workspace for feature work
 
@@ -78,7 +77,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`, `internal-comms`
 - **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`
 - **SEO**: `seo`, `seo-audit`
-- **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`
+- **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 commands + 7 references + 16 workflows)
 - **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
@@ -374,7 +373,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 #### `/ship` - Deploy to Production
 - **Input**: Reviewed, tested code
 - **Output**: Successful deployment with monitoring, rollback plans
-- **Skills Used**: `git-master`, `finishing-a-development-branch`
+- **Skills Used**: `finishing-a-development-branch`
 
 ### Extended Commands (77 additional)
 
@@ -705,4 +704,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-12 | Total Skills: 168 (100 core + 68 GSD) | Commands: 84 | Agents: 142 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*
+*Last updated: 2026-05-13 | Total Skills: 168 (100 core + 68 GSD) | Commands: 86 | Agents: 142 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*

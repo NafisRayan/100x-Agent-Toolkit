@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **84 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 100 specialized skill workflows (100 core + 68 GSD sub-skills)
+├── skills/                # 168 specialized skill workflows (100 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation
@@ -48,7 +48,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   ├── security/          # Security auditing
 │   └── specialization/    # API docs, technical writing
 │
-├── commands/               # 84 slash command definitions
+├── commands/               # 86 slash command definitions
 │   ├── spec.md            # Define requirements
 │   ├── plan.md            # Break down into tasks
 │   ├── build.md           # Implement incrementally
@@ -67,6 +67,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── rules/                  # Language-specific coding rules
 │   ├── angular/            # Angular rules
 │   ├── arkts/              # ArkTS/HarmonyOS rules
+│   ├── common/             # Shared rules across languages
 │   ├── cpp/                # C++ rules
 │   ├── csharp/             # C# rules
 │   ├── dart/               # Dart rules
@@ -211,6 +212,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `performance` | Measure-first Core Web Vitals improvement |
 | `core-web-vitals` | Optimize LCP, INP, CLS |
 | `ultrareview` | Multi-agent parallel code review |
+| `playwright-cli` | Playwright CLI automation, testing, and session management |
 
 ### 3D & Graphics
 | Skill | Description |
@@ -281,7 +283,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `using-superpowers` | Find and use skills effectively |
 | `dispatching-parallel-agents` | Run independent tasks concurrently |
 | `finishing-a-development-branch` | Guide completion of dev work |
-| `git-master` | Complete Git expertise for all operations |
+| `clone-website` | Reverse-engineer and clone websites from URLs |
 | `caveman` | Ultra-compressed communication mode |
 | `grill-me` | Interview user about a plan or design |
 | `gsd` | Get Shit Done project management (68 sub-skills) |
@@ -299,7 +301,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `/test` | Verify with comprehensive test suite | `systematic-debugging`, `verification-before-completion` |
 | `/review` | Quality assurance before merge | `best-practices`, `performance` |
 | `/code_simplify` | Reduce complexity while preserving behavior | `karpathy-guidelines`, `performance` |
-| `/ship` | Deploy with monitoring and rollback | `git-master`, `finishing-a-development-branch` |
+| `/ship` | Deploy with monitoring and rollback | `finishing-a-development-branch` |
 
 ### Build & Fix
 | Command | Purpose |
