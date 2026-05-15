@@ -1,22 +1,21 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
 ## Architecture
 
-The system uses a **three-layer composition model**:
+The system uses a **two-layer composition model**:
 
 | Layer | What it is | Example | Role |
 |-------|-----------|---------|------|
 | **Skill** | A workflow with steps and exit criteria | `test-driven-development` | The *how* |
 | **Persona** | A role with a perspective and output format | `code-reviewer` | The *who* |
-| **Command** | A user-facing entry point | `/review`, `/ship` | The *when* |
 
-Personas do not call other personas. Commands orchestrate the composition.
+Personas don't call other personas. The orchestrator skill handles composition.
 
-> **Important:** Skills carry 90% of the system's value. Agents and commands are thin orchestration wrappers — most could be consolidated into a single lookup table in AGENTS.md without losing capability. If you're utilizing or maintaining this toolkit, prioritize skills first.
+> **Important:** Skills carry 99% of the system's value. The `agents/` directory (142 personas), `rules/` directory (104 language-specific rules across 18 languages), `references/` directory (5 domain checklists), `docs/` directory (3 guides), and `commands/` directory (86 slash commands) were all converted into two skills — `agent-personas` and `syntax-rules` — because skills provide auto-triggering, progressive loading, on-demand references, and universal compatibility across any AI tool. The rest was redundant with existing skills or no longer needed. If you're utilizing or maintaining this toolkit, prioritize skills first.
 ---
 
 ## Directory Structure
@@ -34,15 +33,6 @@ Personas do not call other personas. Commands orchestrate the composition.
 │       ├── assets/        # Starter projects, templates, images
 │       └── evals/         # Evaluation test cases
 │   └── ...
-│
-├── commands/               # 86 slash command definitions
-│   ├── spec.md            # Define requirements
-│   ├── plan.md            # Break down into tasks
-│   ├── build.md           # Implement incrementally
-│   ├── test.md            # Verify with tests
-│   ├── review.md          # Quality assurance
-│   ├── code-simplify.md   # Optimize and clean
-│   └── ship.md            # Deploy to production
 │
 ├── mcps/
 │   └── mcp.json           # 9 MCP server configurations
@@ -66,15 +56,14 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 1. Clone the repository and rename the folder to `.agents`, then place it in your home directory:
    - **Windows**: `C:\Users\<YourUsername>\.agents`
    - **macOS / Linux**: `~/.agents`
-2. The `AGENTS.md` file is the entry point — your agent reads it on startup and gains access to all skills, personas, and commands.
-3. Slash commands guide your lifecycle:
-   - `/spec` → define what to build
-   - `/plan` → plan how to build it
-   - `/build` → implement incrementally
-   - `/test` → verify it works
-   - `/review` → quality assurance
-   - `/code-simplify` → optimize if needed
-   - `/ship` → deploy to production
+2. The `AGENTS.md` file is the entry point — your agent reads it on startup and gains access to all skills and personas.
+3. Skills drive the lifecycle through auto-triggering:
+   - `brainstorming` → define what to build
+   - `planning-and-task-breakdown` → plan how to build it
+   - `incremental-implementation` → implement incrementally
+   - `test-driven-development` → verify it works
+   - `requesting-code-review` → quality assurance
+   - `finishing-a-development-branch` → deploy to production
 
 ---
 
@@ -245,168 +234,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 
 ---
 
-## Slash Commands
-
-### Lifecycle Commands
-| Command | Purpose | Skills Used |
-|---------|---------|-------------|
-| `/spec` | Define what to build (PRD) | `brainstorming`, `planning-and-task-breakdown` |
-| `/plan` | Plan how to build (task breakdown) | `planning-and-task-breakdown`, `writing-plans` |
-| `/build` | Build incrementally with feature flags | `incremental-implementation`, `test-driven-development` |
-| `/test` | Verify with comprehensive test suite | `systematic-debugging`, `verification-before-completion` |
-| `/review` | Quality assurance before merge | `best-practices`, `performance` |
-| `/code_simplify` | Reduce complexity while preserving behavior | `karpathy-guidelines`, `performance` |
-| `/ship` | Deploy with monitoring and rollback | `finishing-a-development-branch` |
-
-### Build & Fix
-| Command | Purpose |
-|---------|---------|
-| `/build-fix` | Resolve build errors and TypeScript issues |
-| `/cpp-build` | Fix C++/CMake build errors |
-| `/dart-build` | Fix Dart/Flutter build errors (alias: `/flutter-build`) |
-| `/go-build` | Fix Go build errors |
-| `/gradle-build` | Fix Gradle build errors |
-| `/java-build` | Fix Java/Maven/Gradle build errors |
-| `/kotlin-build` | Fix Kotlin/Gradle build errors |
-| `/rust-build` | Fix Rust/Cargo build errors |
-| `/swift-build` | Fix Swift/Xcode build errors |
-
-### Code Review
-| Command | Purpose |
-|---------|---------|
-| `/code-review` | Run comprehensive code review |
-| `/cpp-review` | C++ code review |
-| `/fastapi-review` | FastAPI code review |
-| `/flutter-review` | Flutter/Dart code review |
-| `/go-review` | Go code review |
-| `/kotlin-review` | Kotlin code review |
-| `/python-review` | Python code review |
-| `/rust-review` | Rust code review |
-| `/review-pr` | Review a pull request |
-| `/pr` | Create a pull request |
-
-### Testing
-| Command | Purpose |
-|---------|---------|
-| `/cpp-test` | Run C++ tests |
-| `/e2e` | Run end-to-end tests |
-| `/flutter-test` | Run Flutter tests |
-| `/go-test` | Run Go tests |
-| `/kotlin-test` | Run Kotlin tests |
-| `/rust-test` | Run Rust tests |
-| `/tdd` | Test-Driven Development workflow |
-| `/test-coverage` | Check test coverage |
-
-### Security & Quality
-| Command | Purpose |
-|---------|---------|
-| `/security` | Security audit |
-| `/security-scan` | Run security scanning |
-| `/quality-gate` | Enforce quality gates |
-| `/verify` | Verify completed work |
-
-### Project Management
-| Command | Purpose |
-|---------|---------|
-| `/project-init` | Initialize a new project |
-| `/projects` | List projects |
-| `/setup-pm` | Setup project management |
-| `/checkpoint` | Create/save checkpoints |
-| `/save-session` | Save current session |
-| `/resume-session` | Resume a saved session |
-| `/sessions` | List sessions |
-| `/jira` | Jira integration |
-
-### Feature Development
-| Command | Purpose |
-|---------|---------|
-| `/feature-dev` | Develop a feature end-to-end |
-| `/plan-prd` | Plan from a PRD |
-| `/prp-prd` | PRP pipeline: PRD creation |
-| `/prp-plan` | PRP pipeline: planning |
-| `/prp-implement` | PRP pipeline: implementation |
-| `/prp-pr` | PRP pipeline: pull request |
-| `/prp-commit` | PRP pipeline: commit |
-| `/gan-build` | GAN Harness: build |
-| `/gan-design` | GAN Harness: design |
-
-### Multi-Agent Orchestration
-| Command | Purpose |
-|---------|---------|
-| `/orchestrate` | Orchestrate multi-agent workflow |
-| `/multi-plan` | Multi-agent planning |
-| `/multi-execute` | Multi-agent execution |
-| `/multi-frontend` | Multi-agent frontend work |
-| `/multi-backend` | Multi-agent backend work |
-| `/multi-workflow` | Multi-agent workflow |
-
-### Agent Loop & Learning
-| Command | Purpose |
-|---------|---------|
-| `/loop-start` | Start an agent loop |
-| `/loop-status` | Check loop status |
-| `/santa-loop` | Santa loop workflow |
-| `/learn` | Learn from interactions |
-| `/learn-eval` | Evaluate learning |
-
-### Tools & Utilities
-| Command | Purpose |
-|---------|---------|
-| `/aside` | Side task handling |
-| `/auto-update` | Auto-update system |
-| `/evolve` | Evolve the codebase |
-| `/eval` | Run evaluations |
-| `/promote` | Promote changes |
-| `/prune` | Prune unused code |
-| `/refactor-clean` | Refactor and clean code |
-| `/model-route` | Model routing configuration |
-| `/pm2` | PM2 process management |
-| `/hookify` | Generate hooks from conversations |
-| `/hookify-configure` | Configure hooks |
-| `/hookify-help` | Hook help |
-| `/hookify-list` | List hooks |
-| `/instinct-export` | Export instincts |
-| `/instinct-import` | Import instincts |
-| `/instinct-status` | Check instinct status |
-| `/skill-create` | Create a new skill |
-| `/skill-health` | Check skill health |
-| `/update-codemaps` | Update code maps |
-| `/update-docs` | Update documentation |
-| `/harness-audit` | Audit agent harness |
-| `/ecc-guide` | ECC guide |
-
----
-
-## Agent Personas
-
-The system includes **142 expert agent personas** organized by domain:
-
-| Category | Agents |
-|----------|--------|
-| **Core** | `code-reviewer`, `security-auditor`, `test-engineer`, `code-archaeologist`, `documentation-specialist`, `performance-optimizer`, `a11y-architect`, `architect`, `code-architect`, `code-explorer`, `code-simplifier`, `comment-analyzer`, `conversation-analyzer`, `planner`, `type-design-analyzer` |
-| **Beast Mode** | `beast mode 3.1` |
-| **Orchestrators** | `agent-organizer`, `project-analyst`, `team-configurator`, `tech-lead-orchestrator`, `chief-of-staff`, `loop-operator` |
-| **Spec Agents** | `spec-analyst`, `spec-architect`, `spec-developer`, `spec-orchestrator`, `spec-planner`, `spec-reviewer`, `spec-tester`, `spec-validator` |
-| **Business** | `product-manager` |
-| **Data & AI** | `ai-engineer`, `data-engineer`, `data-scientist`, `database-optimizer`, `graphql-architect`, `ml-engineer`, `postgres-pro`, `prompt-engineer`, `gan-evaluator`, `gan-generator`, `gan-planner` |
-| **Development** | `backend-architect`, `dx-optimizer`, `electron-pro`, `frontend-developer`, `full-stack-developer`, `golang-pro`, `harmonyos-app-resolver`, `legacy-modernizer`, `mobile-developer`, `nextjs-pro`, `python-pro`, `react-pro`, `typescript-pro`, `ui-designer`, `ux-designer` |
-| **Frontend** | `senior-frontend-architect` |
-| **Backend** | `senior-backend-architect` |
-| **Infrastructure** | `cloud-architect`, `deployment-engineer`, `devops-incident-responder`, `incident-responder`, `performance-engineer`, `harness-optimizer`, `homelab-architect`, `network-architect`, `network-troubleshooter` |
-| **Quality & Testing** | `architect-review`, `code-reviewer`, `debugger`, `qa-expert`, `test-automator`, `e2e-runner`, `pr-test-analyzer`, `silent-failure-hunter`, `tdd-guide` |
-| **Security** | `security-auditor`, `security-reviewer` |
-| **UI/UX** | `ui-ux-master` |
-| **Universal** | `api-architect`, `backend-developer`, `frontend-developer`, `tailwind-css-expert` |
-| **Utility** | `refactor-agent`, `refactor-cleaner` |
-| **Specialization** | `api-documenter`, `documentation-expert`, `doc-updater`, `docs-lookup`, `seo-specialist` |
-| **Specialized (by tech)** | `django/` (3 agents), `laravel/` (2), `python/` (9), `rails/` (3), `react/` (2), `vue/` (3) |
-| **Build Resolvers** | `build-error-resolver`, `cpp-build-resolver`, `dart-build-resolver`, `go-build-resolver`, `java-build-resolver`, `kotlin-build-resolver`, `pytorch-build-resolver`, `rust-build-resolver`, `swift-build-resolver` |
-| **Open Source** | `opensource-forker`, `opensource-sanitizer`, `opensource-packager` |
-| **Reviewers** | `cpp-reviewer`, `csharp-reviewer`, `database-reviewer`, `fastapi-reviewer`, `flutter-reviewer`, `fsharp-reviewer`, `go-reviewer`, `healthcare-reviewer`, `java-reviewer`, `kotlin-reviewer`, `mle-reviewer`, `network-config-reviewer`, `python-reviewer`, `rust-reviewer`, `swift-reviewer`, `typescript-reviewer` |
-| **Local** | `code-reviewer-local` |
-
----
-
 ## MCP Server Integration
 
 The system connects to 9 external tools via Model Context Protocol (`mcps/mcp.json`):
@@ -468,6 +295,12 @@ During the shift to a skill-first architecture, several top-level directories we
 3 documentation files (best-practices.md, creating-agents.md, dependencies.md) removed.
 
 **Why deleted**: These were one-time setup guides that don't benefit from being in context during normal operation. `best-practices.md` and `creating-agents.md` were about how to configure the agent system itself — useful for humans setting up the repo, not something the AI needs loaded at runtime. `dependencies.md` was a Context7 MCP setup instruction that's now covered by the `context7` skill. Keeping these as root-level docs meant they were always visible but rarely useful — the skill-based approach loads equivalent guidance only when relevant.
+
+### `commands/` (deleted)
+
+86 slash command definitions (`/spec`, `/plan`, `/build`, `/test`, `/review`, `/ship`, etc.) removed.
+
+**Why deleted**: Slash commands were a convention specific to Claude Code's `.claude/commands/` directory structure — they don't port to other AI systems (Cursor, Copilot, Windsurf, etc.) and required manual installation into `~/.claude/commands/`. The workflows these commands encoded — spec → plan → build → test → review → ship — are already captured as skills (`brainstorming`, `planning-and-task-breakdown`, `incremental-implementation`, `test-driven-development`, `best-practices`, `finishing-a-development-branch`). Skills are universal, self-documenting, and work across any AI tool that reads a markdown file. Commands were thin orchestration wrappers around skills; removing them eliminates a layer of indirection without losing any capability.
 
 ### Skills removed
 

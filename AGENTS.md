@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 86 slash commands, 9 MCP server integrations, and 24 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 24 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -13,10 +13,9 @@ Your agent system operates across 7 lifecycle phases:
 
 ### Core Architecture
 - **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
-- **`commands/`** - 86 slash commands for lifecycle management
+- **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`designs/`** - 24 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
-- **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 
 ---
 
@@ -78,7 +77,7 @@ Your agent system operates across 7 lifecycle phases:
 - **SEO**: `seo`, `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
-- **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 commands + 7 references + 16 workflows + 1 parent skill)
+- **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 sub-commands + 7 references + 16 workflows + 1 parent skill)
 - **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
@@ -99,167 +98,6 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Use verification gates - never skip "prove it works" sections
 - Reference checklists when needed (security, performance, etc.)
 - Combine skills: planning + incremental implementation + testing + review
-
----
-
-## Commands Directory (`commands/`)
-
-**84 slash commands** that orchestrate your entire development lifecycle.
-
-### Development Lifecycle Commands
-
-#### `/spec` - Define What to Build
-- **Input**: Vague idea or requirement
-- **Output**: Detailed PRD with objectives, success criteria, boundaries
-- **Skills Used**: `brainstorming`, `planning-and-task-breakdown`
-
-#### `/plan` - Plan How to Build
-- **Input**: PRD or requirements
-- **Output**: Task breakdown with acceptance criteria, dependencies
-- **Skills Used**: `planning-and-task-breakdown`, `writing-plans`
-
-#### `/build` - Build Incrementally
-- **Input**: Task list
-- **Output**: Working code with tests, feature flags, safe rollbacks
-- **Skills Used**: `incremental-implementation`, `test-driven-development`
-
-#### `/test` - Verify It Works
-- **Input**: Code changes
-- **Output**: Comprehensive test suite, debugging reports
-- **Skills Used**: `systematic-debugging`, `verification-before-completion`
-
-#### `/review` - Quality Assurance
-- **Input**: Code ready for merge
-- **Output**: Review feedback, security audit, performance analysis
-- **Skills Used**: `best-practices`, `performance`
-
-#### `/code-simplify` - Optimize & Clean
-- **Input**: Working but complex code
-- **Output**: Simplified code maintaining exact behavior
-- **Skills Used**: `karpathy-guidelines`, `performance`
-
-#### `/ship` - Deploy to Production
-- **Input**: Reviewed, tested code
-- **Output**: Successful deployment with monitoring, rollback plans
-- **Skills Used**: `finishing-a-development-branch`
-
-### Extended Commands (77 additional)
-
-#### Build & Fix
-- `/build-fix` - Resolve build errors and TypeScript issues
-- `/cpp-build` - Fix C++/CMake build errors
-- `/dart-build` - Fix Dart/Flutter build errors (alias: `/flutter-build`)
-- `/go-build` - Fix Go build errors
-- `/gradle-build` - Fix Gradle build errors
-- `/java-build` - Fix Java/Maven/Gradle build errors
-- `/kotlin-build` - Fix Kotlin/Gradle build errors
-- `/rust-build` - Fix Rust/Cargo build errors
-- `/swift-build` - Fix Swift/Xcode build errors
-
-#### Code Review
-- `/code-review` - Run comprehensive code review
-- `/cpp-review` - C++ code review
-- `/fastapi-review` - FastAPI code review
-- `/flutter-review` - Flutter/Dart code review
-- `/go-review` - Go code review
-- `/kotlin-review` - Kotlin code review
-- `/python-review` - Python code review
-- `/rust-review` - Rust code review
-- `/review-pr` - Review a pull request
-- `/pr` - Create a pull request
-
-#### Testing
-- `/cpp-test` - Run C++ tests
-- `/e2e` - Run end-to-end tests
-- `/flutter-test` - Run Flutter tests
-- `/go-test` - Run Go tests
-- `/kotlin-test` - Run Kotlin tests
-- `/rust-test` - Run Rust tests
-- `/tdd` - Test-Driven Development workflow
-- `/test-coverage` - Check test coverage
-
-#### Security & Quality
-- `/security` - Security audit
-- `/security-scan` - Run security scanning
-- `/quality-gate` - Enforce quality gates
-- `/verify` - Verify completed work
-
-#### Project Management
-- `/project-init` - Initialize a new project
-- `/projects` - List projects
-- `/setup-pm` - Setup project management
-- `/checkpoint` - Create/save checkpoints
-- `/save-session` - Save current session
-- `/resume-session` - Resume a saved session
-- `/sessions` - List sessions
-- `/jira` - Jira integration
-
-#### Feature Development
-- `/feature-dev` - Develop a feature end-to-end
-- `/plan-prd` - Plan from a PRD
-- `/prp-prd` - PRP pipeline: PRD creation
-- `/prp-plan` - PRP pipeline: planning
-- `/prp-implement` - PRP pipeline: implementation
-- `/prp-pr` - PRP pipeline: pull request
-- `/prp-commit` - PRP pipeline: commit
-- `/gan-build` - GAN Harness: build
-- `/gan-design` - GAN Harness: design
-
-#### Multi-Agent Orchestration
-- `/orchestrate` - Orchestrate multi-agent workflow
-- `/multi-plan` - Multi-agent planning
-- `/multi-execute` - Multi-agent execution
-- `/multi-frontend` - Multi-agent frontend work
-- `/multi-backend` - Multi-agent backend work
-- `/multi-workflow` - Multi-agent workflow
-
-#### Agent Loop & Learning
-- `/loop-start` - Start an agent loop
-- `/loop-status` - Check loop status
-- `/santa-loop` - Santa loop workflow
-- `/learn` - Learn from interactions
-- `/learn-eval` - Evaluate learning
-
-#### Tools & Utilities
-- `/aside` - Side task handling
-- `/auto-update` - Auto-update system
-- `/evolve` - Evolve the codebase
-- `/eval` - Run evaluations
-- `/promote` - Promote changes
-- `/prune` - Prune unused code
-- `/refactor-clean` - Refactor and clean code
-- `/model-route` - Model routing configuration
-- `/pm2` - PM2 process management
-- `/hookify` - Generate hooks from conversations
-- `/hookify-configure` - Configure hooks
-- `/hookify-help` - Hook help
-- `/hookify-list` - List hooks
-- `/instinct-export` - Export instincts
-- `/instinct-import` - Import instincts
-- `/instinct-status` - Check instinct status
-- `/skill-create` - Create a new skill
-- `/skill-health` - Check skill health
-- `/update-codemaps` - Update code maps
-- `/update-docs` - Update documentation
-- `/harness-audit` - Audit agent harness
-- `/ecc-guide` - ECC guide
-- `/ecc-guide` - ECC guide
-
-### Command Usage Patterns
-
-**Sequential Workflow**:
-1. `/spec` -> Define requirements
-2. `/plan` -> Break down into tasks
-3. `/build` -> Implement incrementally
-4. `/test` -> Verify functionality
-5. `/review` -> Quality assurance
-6. `/code-simplify` -> Optimize if needed
-7. `/ship` -> Deploy to production
-
-**Iterative Development**:
-- Use `/build` + `/test` loops for rapid iteration
-- `/review` after each significant change
-- `/code-simplify` when complexity builds up
 
 ---
 
@@ -341,12 +179,12 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ### Power User Workflow
 
 1. **Start with Intent**: User says "build a dashboard"
-2. **Define**: `/spec` creates detailed requirements
-3. **Plan**: `/plan` breaks into verifiable tasks
-4. **Build**: `/build` implements with feature flags
-5. **Test**: `/test` validates with comprehensive coverage
-6. **Review**: `/review` ensures production quality
-7. **Ship**: `/ship` deploys with monitoring
+2. **Define**: `brainstorming` skill creates detailed requirements
+3. **Plan**: `planning-and-task-breakdown` breaks into verifiable tasks
+4. **Build**: `incremental-implementation` implements with feature flags
+5. **Test**: `test-driven-development` validates with comprehensive coverage
+6. **Review**: `best-practices` + `requesting-code-review` ensures production quality
+7. **Ship**: `finishing-a-development-branch` deploys with monitoring
 
 ### Context Engineering
 
@@ -455,4 +293,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-15 | Total Skills: 168 (100 core + 68 GSD) | Commands: 86 | Agents: 142 | MCPs: 9 | Designs: 24*
+*Last updated: 2026-05-15 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 24*
