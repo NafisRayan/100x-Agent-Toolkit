@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **5 reference checklists**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **169 specialized skill workflows** (101 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -26,7 +26,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 168 specialized skill workflows (100 core + 68 GSD sub-skills)
+├── skills/                # 169 specialized skill workflows (101 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation
@@ -57,38 +57,6 @@ Personas do not call other personas. Commands orchestrate the composition.
 │   ├── review.md          # Quality assurance
 │   ├── code-simplify.md   # Optimize and clean
 │   └── ship.md            # Deploy to production
-│
-├── references/             # 5 domain checklists
-│   ├── security-checklist.md
-│   ├── testing-patterns.md
-│   ├── performance-checklist.md
-│   ├── accessibility-checklist.md
-│   └── orchestration-patterns.md
-│
-├── rules/                  # Language-specific coding rules
-│   ├── angular/            # Angular rules
-│   ├── arkts/              # ArkTS/HarmonyOS rules
-│   ├── common/             # Shared rules across languages
-│   ├── cpp/                # C++ rules
-│   ├── csharp/             # C# rules
-│   ├── dart/               # Dart rules
-│   ├── fsharp/             # F# rules
-│   ├── golang/             # Go rules
-│   ├── java/               # Java rules
-│   ├── kotlin/             # Kotlin rules
-│   ├── perl/               # Perl rules
-│   ├── php/                # PHP rules
-│   ├── python/             # Python rules
-│   ├── rust/               # Rust rules
-│   ├── swift/              # Swift rules
-│   ├── typescript/         # TypeScript rules
-│   ├── web/                # Web rules
-│   └── zh/                 # Chinese language rules
-│
-├── docs/
-│   ├── best-practices.md    # Crafting high-impact Claude Code sub-agents
-│   ├── creating-agents.md   # Tutorial for creating Claude agents
-│   └── dependencies.md      # Context7 MCP dependency setup
 │
 ├── mcps/
 │   └── mcp.json           # 9 MCP server configurations
@@ -190,7 +158,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `prisma` | ORM queries, mutations, relations, schema |
 | `prisma-expert` | Schema design, migrations, query optimization |
 | `sql-pro` | Complex joins, window functions, indexing |
-| `sql-optimization-patterns` | EXPLAIN analysis, index strategy |
 | `supabase-postgres-best-practices` | Postgres performance from Supabase |
 | `neon-postgres` | Serverless Postgres with Neon |
 
@@ -263,6 +230,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `javascript-pro` | Modern ES2023+ JavaScript patterns |
 | `typescript-advanced-types` | Generics, conditional types, mapped types |
 | `python-performance-optimization` | Profile and optimize Python code |
+| `syntax-rules` | Language-specific coding standards for 18 languages |
 
 ### SEO
 | Skill | Description |
@@ -468,18 +436,6 @@ The system connects to 9 external tools via Model Context Protocol (`mcps/mcp.js
 | `firecrawl` | Web crawling | Requires API key |
 | `typescript-lsp` | TypeScript language server | Configured |
 | `vercel` | Vercel deployment | Requires API token |
-
----
-
-## Reference Checklists
-
-Five domain checklists in `references/` that skills reference for best practices:
-
-- **Security** — OWASP Top 10, auth patterns, input validation, CORS, dependency auditing
-- **Testing** — Test pyramid, naming conventions, mocking, React/API/E2E patterns
-- **Performance** — Core Web Vitals targets, bundle analysis, profiling workflows
-- **Accessibility** — WCAG 2.1 AA, keyboard nav, screen readers, ARIA
-- **Orchestration** — Multi-agent coordination, task decomposition, parallel execution
 
 ---
 

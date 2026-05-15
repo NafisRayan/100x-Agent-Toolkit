@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 5 reference checklists, 86 slash commands, 9 MCP server integrations, 24 design system specifications, and documentation guides.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 169 specialized skill workflows (101 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 86 slash commands, 9 MCP server integrations, and 24 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,20 +12,17 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
+- **`skills/`** - 169 specialized workflows (101 core + 68 GSD sub-skills)
 - **`agents/`** - 142 expert personas across 23 categories (hierarchically organized)
-- **`references/`** - 5 domain checklists (security, testing, performance, accessibility, orchestration)
 - **`commands/`** - 86 slash commands for lifecycle management
 - **`mcps/`** - 9 MCP server configurations for external tool integration
-- **`designs/`** - Design system specifications (Figma-inspired, etc.)
-- **`docs/`** - Internal documentation (best practices, agent creation guides, dependency maps)
-- **`rules/`** - Language-specific coding rules and conventions (angular, arkts, common, cpp, csharp, dart, fsharp, golang, java, kotlin, perl, php, python, rust, swift, typescript, web, zh)
+- **`designs/`** - 24 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
 
 ---
 
 ## Skills Directory (`skills/`)
 
-**Your 168 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 169 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -72,8 +69,9 @@ Your agent system operates across 7 lifecycle phases:
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`
-- **Databases & ORM**: `prisma`, `prisma-expert`, `sql-pro`, `sql-optimization-patterns`, `supabase-postgres-best-practices`
+- **Databases & ORM**: `prisma`, `prisma-expert`, `sql-pro`, `supabase-postgres-best-practices`
 - **Languages**: `javascript-pro`, `typescript-advanced-types`
+- **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`, `internal-comms`
 - **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`
 - **SEO**: `seo`, `seo-audit`
@@ -292,45 +290,6 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 **Beast Mode**: "Activate beast mode for autonomous problem-solving"
 **Parallel Analysis**: "Have security-auditor review this authentication code"
 **Quality Gates**: Always use personas before shipping to production
-
----
-
-## References Directory (`references/`)
-
-**5 comprehensive checklists** that skills reference for domain expertise.
-
-### Available Checklists
-
-#### Security Checklist (`references/security-checklist.md`)
-- Pre-commit checks, auth patterns, input validation
-- Headers, CORS, OWASP Top 10 prevention
-- Dependency auditing, secrets management
-
-#### Testing Patterns (`references/testing-patterns.md`)
-- Test structure, naming conventions, mocking strategies
-- React/API/E2E testing examples, anti-patterns
-- Test pyramid (80% unit, 15% integration, 5% E2E)
-
-#### Performance Checklist (`references/performance-checklist.md`)
-- Core Web Vitals targets, frontend/backend metrics
-- Bundle analysis, profiling workflows
-- Anti-pattern detection and optimization patterns
-
-#### Accessibility Checklist (`references/accessibility-checklist.md`)
-- WCAG 2.1 AA compliance, keyboard navigation
-- Screen reader support, visual design, ARIA usage
-- Testing tools and validation methods
-
-#### Orchestration Patterns (`references/orchestration-patterns.md`)
-- Multi-agent coordination, task decomposition
-- Parallel execution strategies, dependency management
-- Error handling and rollback procedures
-
-### Using References
-
-**Automatic Loading**: Skills reference these when needed
-**Direct Access**: "Check the security-checklist for this implementation"
-**Integration**: Always consult relevant checklists during implementation
 
 ---
 
@@ -568,23 +527,6 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## Documentation (`docs/`)
-
-**Internal documentation** for system usage and maintenance.
-
-### Available Docs
-
-#### `docs/best-practices.md`
-- Best practices guide for using the agent system effectively
-
-#### `docs/creating-agents.md`
-- Guide for creating new agent personas and extending the system
-
-#### `docs/dependencies.md`
-- Dependency map between skills, agents, and references
-
----
-
 ## Usage Patterns & Best Practices
 
 ### Power User Workflow
@@ -694,7 +636,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 169 skill workflows (101 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -704,4 +646,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-13 | Total Skills: 168 (100 core + 68 GSD) | Commands: 86 | Agents: 142 | References: 5 | MCPs: 9 | Designs: 24 | Docs: 3*
+*Last updated: 2026-05-15 | Total Skills: 169 (101 core + 68 GSD) | Commands: 86 | Agents: 142 | MCPs: 9 | Designs: 24*
