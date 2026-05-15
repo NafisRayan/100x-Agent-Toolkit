@@ -29,25 +29,11 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── skills/                # 168 specialized skill workflows (100 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
-│       ├── references/    # Domain-specific documentation
+│       ├── references/    # Domain-specific documentation (includes 142 agent personas)
 │       ├── scripts/       # Automation scripts (Python, JS, Shell)
 │       ├── assets/        # Starter projects, templates, images
 │       └── evals/         # Evaluation test cases
 │   └── ...
-│
-├── agents/                # 142 expert agent personas
-│   ├── code-reviewer.md   # Senior Staff Engineer perspective
-│   ├── security-auditor.md# Security Engineer perspective
-│   ├── test-engineer.md   # QA Engineer perspective
-│   ├── beast mode 3.1.md  # Autonomous agent instructions
-│   ├── agent-organizer.md # Multi-agent orchestration planner
-│   ├── business/          # Product management
-│   ├── data-ai/           # Data, ML, AI agents
-│   ├── development/       # Frontend, backend, language specialists
-│   ├── infrastructure/    # Cloud, DevOps, incident response
-│   ├── quality-testing/   # QA, testing, debugging
-│   ├── security/          # Security auditing
-│   └── specialization/    # API docs, technical writing
 │
 ├── commands/               # 86 slash command definitions
 │   ├── spec.md            # Define requirements
@@ -194,7 +180,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `code-documenter` | Docstrings, OpenAPI specs, JSDoc, doc sites |
 | `docs-writing` | Diataxis framework, Stripe-style clarity |
-| `documentation-writer` | Diátaxis expert technical writing |
 | `doc-coauthoring` | Structured workflow for co-authoring docs |
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
 | `design-md` | Synthesize design systems into DESIGN.md files |
@@ -256,6 +241,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `caveman` | Ultra-compressed communication mode |
 | `grill-me` | Interview user about a plan or design |
 | `gsd` | Get Shit Done project management (68 sub-skills) |
+| `agent-personas` | 142 expert agent personas across 23 categories |
 
 ---
 
@@ -452,6 +438,44 @@ The system connects to 9 external tools via Model Context Protocol (`mcps/mcp.js
 3. Optionally add `references/`, `scripts/`, `assets/`, or `evals/` subdirectories.
 4. Register the skill in AGENTS.md under the appropriate category.
 5. Use the `skill-creator` skill for detailed guidance.
+
+---
+
+## Migration Log — Folders Converted to Skills
+
+During the shift to a skill-first architecture, several top-level directories were absorbed into skills. Skills are the better home for this content because they get progressive loading (metadata first, full content on trigger), automatic context-based activation, bundled references that load only when needed, and a single `skills/` entry point instead of scattered root-level directories.
+
+### `agents/` → `skills/agent-personas/` (converted)
+
+142 agent persona `.md` files across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, etc.) moved into `skills/agent-personas/references/`.
+
+**Why skills work better**: Agent personas were standalone `.md` files in a directory tree with no triggering mechanism — they only activated when manually referenced or via commands. As a skill, the personas get a unified SKILL.md that explains when and how to use each agent, auto-triggers on agent-related queries ("which agent should I use", "set up a code review team"), and bundles the full persona catalog as reference files that load on demand instead of sitting in context permanently.
+
+### `rules/` → `skills/syntax-rules/` (converted)
+
+104 rule files across 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) plus 10 common universal rules moved into `skills/syntax-rules/references/`.
+
+**Why skills work better**: Rules lived in a flat directory tree with no triggering — they had to be manually installed into `~/.claude/rules/` and were always in context even when writing a different language. As a skill, the rules auto-trigger only when writing or reviewing code in the relevant language, load language-specific rules on demand (no need to keep all 18 languages in context), and include a structured workflow (detect language → load rules → apply → report violations) that the raw directory never had.
+
+### `references/` (deleted)
+
+5 domain checklists (security-checklist.md, testing-patterns.md, performance-checklist.md, accessibility-checklist.md, orchestration-patterns.md) removed.
+
+**Why deleted**: These were static markdown files that required manual lookup and had no triggering mechanism. Their content is now redundant — every topic they covered is handled more thoroughly by dedicated skills (`security` skill for security checks, `test-driven-development` for testing patterns, `performance` for performance optimization, `accessibility` for WCAG compliance, and `dispatching-parallel-agents` for orchestration patterns). Skills provide the same information plus actionable workflows, verification gates, and auto-triggering.
+
+### `docs/` (deleted)
+
+3 documentation files (best-practices.md, creating-agents.md, dependencies.md) removed.
+
+**Why deleted**: These were one-time setup guides that don't benefit from being in context during normal operation. `best-practices.md` and `creating-agents.md` were about how to configure the agent system itself — useful for humans setting up the repo, not something the AI needs loaded at runtime. `dependencies.md` was a Context7 MCP setup instruction that's now covered by the `context7` skill. Keeping these as root-level docs meant they were always visible but rarely useful — the skill-based approach loads equivalent guidance only when relevant.
+
+### Skills removed
+
+| Skill | Reason |
+|-------|--------|
+| `documentation-writer` | Overlapped with `docs-writing` (both Diátaxis-based). Consolidated into the more comprehensive `docs-writing` skill which has 52 rules across 9 categories. |
+| `sql-optimization-patterns` | Overlapped with `sql-pro` which already covers query optimization, EXPLAIN analysis, and indexing strategies more comprehensively. |
+| `mirror-website` | Empty skill directory with no SKILL.md — never had content. |
 
 ---
 
