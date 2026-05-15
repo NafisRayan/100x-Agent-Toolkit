@@ -16,6 +16,7 @@ The system uses a **three-layer composition model**:
 
 Personas do not call other personas. Commands orchestrate the composition.
 
+> **Important:** Skills carry 90% of the system's value. Agents and commands are thin orchestration wrappers — most could be consolidated into a single lookup table in AGENTS.md without losing capability. If you're utilizing or maintaining this toolkit, prioritize skills first.
 ---
 
 ## Directory Structure
