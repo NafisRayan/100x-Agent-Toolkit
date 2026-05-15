@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 169 specialized skill workflows (101 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 86 slash commands, 9 MCP server integrations, and 24 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas across 23 categories, 86 slash commands, 9 MCP server integrations, and 24 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 169 specialized workflows (101 core + 68 GSD sub-skills)
+- **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
 - **`agents/`** - 142 expert personas across 23 categories (hierarchically organized)
 - **`commands/`** - 86 slash commands for lifecycle management
 - **`mcps/`** - 9 MCP server configurations for external tool integration
@@ -22,7 +22,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 169 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 168 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -77,7 +77,7 @@ Your agent system operates across 7 lifecycle phases:
 - **SEO**: `seo`, `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
-- **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 commands + 7 references + 16 workflows)
+- **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 commands + 7 references + 16 workflows + 1 parent skill)
 - **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
@@ -636,7 +636,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 169 skill workflows (101 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -646,4 +646,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-15 | Total Skills: 169 (101 core + 68 GSD) | Commands: 86 | Agents: 142 | MCPs: 9 | Designs: 24*
+*Last updated: 2026-05-15 | Total Skills: 168 (100 core + 68 GSD) | Commands: 86 | Agents: 142 | MCPs: 9 | Designs: 24*

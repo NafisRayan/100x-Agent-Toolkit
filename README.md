@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **169 specialized skill workflows** (101 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, **86 slash commands**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -26,7 +26,7 @@ Personas do not call other personas. Commands orchestrate the composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 169 specialized skill workflows (101 core + 68 GSD sub-skills)
+├── skills/                # 168 specialized skill workflows (100 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation
