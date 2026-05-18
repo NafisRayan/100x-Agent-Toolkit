@@ -78,7 +78,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 sub-commands + 7 references + 16 workflows + 1 parent skill)
-- **Other**: `enhance-prompt`, `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
+- **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
 
