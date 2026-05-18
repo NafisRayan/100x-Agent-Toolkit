@@ -172,8 +172,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `doc-coauthoring` | Structured workflow for co-authoring docs |
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
 | `design-md` | Synthesize design systems into DESIGN.md files |
-
-### Office & Productivity
+| `humanizer` | Remove AI writing patterns, make text sound natural |
 | Skill | Description |
 |-------|-------------|
 | `docx` | Word document generation and manipulation |
