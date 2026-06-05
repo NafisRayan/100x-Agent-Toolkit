@@ -1,7 +1,6 @@
 ---
 name: brag-document
-description: >
-  Generate a polished, professional brag document (also called a work accomplishments report or self-review) from raw achievement data. Use this skill whenever a user asks to create, write, draft, or generate a brag document, brag report, work accomplishments summary, self-review, performance review input, monthly/quarterly/annual achievement report, or any structured record of their professional contributions. Trigger this skill even when the user says things like "write up what I did this month", "help me summarise my work contributions", "I need to document my achievements", or "turn my notes into a brag doc". This skill works for any role, industry, seniority level, or time period.
+description: Generate a polished, professional brag document (also called a work accomplishments report or self-review) from raw achievement data. Use this skill whenever a user asks to create, write, draft, or generate a brag document, brag report, work accomplishments summary, self-review, performance review input, monthly/quarterly/annual achievement report, or any structured record of their professional contributions. Trigger this skill even when the user says things like "write up what I did this month", "help me summarise my work contributions", "I need to document my achievements", or "turn my notes into a brag doc". This skill works for any role, industry, seniority level, or time period.
 ---
 
 # Brag Document Generator
