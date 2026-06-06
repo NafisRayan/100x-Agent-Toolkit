@@ -52,7 +52,7 @@ Your agent system operates across 7 lifecycle phases:
 - `requesting-code-review` - Get quality feedback before merge
 
 #### Review & Quality (3 skills)
-- `best-practices` - Modern web development best practices for security and quality
+- `full-code-review` - Run a deep multi-agent code review across one or more codebases
 - `performance` - Measure-first approach with Core Web Vitals improvement
 - `core-web-vitals` - Optimize LCP, INP, CLS for better page experience
 
@@ -73,7 +73,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
 - **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`, `internal-comms`
-- **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `code-documenter`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`, `humanizer`
+- **Design & Docs**: `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`, `humanizer`, `code-wiki`
 - **SEO**: `seo`, `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
@@ -183,7 +183,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 3. **Plan**: `planning-and-task-breakdown` breaks into verifiable tasks
 4. **Build**: `incremental-implementation` implements with feature flags
 5. **Test**: `test-driven-development` validates with comprehensive coverage
-6. **Review**: `best-practices` + `requesting-code-review` ensures production quality
+6. **Review**: `full-code-review` + `requesting-code-review` ensures production quality
 7. **Ship**: `finishing-a-development-branch` deploys with monitoring
 
 ### Context Engineering
@@ -221,7 +221,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Sequential dependencies for integrated features
 
 **Skill Composition**:
-- Combine domain skills (e.g., `impeccable` + `best-practices`)
+- Combine domain skills (e.g., `impeccable` + `performance`)
 - Layer quality skills on top of implementation
 - Use specialized agents for expert reviews
 

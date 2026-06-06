@@ -151,9 +151,9 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `verification-before-completion` | Run commands before claiming success |
 | `receiving-code-review` | Handle feedback with technical rigor |
 | `requesting-code-review` | Get quality feedback before merge |
-| `best-practices` | Modern web development best practices |
 | `performance` | Measure-first Core Web Vitals improvement |
 | `core-web-vitals` | Optimize LCP, INP, CLS |
+| `full-code-review` | Deep multi-agent code review across codebase |
 | `ultrareview` | Multi-agent parallel code review |
 | `playwright-cli` | Playwright CLI automation, testing, and session management |
 
@@ -167,8 +167,8 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### Documentation
 | Skill | Description |
 |-------|-------------|
-| `code-documenter` | Docstrings, OpenAPI specs, JSDoc, doc sites |
 | `docs-writing` | Diataxis framework, Stripe-style clarity |
+| `code-wiki` | Generate wiki docs + Mermaid diagrams for codebase |
 | `doc-coauthoring` | Structured workflow for co-authoring docs |
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
 | `design-md` | Synthesize design systems into DESIGN.md files |
