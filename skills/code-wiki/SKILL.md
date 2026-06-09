@@ -32,7 +32,7 @@ Do NOT use this for:
 
 ## How to Run
 
-Invoke through the `terminal` tool from the target repo's root, then use `read_file` / `search_files` / `write_file` to produce the wiki. Default output location is `.code-wiki/<repo-name>/`. Only write into the repo (`docs/wiki/`) when the user explicitly requests it.
+Invoke through the `terminal` tool from the target repo's root, then use `read_file` / `search_files` / `write_file` to produce the wiki. By default the generator writes to a temporary output directory outside the repository to avoid in-repo changes; only write into the repo (for example, `docs/wiki/` or `.<repo-root>/.code-wiki/`) when the user explicitly requests it.
 
 ## Quick Reference
 
@@ -42,7 +42,7 @@ Invoke through the `terminal` tool from the target repo's root, then use `read_f
 | 2 | Scan structure — `ls`, `find -maxdepth 3`, manifest files, README |
 | 3 | Pick 8–10 modules to document |
 | 4 | Write `README.md` (overview + module map) |
-| 5 | Write `architecture.md` with Mermaid flowchart |
+| 5 | Write `architecture.md` (prose) and `diagrams/architecture.md` (Mermaid flowchart) |
 | 6 | Write per-module docs in `modules/` |
 | 7 | Write `diagrams/class-diagram.md` (Mermaid classDiagram) |
 | 8 | Write `diagrams/sequences.md` (Mermaid sequenceDiagram, 2–4 workflows) |
@@ -59,7 +59,10 @@ For a GitHub URL:
 
 ```bash
 WIKI_TMP=$(mktemp -d)
-git clone --depth 50 <url> "$WIKI_TMP/repo"
+GIT_TERMINAL_PROMPT=0 git clone --depth 50 <url> "$WIKI_TMP/repo" || {
+  echo "Clone failed (authentication or network). Provide a local path or authenticate git." >&2
+  exit 1
+}
 cd "$WIKI_TMP/repo"
 REPO_SHA=$(git rev-parse HEAD)
 REPO_NAME=$(basename <url> .git)
@@ -73,12 +76,27 @@ REPO_SHA=$(git rev-parse HEAD 2>/dev/null || echo "uncommitted")
 REPO_NAME=$(basename "$PWD")
 ```
 
-Then set the output dir:
+Then set the output dir. Default behavior is to place generated files in a temporary output directory outside the repo to avoid unprompted in-repo writes. If the user explicitly requests in-repo output, write into the repository instead.
 
 ```bash
-OUTPUT_DIR=".code-wiki/$REPO_NAME"
+# Default: temporary output dir outside the repo (safe, non-destructive)
+OUTPUT_DIR="${WIKI_TMP:-$(mktemp -d)}/.code-wiki/$REPO_NAME"
 mkdir -p "$OUTPUT_DIR/modules" "$OUTPUT_DIR/diagrams"
+
+# If you have explicit permission to write into the repo, set:
+# OUTPUT_DIR="$PWD/.code-wiki/$REPO_NAME"
+# mkdir -p "$OUTPUT_DIR/modules" "$OUTPUT_DIR/diagrams"
 ```
+
+### 1.5 Check previous state
+
+If a `.codewiki-state.json` already exists at the intended output path, stop and surface the previous state to the user before proceeding. Read the state file and compare `source_sha` to the current `REPO_SHA`.
+
+- If the SHA matches: continue generating (no changes detected).
+- If the SHA differs: abort the run and return to the user with the list of changed files and the option to (a) regenerate everything, (b) regenerate only changed modules, or (c) cancel. Do not continue generating without the user's explicit choice.
+
+This step prevents ambiguous mid-run branching and avoids unprompted overwrites.
+
 
 ### 2. Scan repo structure
 
@@ -122,7 +140,7 @@ For very large repos, prioritize by:
 2. LOC (bigger modules usually warrant their own doc)
 3. Mentions in README / top-level docs
 
-State the module list to the user before generating per-module docs on big repos — gives them a chance to redirect.
+State the module list to the user before generating per-module docs if the repository has more than 10 modules or more than 100 source files — gives them a chance to redirect.
 
 ### 4. Write `README.md`
 
@@ -382,13 +400,9 @@ If the user says "do the whole thing exhaustively", believe them — but ballpar
 
 ## Re-Run / Update
 
-If `.codewiki-state.json` already exists at the target path:
+See **Step 1.5: Check previous state**. If a previous `.codewiki-state.json` exists the skill will stop and present the previous state and changed-files summary to the user, requiring explicit confirmation before any regeneration or in-repo writes.
 
-- Read it for previous SHA and module list
-- If source SHA matches: ask user if they want to regenerate or skip
-- If SHA differs: offer to regenerate only modules with changed files (`git diff --name-only <old-sha> HEAD`)
-
-Full incremental-regeneration is a future enhancement — for now, regenerating the whole thing is acceptable.
+Full incremental-regeneration is a future enhancement — for now, regenerating the whole thing is acceptable once the user confirms.
 
 ## Pitfalls
 
@@ -397,7 +411,7 @@ Full incremental-regeneration is a future enhancement — for now, regenerating 
 - **Restating code as prose.** A module doc that says "the `process` function processes things by calling `process_item` on each item" is worse than just linking to the function.
 - **Mermaid > 50 nodes.** They don't render legibly. Split them.
 - **Documenting tests, generated code, or vendored deps as if they were product code.** Skip them.
-- **In-repo output without asking.** Default is `.code-wiki/`. Only write into the repo when the user explicitly requests it.
+- **In-repo output without asking.** Default is to write to a temporary output directory outside the repo. Only write into the repo when the user explicitly requests it.
 - **Mermaid special chars need quotes:** `A["Tool / Agent"]` not `A[Tool / Agent]`. `<br>` for line breaks inside a node.
 - **Nested code fences in SKILL.md.** When writing a markdown example that contains a Mermaid block, use 4-backtick outer fences so the 3-backtick inner ` ```mermaid ` doesn't close the outer. (This SKILL.md does it.)
 - **classDiagram generics** render as `~T~` (e.g. `List~Tool~`), not `<T>`.
