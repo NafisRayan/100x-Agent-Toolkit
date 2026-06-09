@@ -32,7 +32,7 @@ Do NOT use this for:
 
 ## How to Run
 
-Invoke through the `terminal` tool from the target repo's root, then use `read_file` / `search_files` / `write_file` to produce the wiki. Default output location is `~/.hermes/wikis/<repo-name>/`. Only write into the repo (`docs/wiki/`) when the user explicitly requests it.
+Invoke through the `terminal` tool from the target repo's root, then use `read_file` / `search_files` / `write_file` to produce the wiki. Default output location is `.code-wiki/<repo-name>/`. Only write into the repo (`docs/wiki/`) when the user explicitly requests it.
 
 ## Quick Reference
 
@@ -76,7 +76,7 @@ REPO_NAME=$(basename "$PWD")
 Then set the output dir:
 
 ```bash
-OUTPUT_DIR="$HOME/.hermes/wikis/$REPO_NAME"
+OUTPUT_DIR=".code-wiki/$REPO_NAME"
 mkdir -p "$OUTPUT_DIR/modules" "$OUTPUT_DIR/diagrams"
 ```
 
@@ -139,26 +139,21 @@ reader has the source README.>
 - **<Concept 1>** — <one line>
 - **<Concept 2>** — <one line>
 
-## Entry Points
-
-- [`path/to/main.py`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>) — <what runs when you start it>
-- [`path/to/cli.py`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>) — <CLI surface>
-
 ## High-Level Architecture
 
 <2-3 sentences. Detail goes in architecture.md.>
 
-See [architecture.md](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/architecture.md).
+See [architecture.md](architecture.md).
 
 ## Module Map
 
 | Module | Purpose |
 |---|---|
-| [`<module>`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/modules/<module>.md) | <one-line purpose> |
+| `modules/<module>.md` | <one-line purpose> |
 
 ## Getting Started
 
-See [getting-started.md](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/getting-started.md).
+See [getting-started.md](getting-started.md).
 ````
 
 For link targets in local mode use relative paths. For cloned repos use `https://github.com/<owner>/<repo>/blob/<sha>/<path>` so links survive future commits.
@@ -173,7 +168,7 @@ where it exits, where state lives.>
 
 ## Components
 
-- **<Component>** — <1-2 sentences>. See [`modules/<module>.md`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/modules/<module>.md).
+- **<Component>** — <1-2 sentences>. See `modules/<module>.md`.
 
 ## System Diagram
 
@@ -184,11 +179,6 @@ flowchart TD
     Core --> StorageA[(Database)]
     Core --> ExternalAPI{{External API}}
 ```
-
-## Data Flow
-
-1. **<Step>** — [`<file>`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>)
-2. **<Step>** — [`<file>`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>)
 
 ## Key Design Decisions
 
@@ -220,7 +210,7 @@ For each selected module, inspect its layout with `ls`, identify 3–5 most impo
 
 ## Key Files
 
-- [`<module>/<file>`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>) — <what it does>
+- `<module>/<file>` — <what it does>
 
 ## Public API
 
@@ -298,11 +288,6 @@ sequenceDiagram
     Agent->>Agent: execute tools
     Agent-->>CLI: final response
 ```
-
-### Walkthrough
-
-1. **User input** — [`cli.py:HermesCLI.run_session`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>)
-2. **Message dispatch** — [`run_agent.py:AIAgent.chat`](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/<link>)
 ````
 
 Don't invent participants. Every box must correspond to a real component the reader can find in the code.
@@ -340,8 +325,8 @@ Don't invent participants. Every box must correspond to a real component the rea
 
 ## Where to Go Next
 
-- Architecture: [architecture.md](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/architecture.md)
-- Module reference: [README.md#module-map](https://github.com/NousResearch/hermes-agent/blob/main/optional-skills/software-development/code-wiki/README.md#module-map)
+- Architecture: [architecture.md](architecture.md)
+- Module reference: [README.md#module-map](README.md#module-map)
 ````
 
 ### 10. Write `api.md` (skip if not applicable)
@@ -361,7 +346,7 @@ cat > "$OUTPUT_DIR/.codewiki-state.json" <<EOF
   "source_path": "$PWD",
   "source_sha": "$REPO_SHA",
   "generated_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
-  "generator": "hermes-agent code-wiki skill v0.1.0",
+  "generator": "code-wiki skill v0.1.0",
   "modules_documented": []
 }
 EOF
@@ -372,7 +357,7 @@ EOF
 State exactly what was generated and where:
 
 ```
-Generated wiki at ~/.hermes/wikis/<repo-name>/:
+Generated wiki at .code-wiki/<repo-name>/:
   README.md                   project overview, module map
   architecture.md             system architecture + flowchart
   getting-started.md          setup, first run, workflows
@@ -412,7 +397,7 @@ Full incremental-regeneration is a future enhancement — for now, regenerating 
 - **Restating code as prose.** A module doc that says "the `process` function processes things by calling `process_item` on each item" is worse than just linking to the function.
 - **Mermaid > 50 nodes.** They don't render legibly. Split them.
 - **Documenting tests, generated code, or vendored deps as if they were product code.** Skip them.
-- **In-repo output without asking.** Default is `~/.hermes/wikis/`. Only write into the repo when the user explicitly requests it.
+- **In-repo output without asking.** Default is `.code-wiki/`. Only write into the repo when the user explicitly requests it.
 - **Mermaid special chars need quotes:** `A["Tool / Agent"]` not `A[Tool / Agent]`. `<br>` for line breaks inside a node.
 - **Nested code fences in SKILL.md.** When writing a markdown example that contains a Mermaid block, use 4-backtick outer fences so the 3-backtick inner ` ```mermaid ` doesn't close the outer. (This SKILL.md does it.)
 - **classDiagram generics** render as `~T~` (e.g. `List~Tool~`), not `<T>`.
