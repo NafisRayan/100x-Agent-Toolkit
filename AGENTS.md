@@ -31,9 +31,10 @@ Your agent system operates across 7 lifecycle phases:
 
 ### Key Skills by Category
 
-#### Define & Plan (4 skills)
+#### Define & Plan (5 skills)
 - `brainstorming` - Explore intent, requirements, and design before implementation
 - `planning-and-task-breakdown` - Decompose specs into verifiable tasks
+- `pro-task-breakdown` - Generate structured task breakdown CSVs from features/epics
 - `writing-plans` - Create detailed implementation plans
 - `executing-plans` - Execute written plans with review checkpoints
 
@@ -68,7 +69,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`
-- **Databases & ORM**: `prisma`, `prisma-expert`, `sql-pro`, `supabase-postgres-best-practices`
+- **Databases & ORM**: `prisma-pro`, `sql-pro`, `supabase-postgres-best-practices`
 - **Languages**: `javascript-pro`, `typescript-advanced-types`
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
@@ -293,4 +294,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-05-15 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 24*
+*Last updated: 2026-06-09 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 24*

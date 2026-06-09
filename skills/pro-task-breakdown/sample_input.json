@@ -1,0 +1,116 @@
+{
+  "project": "CloudSync",
+  "phase": "Phase 2",
+  "modules": [
+    {
+      "name": "File Upload Service",
+      "features": [
+        {
+          "name": "Chunked Upload API",
+          "tasks": [
+            {
+              "title": "Create UploadController with chunked endpoint",
+              "details": [
+                "Add POST /api/v1/uploads/init endpoint to create upload session",
+                "Add PUT /api/v1/uploads/:sessionId/chunk endpoint for chunk delivery",
+                "Add POST /api/v1/uploads/:sessionId/complete to finalize upload",
+                "Validate chunk index continuity (reject gaps or duplicates)",
+                "Return upload session metadata: sessionId, totalChunks, receivedChunks, status"
+              ],
+              "estimation_days": 0.5
+            },
+            {
+              "title": "Add UploadSession entity to database",
+              "details": [
+                "Create UploadSessions table: id, userId, fileName, fileSize, mimeType, totalChunks, status, createdAt, completedAt",
+                "Add UploadChunk table: id, sessionId, chunkIndex, checksum, storagePath",
+                "Add Entity Framework migration with up/down methods",
+                "Add unique constraint on (sessionId, chunkIndex) to prevent duplicates"
+              ],
+              "estimation_days": 0.25
+            },
+            {
+              "title": "Implement chunk assembly worker",
+              "details": [
+                "Background job triggered when all chunks received (status → Assembling)",
+                "Read chunks in order, verify SHA-256 checksum per chunk",
+                "Concatenate to final storage path (S3-compatible)",
+                "On failure: retry up to 3 times, then mark session as Failed",
+                "On success: update status to Completed, set completedAt timestamp"
+              ],
+              "estimation_days": 0.4
+            }
+          ]
+        },
+        {
+          "name": "Upload Progress Tracking",
+          "tasks": [
+            {
+              "title": "Add SignalR hub for real-time progress",
+              "details": [
+                "Create UploadProgressHub with SubscribeToSession(sessionId) method",
+                "Broadcast progress events: ChunkReceived, AssemblyStarted, UploadCompleted, UploadFailed",
+                "Add rate-limited progress updates (throttle to 1 per second per session)",
+                "Register hub in startup DI container"
+              ],
+              "estimation_days": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dashboard – Upload UI",
+      "features": [
+        {
+          "name": "Upload Widget Component",
+          "tasks": [
+            {
+              "title": "Create FileUploader.tsx component",
+              "details": [
+                "Drag-and-drop zone with file type validation (accept prop)",
+                "Chunk files into 5MB pieces using FileReader.slice()",
+                "Show progress bar per file using SignalR subscription",
+                "Retry failed chunks automatically (max 2 retries)",
+                "Display upload status badges: Uploading / Assembling / Completed / Failed"
+              ],
+              "estimation_days": 0.5
+            },
+            {
+              "title": "Add upload history table to dashboard",
+              "details": [
+                "Fetch uploads from GET /api/v1/uploads?page=1&limit=20",
+                "Render table columns: FileName, Size, Status, Date",
+                "Add status filter dropdown (All / Completed / Failed / In Progress)",
+                "Add click-to-download action on completed rows",
+                "Empty state illustration when no uploads exist"
+              ],
+              "estimation_days": 0.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Testing",
+      "features": [
+        {
+          "name": "Upload Service QA",
+          "tasks": [
+            {
+              "title": "Write integration tests for chunked upload flow",
+              "details": [
+                "Test full upload cycle: init → upload chunks → complete → verify file",
+                "Test duplicate chunk rejection returns 409 Conflict",
+                "Test gap detection returns 400 with missing chunk index",
+                "Test assembly failure triggers retry and eventually marks Failed",
+                "Test concurrent uploads to same session are serialized"
+              ],
+              "estimation_days": 0.4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

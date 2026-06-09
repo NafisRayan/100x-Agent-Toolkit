@@ -74,6 +74,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `brainstorming` | Explore intent and requirements before implementation |
 | `planning-and-task-breakdown` | Decompose specs into verifiable tasks |
+| `pro-task-breakdown` | Generate structured task breakdown CSVs from features/epics |
 | `writing-plans` | Create detailed implementation plans |
 | `executing-plans` | Execute written plans with checkpoints |
 
@@ -130,8 +131,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### Database
 | Skill | Description |
 |-------|-------------|
-| `prisma` | ORM queries, mutations, relations, schema |
-| `prisma-expert` | Schema design, migrations, query optimization |
+| `prisma-pro` | Schema design, migrations, query optimization, relations |
 | `sql-pro` | Complex joins, window functions, indexing |
 | `supabase-postgres-best-practices` | Postgres performance from Supabase |
 | `neon-postgres` | Serverless Postgres with Neon |
@@ -308,6 +308,7 @@ During the shift to a skill-first architecture, several top-level directories we
 | `documentation-writer` | Overlapped with `docs-writing` (both Diátaxis-based). Consolidated into the more comprehensive `docs-writing` skill which has 52 rules across 9 categories. |
 | `sql-optimization-patterns` | Overlapped with `sql-pro` which already covers query optimization, EXPLAIN analysis, and indexing strategies more comprehensively. |
 | `mirror-website` | Empty skill directory with no SKILL.md — never had content. |
+| `prisma` + `prisma-expert` | Overlapped significantly. Consolidated into a single `prisma-pro` skill covering schema design, migrations, query optimization, and relations modeling. |
 
 ---
 
