@@ -47,7 +47,7 @@ installed version.
 - Works with any AI agent (Cursor, Claude Code, Codex, Continue, Windsurf, etc.)
 - Chrome/Chromium via CDP with no Playwright or Puppeteer dependency
 - Accessibility-tree snapshots with element refs for reliable interaction
-- Sessions, authentication vault, state persistence, video recording
+- Sessions, authentication vault, state persistence, live viewport streaming
 - Specialized skills for Electron apps, Slack, exploratory testing, cloud providers
 
 ## Observability Dashboard
