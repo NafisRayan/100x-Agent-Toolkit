@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **24 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -37,14 +37,14 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── mcps/
 │   └── mcp.json           # 9 MCP server configurations
 │
-└── designs/
-    ├── DESIGN-figma.md    # Figma-inspired design system
-    ├── DESIGN-airbnb.md   # Airbnb design system
-    ├── DESIGN-apple.md    # Apple design system
-    ├── DESIGN-stripe.md   # Stripe design system
-    ├── DESIGN-notion.md   # Notion design system
-    ├── DESIGN-vercel.md   # Vercel design system
-    └── ... (24 total: airbnb, apple, binance, bmw, claude, cursor, expo, figma, framer, meta, minimax, mongodb, notion, nvidia, pinterest, revolut, stripe, supabase, superhuman, uber, vercel, warp, webflow, xai)
+└── design-md/
+    ├── figma/
+    │   ├── DESIGN.md      # Figma design system
+    │   └── README.md      # Design overview
+    ├── airbnb/
+    │   ├── DESIGN.md      # Airbnb design system
+    │   └── README.md      # Design overview
+    └── ... (74 total: airbnb, airtable, apple, binance, bmw, bmw-m, bugatti, cal, claude, clay, clickhouse, cohere, coinbase, composio, cursor, dell-1996, elevenlabs, expo, ferrari, figma, framer, hashicorp, hp, ibm, intercom, kraken, lamborghini, linear.app, lovable, mastercard, meta, minimax, mintlify, miro, mistral.ai, mongodb, nike, nintendo-2001, notion, nvidia, ollama, opencode.ai, pinterest, playstation, posthog, raycast, renault, replicate, resend, revolut, runwayml, sanity, sentry, shopify, slack, spacex, spotify, starbucks, stripe, supabase, superhuman, tesla, theverge, together.ai, uber, vercel, vodafone, voltagent, warp, webflow, wired, wise, x.ai, zapier)
 ```
 
 ---
@@ -173,8 +173,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
 | `design-md` | Synthesize design systems into DESIGN.md files |
 | `humanizer` | Remove AI writing patterns, make text sound natural |
-| Skill | Description |
-|-------|-------------|
 | `docx` | Word document generation and manipulation |
 | `pptx` | PowerPoint deck creation and editing |
 | `xlsx` | Spreadsheet creation, editing, data cleaning |

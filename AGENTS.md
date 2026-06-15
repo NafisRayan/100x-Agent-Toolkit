@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 24 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -15,7 +15,7 @@ Your agent system operates across 7 lifecycle phases:
 - **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
 - **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 - **`mcps/`** - 9 MCP server configurations for external tool integration
-- **`designs/`** - 24 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
+- **`design-md/`** - 74 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
 
 ---
 
@@ -134,15 +134,15 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-## Design System Specs (`designs/`)
+## Design System Specs (`design-md/`)
 
 **Design specifications** for consistent visual implementation.
 
 ### Available Designs
 
-**24 design system specifications** covering major brand design languages.
+**74 design system specifications** covering major brand design languages.
 
-#### `designs/DESIGN-figma.md` - Figma-Inspired Design System
+#### `design-md/figma/DESIGN.md` - Figma-Inspired Design System
 - Custom variable font (figmaSans) with granular weight control
 - Strictly black-and-white interface chrome with vibrant product content
 - Pill and circular button geometry (50px/50% radius)
@@ -150,22 +150,51 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 - Negative letter-spacing throughout
 - OpenType kern feature enabled globally
 
-#### Additional Design Specifications
+#### Additional Design Specifications (73 more)
 
 | Design | Brand | Design | Brand |
 |--------|-------|--------|-------|
-| `DESIGN-airbnb` | Airbnb | `DESIGN-apple` | Apple |
-| `DESIGN-binance` | Binance | `DESIGN-bmw` | BMW |
-| `DESIGN-claude` | Claude (Anthropic) | `DESIGN-cursor` | Cursor |
-| `DESIGN-expo` | Expo | `DESIGN-framer` | Framer |
-| `DESIGN-meta` | Meta | `DESIGN-minimax` | MiniMax |
-| `DESIGN-mongodb` | MongoDB | `DESIGN-notion` | Notion |
-| `DESIGN-nvidia` | NVIDIA | `DESIGN-pinterest` | Pinterest |
-| `DESIGN-revolut` | Revolut | `DESIGN-stripe` | Stripe |
-| `DESIGN-supabase` | Supabase | `DESIGN-superhuman` | Superhuman |
-| `DESIGN-uber` | Uber | `DESIGN-vercel` | Vercel |
-| `DESIGN-warp` | Warp | `DESIGN-webflow` | Webflow |
-| `DESIGN-xai` | xAI | | |
+| `airbnb` | Airbnb | `airtable` | Airtable |
+| `apple` | Apple | `binance` | Binance |
+| `bmw` | BMW | `bmw-m` | BMW M |
+| `bugatti` | Bugatti | `cal` | Cal.com |
+| `claude` | Claude (Anthropic) | `clay` | Clay |
+| `clickhouse` | ClickHouse | `cohere` | Cohere |
+| `coinbase` | Coinbase | `composio` | Composio |
+| `cursor` | Cursor | `dell-1996` | Dell (1996) |
+| `elevenlabs` | ElevenLabs | `expo` | Expo |
+| `ferrari` | Ferrari | `framer` | Framer |
+| `hashicorp` | HashiCorp | `hp` | HP |
+| `ibm` | IBM | `intercom` | Intercom |
+| `kraken` | Kraken | `lamborghini` | Lamborghini |
+| `linear.app` | Linear | `lovable` | Lovable |
+| `mastercard` | Mastercard | `meta` | Meta |
+| `minimax` | MiniMax | `mintlify` | Mintlify |
+| `miro` | Miro | `mistral.ai` | Mistral AI |
+| `mongodb` | MongoDB | `nike` | Nike |
+| `nintendo-2001` | Nintendo (2001) | `notion` | Notion |
+| `nvidia` | NVIDIA | `ollama` | Ollama |
+| `opencode.ai` | OpenCode | `pinterest` | Pinterest |
+| `playstation` | PlayStation | `posthog` | PostHog |
+| `raycast` | Raycast | `renault` | Renault |
+| `replicate` | Replicate | `resend` | Resend |
+| `revolut` | Revolut | `runwayml` | RunwayML |
+| `sanity` | Sanity | `sentry` | Sentry |
+| `shopify` | Shopify | `slack` | Slack |
+| `spacex` | SpaceX | `spotify` | Spotify |
+| `starbucks` | Starbucks | `stripe` | Stripe |
+| `supabase` | Supabase | `superhuman` | Superhuman |
+| `tesla` | Tesla | `theverge` | The Verge |
+| `together.ai` | Together AI | `uber` | Uber |
+| `vercel` | Vercel | `vodafone` | Vodafone |
+| `voltagent` | VoltAgent | `warp` | Warp |
+| `webflow` | Webflow | `wired` | Wired |
+| `wise` | Wise | `x.ai` | xAI |
+| `zapier` | Zapier | | |
+
+**Each design system includes:**
+- `DESIGN.md` - Comprehensive design specification
+- `README.md` - Design overview and usage guide
 
 ### Using Design Specs
 
@@ -294,4 +323,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-06-09 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 24*
+*Last updated: 2026-06-15 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
