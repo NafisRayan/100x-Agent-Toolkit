@@ -185,11 +185,11 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `sales-enablement` | Sales collateral, pitch decks, demo scripts |
 | `marketing-psychology` | Behavioral science applied to marketing |
 | `brag-document` | Work accomplishments reports and self-reviews |
-| `internal-comms` | Internal communications writing |
 
 ### Design & Creativity
 | Skill | Description |
 |-------|-------------|
+| `frontend-design` | Guidance for distinctive, intentional visual design for UI |
 | `figma-developer` | Figma to React component conversion |
 | `canvas-design` | Visual art in .png and .pdf documents |
 | `algorithmic-art` | Generative art and creative coding with p5.js |
