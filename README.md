@@ -171,7 +171,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `code-wiki` | Generate wiki docs + Mermaid diagrams for codebase |
 | `doc-coauthoring` | Structured workflow for co-authoring docs |
 | `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
-| `design-md` | Synthesize design systems into DESIGN.md files |
 | `humanizer` | Remove AI writing patterns, make text sound natural |
 | `docx` | Word document generation and manipulation |
 | `pptx` | PowerPoint deck creation and editing |
@@ -182,6 +181,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `business-analyst` | Product discovery and requirements analysis |
+| `cold-email` | B2B cold emails and follow-up sequences that get replies |
 | `sales-enablement` | Sales collateral, pitch decks, demo scripts |
 | `marketing-psychology` | Behavioral science applied to marketing |
 | `brag-document` | Work accomplishments reports and self-reviews |
@@ -190,6 +190,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `frontend-design` | Guidance for distinctive, intentional visual design for UI |
+| `design-taste-frontend` | Anti-slop frontend skill for landing pages, portfolios, and redesigns |
 | `figma-developer` | Figma to React component conversion |
 | `canvas-design` | Visual art in .png and .pdf documents |
 | `algorithmic-art` | Generative art and creative coding with p5.js |
@@ -206,7 +207,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### SEO
 | Skill | Description |
 |-------|-------------|
-| `seo` | Search engine visibility optimization |
 | `seo-audit` | Diagnose SEO issues on websites |
 
 ### Meta & Dev Tools

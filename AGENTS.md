@@ -74,9 +74,9 @@ Your agent system operates across 7 lifecycle phases:
 - **Languages**: `javascript-pro`, `typescript-advanced-types`
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
-- **Business**: `business-analyst`, `sales-enablement`, `marketing-psychology`, `brag-document`
-- **Design & Docs**: `frontend-design`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `mermaid`, `design-md`, `humanizer`, `code-wiki`
-- **SEO**: `seo`, `seo-audit`
+- **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`
+- **Design & Docs**: `frontend-design`, `design-taste-frontend`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `mermaid`, `humanizer`, `code-wiki`
+- **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Project Management**: `gsd` (68 sub-skills for Get Shit Done system: 11 agents + 34 sub-commands + 7 references + 16 workflows + 1 parent skill)
@@ -324,4 +324,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-06-15 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-06-16 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
