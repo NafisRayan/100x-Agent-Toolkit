@@ -38,13 +38,14 @@ Your agent system operates across 7 lifecycle phases:
 - `writing-plans` - Create detailed implementation plans
 - `executing-plans` - Execute written plans with review checkpoints
 
-#### Build & Code (6 skills)
+#### Build & Code (7 skills)
 - `incremental-implementation` - Thin vertical slices with feature flags
 - `test-driven-development` - Red-Green-Refactor with test pyramid
 - `source-driven-development` - Ground decisions in official documentation
 - `subagent-driven-development` - Execute plans with independent sub-agents
 - `dispatching-parallel-agents` - Run independent tasks concurrently
 - `karpathy-guidelines` - Behavioral guidelines to reduce LLM coding mistakes
+- `ponytail` - Minimalistic coding approach with lazy senior dev philosophy
 
 #### Verify & Test (4 skills)
 - `systematic-debugging` - Structured bug investigation workflows
@@ -65,7 +66,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Cloud & Infra**: `cloudflare`, `neon-postgres`, `supabase-postgres-best-practices`, `database-optimizer`, `docker-expert`
 - **Performance**: `performance`, `core-web-vitals`, `python-performance-optimization`
 - **Accessibility**: `accessibility`, `web-design-guidelines`, `web-quality-audit`
-- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `scroll-animations`
+- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`

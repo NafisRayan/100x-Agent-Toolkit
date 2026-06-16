@@ -86,6 +86,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `source-driven-development` | Ground decisions in official documentation |
 | `subagent-driven-development` | Execute plans with independent sub-agents |
 | `karpathy-guidelines` | Behavioral guidelines to reduce LLM coding mistakes |
+| `ponytail` | Minimalistic coding approach - lazy senior dev philosophy |
 
 ### Web & Frontend
 | Skill | Description |
@@ -103,7 +104,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `web-design-guidelines` | UI code review against design best practices |
 | `web-quality-audit` | Comprehensive web quality audit |
 | `ui-ux-pro-max` | 50+ styles, 161 color palettes, 57 font pairings |
-| `scroll-animations` | Scroll-triggered animations and parallax |
 | `21st-dev-builder-v2` | Build with 1400+ shadcn/ui components |
 | `impeccable` | Critique, polish, and improve frontend interfaces |
 | `design-system` | Design-system driven by specification files |
