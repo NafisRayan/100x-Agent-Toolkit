@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **169 specialized skill workflows** (101 core + 68 GSD sub-skills), **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 169 specialized skill workflows (101 core + 68 GSD sub-skills)
+├── skills/                # 100 specialized skill workflows
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation (includes 142 agent personas)
@@ -227,7 +227,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `clone-website` | Reverse-engineer and clone websites from URLs |
 | `caveman` | Ultra-compressed communication mode |
 | `grill-me` | Interview user about a plan or design |
-| `gsd` | Get Shit Done project management (68 sub-skills) |
 | `agent-personas` | 142 expert agent personas across 23 categories |
 
 ---
@@ -308,6 +307,7 @@ During the shift to a skill-first architecture, several top-level directories we
 | `sql-optimization-patterns` | Overlapped with `sql-pro` which already covers query optimization, EXPLAIN analysis, and indexing strategies more comprehensively. |
 | `mirror-website` | Empty skill directory with no SKILL.md — never had content. |
 | `prisma` + `prisma-expert` | Overlapped significantly. Consolidated into a single `prisma-pro` skill covering schema design, migrations, query optimization, and relations modeling. |
+| `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
 
 ---
 
