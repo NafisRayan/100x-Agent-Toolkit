@@ -1,215 +1,269 @@
 ---
 name: brag-document
-description: Generate a polished, professional brag document (also called a work accomplishments report or self-review) from raw achievement data. Use this skill whenever a user asks to create, write, draft, or generate a brag document, brag report, work accomplishments summary, self-review, performance review input, monthly/quarterly/annual achievement report, or any structured record of their professional contributions. Trigger this skill even when the user says things like "write up what I did this month", "help me summarise my work contributions", "I need to document my achievements", or "turn my notes into a brag doc". This skill works for any role, industry, seniority level, or time period.
+description: Generate a concise, professional brag document (work accomplishments report, self-review, or performance-review input) from raw notes, repository activity, or achievement data. Use whenever the user asks to create, draft, rewrite, or summarize a monthly, quarterly, or annual record of work—even if they simply say “write up what I did,” “summarise my contributions,” or “turn these notes/commits into a brag doc.” Preserve the user's facts and level of certainty, emphasize meaningful work over development trivia, and avoid invented metrics or inflated impact claims.
 ---
 
 # Brag Document Generator
 
-## Overview
+## Goal
 
-This skill converts a user's raw achievement notes — bullet points, sentences, dates, feedback snippets, metrics, or free-form text — into a polished, structured brag document that matches the format of professional work accomplishment reports.
+Turn raw achievement material into a clear, factual record of the user's work. The preferred result is easy to scan, specific enough to be credible, and restrained enough to sound human.
 
-The output must be precise, fact-based, active-voice, and metric-rich. It should read as a confident, professional record of contributions — not a resume, not a diary, not a cover letter.
+Use the user's approved style as the default:
 
----
+- concise rather than exhaustive
+- factual rather than promotional
+- accomplishment-focused rather than commit-focused
+- one simple overview block per project rather than many nested categories
+- meaningful scope metrics only when supported
+- short bullet-based learning notes rather than reflective essays
 
-## Step 1: Gather the User's Raw Data
-
-Before generating anything, make sure you have the following from the user. If any field is missing, ask for it — except where noted as optional.
-
-```
-BRAG DOCUMENT INPUT TEMPLATE
-==============================
-
-1. PERIOD COVERED (required)
-   e.g. "January 2026", "Q3 2024", "October–December 2025"
-
-2. YOUR ROLE / TITLE (required)
-   e.g. "Software Engineer", "Product Manager", "Marketing Lead", "Nurse Practitioner"
-
-3. PRIMARY PROJECTS OR WORK AREAS (required)
-   List the main projects, products, clients, or service areas you worked on.
-   For each, provide:
-   - Name of the project/area
-   - What it is (1 sentence of context)
-   - Your specific contributions (bullet points or sentences — raw is fine)
-   - Any measurable results (numbers, %, time saved, revenue, users, errors reduced, etc.)
-
-4. SIDE PROJECTS / LEARNING / R&D (optional)
-   Any personal projects, experiments, certifications, or self-learning initiatives.
-
-5. COLLABORATION & FEEDBACK (optional)
-   - Names/titles of people you worked with (if comfortable sharing)
-   - Any direct quotes or paraphrased praise from managers, clients, or peers
-   - Any formal feedback received
-
-6. SKILLS USED (optional but recommended)
-   List all tools, technologies, frameworks, methodologies, or soft skills applied.
-   Organised by category if possible (e.g. Frontend, Backend, Tools, Soft Skills).
-
-7. LEARNING OUTCOMES (optional)
-   What did you learn, improve at, or grow into this period?
-   This can be technical skills, process improvements, or professional development.
-
-8. GOALS / NEXT STEPS (optional)
-   What are you aiming for in the next period?
-==============================
-```
-
-If the user provides raw notes in any format (not this template), extract what you can and proceed. Do not ask for clarification on every missing field — make reasonable inferences where possible, flag anything critical that's missing, and note where placeholders are used.
+A brag document should communicate what the person built, improved, supported, or learned. It should not read like a repository audit, a résumé, or marketing copy.
 
 ---
 
-## Step 2: Generate the Brag Document
+## 1. Understand the Source Material
 
-Use **exactly** the section order and formatting rules below. Do not add, remove, or reorder sections without reason.
+Extract what is available from the user's notes, files, commits, or conversation:
 
----
+1. Period covered
+2. Main projects or work areas
+3. Brief context for each project
+4. Concrete contributions
+5. Meaningful outcomes or scope
+6. Learning or development projects
+7. Skills and technologies used
+8. Learning outcomes
 
-### FORMATTING RULES
+Proceed with partial data when the period and accomplishments are reasonably clear. Do not force the user to complete a long intake form or ask for optional fields individually.
 
-- **Header label**: `WORK ACCOMPLISHMENTS` in small caps or uppercase, flush left, above the title — always present.
-- **Document title**: `[Month/Quarter Year] Brag Document` OR a thematic subtitle if the period had a single dominant focus. Use title case.
-- **Executive summary**: 2–4 sentences directly below the title (no sub-heading). Summarise the period's overall impact and focus. This is a "leadership-level" paragraph — high signal, no fluff.
-- **Main sections**: Use `##`-level headings (bold, large). Named after the project, service, product, or work area.
-- **Sub-categories within sections**: Use **Bold Label:** format (bold text followed by colon). These group related bullets under a theme (e.g. **Feature Development:**, **Client Collaboration:**, **Infrastructure:**, **Process Improvements:**).
-- **Bullets**: Start every bullet with a strong action verb (see verb bank below). No first-person "I" in bullets. Concise — one idea per bullet.
-- **Sub-bullets**: Indent with ○ or – for supporting detail, additional context, or listed items within a bullet.
-- **Impact callout** (per project, optional): After the bullets for a project, add a short **[Project Name] Impact Summary** using 3–5 bullet points that distil the measurable or strategic outcomes of that work area.
-- **Metrics**: Include numbers, percentages, counts, time estimates, or scale wherever possible. If the user provides none, flag with `[add metric]` rather than omitting the bullet.
-- **Highlights & Impact section**: A dedicated section near the end. Each bullet starts with a **bolded key phrase** followed by a plain explanatory sentence. Focus on outcomes, not activities.
-- **Skills & Technologies Applied**: Categorised list. Format: `**Category:** Item1, Item2, Item3`. Common categories: Frontend, Backend, DevOps & Tools, AI/ML, Soft Skills, Domain-Specific.
-- **Learning section**: Always use the label `LEARNING` (uppercase, as a section label — not a heading), followed by a heading `## Learning & Growth` or `## Learning Outcomes`. Content can be bullet points or short prose paragraphs. Focus on what was gained, practised, or deepened — not just what was done.
-- **Utilized Skills**: End with `UTILIZED SKILLS` label, followed by a flat tag-style list of all skills. Comma-separated or formatted as chips/tags.
+Ask a clarifying question only when a missing fact would materially change the document, such as the reporting period, project ownership, or whether unfinished work may be described as delivered.
 
----
+### Evidence hierarchy
 
-### SECTION ORDER (always follow this sequence)
+When several sources are available, prefer them in this order:
 
-```
-WORK ACCOMPLISHMENTS                          ← label, always present
+1. The user's direct statements and corrections
+2. User-provided project summaries or notes
+3. Concrete behavior visible in source files or project documentation
+4. Commit history and repository statistics
 
-[Month/Period Year] Brag Document             ← title
-
-[Executive summary paragraph — 2–4 sentences]
-
-## [Project / Work Area A]
-[Optional: 1-sentence context for what this area is]
-
-**[Sub-category 1]:**
-• [Strong verb] + [what] + [outcome/metric if available]
-  ○ [Supporting detail or sub-item]
-• [Strong verb] + [what] + [outcome/metric]
-
-**[Sub-category 2]:**
-• ...
-
-[Project A] Impact Summary
-• [Bolded outcome phrase] [plain explanation]
-• ...
+Treat lower-ranked sources as supporting evidence, not permission to overstate impact.
 
 ---
 
-## [Project / Work Area B]
-[repeat structure above]
+## 2. Preserve Facts and Certainty
+
+Faithfulness matters more than sounding impressive.
+
+- Preserve qualifiers such as “participated,” “contributed,” “supported,” “explored,” and “work in progress.”
+- Do not upgrade participation into ownership or exploration into delivery.
+- Do not call work production-ready, complete, launched, scalable, optimized, or comprehensive unless the source supports that description.
+- Do not infer business impact, performance improvement, adoption, quality, or test coverage from implementation activity alone.
+- Do not introduce product names, architectures, tools, workflows, or capabilities that are absent from the evidence.
+- Do not fabricate quotes, metrics, outcomes, or causality.
+- If a detail is uncertain, use restrained wording or omit it. Do not insert placeholders such as `[add metric]` into the finished document unless the user explicitly asks for a fill-in template.
+
+### Metrics policy
+
+Use numbers only when they convey meaningful scope or outcomes and are supported by the source.
+
+Good examples:
+
+- 15 primitive components and 28 UI wrappers
+- a 6-screen authentication flow
+- reduced processing time by 20%
+- supported 300 users
+
+Usually omit development-process vanity metrics:
+
+- commit counts
+- repository counts
+- lines added or removed
+- largest commit size
+- file or test line counts
+- number of polish commits
+- exact implementation dimensions or CSS values
+- dates of individual commits
+
+These details may be included only when the user asks for engineering activity statistics or when the number itself is genuinely important to the achievement.
 
 ---
 
-## [Learning & R&D / Side Projects]   ← if applicable
-[Named sub-project]
-[Brief context sentence]
-**Key Contributions**
-• ...
+## 3. Default Document Structure
+
+Follow this structure unless the user supplies a different template:
+
+```markdown
+# [Period] Brag Document
+
+[One concise sentence summarizing the period's main work. Use two sentences only if needed.]
+
+## [Project / Work Area]
+
+[One sentence explaining the project or work area.]
+
+**Overview:**
+
+- [Concise accomplishment.]
+- [Concise accomplishment.]
+- [Concise accomplishment.]
+
+---
+
+## [Next Project / Work Area]
+
+[Repeat the same simple structure.]
 
 ---
 
 ## Highlights & Impact
-• **[Bolded key phrase]** [plain sentence describing the outcome]
-• **[Bolded key phrase]** [plain sentence]
-• ...
+
+- [Major outcome or contribution.]
+- [Major outcome or contribution.]
+
+---
 
 ## Skills & Technologies Applied
-• **[Category]:** [Item1, Item2, Item3]
-• **[Category]:** [Item1, Item2]
+
+- [A readable group of related skills.]
+- [Another readable group.]
 
 ---
 
-LEARNING
+## Learning
 
-## Learning & Growth
-[Prose paragraph(s) OR bullet list of learning outcomes]
-• [What was learned / practised / deepened]
-• [How it applies to current or future work]
+- [Concise learning outcome.]
+- [Concise learning outcome.]
 
-UTILIZED SKILLS
-[Tag1, Tag2, Tag3, Tag4, ...]
+## UTILIZED SKILLS
+
+[Flat comma-separated list of skills.]
 ```
 
----
+### Structure rules
 
-## Step 3: Writing Style Rules
+- Start directly with the `# [Period] Brag Document` title. Do not add a `WORK ACCOMPLISHMENTS` label.
+- Give each project its own `##` heading and one-sentence context line.
+- Prefer a single `**Overview:**` or `**Project Overview:**` block per project.
+- Use additional subcategories only when a long or complex project would otherwise become hard to scan. Do not split a project merely to make the document look more elaborate.
+- Do not add a separate impact summary to every project when the same points already appear in its bullets.
+- Separate major sections with `---`.
+- Keep `Highlights & Impact` as a concise recap; plain bullets are preferred over bold promotional lead-ins.
+- Present `Skills & Technologies Applied` as simple, readable bullet groups. Category labels are optional, not required.
+- Use `## Learning` followed by bullets. Do not add a separate `LEARNING` label, a second “Learning & Growth” heading, or a multi-paragraph reflection unless requested.
+- End with `## UTILIZED SKILLS` and a flat comma-separated list.
 
-Apply all of the following throughout the document:
+### Length guidance
 
-**Voice & Tone**
-- Active voice throughout. No passive constructions ("was built" → "Built").
-- No first-person pronouns in bullets ("I built" → "Built").
-- Prose sections (executive summary, learning) may use first person sparingly.
-- Confident, not boastful. Precise, not vague. Professional, not corporate-bland.
+Let the amount of real work determine the length, but remove repetition aggressively.
 
-**Action Verb Bank** (rotate — do not repeat the same verb more than 2–3 times)
-Built, Implemented, Developed, Delivered, Designed, Engineered, Launched, Shipped, Led, Managed, Coordinated, Facilitated, Streamlined, Optimised, Reduced, Improved, Increased, Automated, Integrated, Refactored, Migrated, Validated, Tested, Documented, Researched, Evaluated, Prototyped, Contributed, Collaborated, Presented, Completed, Established, Standardised, Resolved, Enhanced, Deployed, Created, Drafted, Reviewed, Analysed, Identified, Trained, Mentored, Supported, Simplified
+- Executive summary: usually 1 sentence
+- Project context: 1 sentence
+- Typical project: 5–10 bullets
+- Small project: 2–4 bullets
+- Highlights: 5–10 bullets
+- Learning: 5–10 bullets
+- Each bullet: usually 8–18 words and one idea
 
-**Metrics & Evidence**
-- Always prefer specific numbers over vague qualifiers ("reduced processing time by 40%" not "faster").
-- If a metric is unknown, insert `[add metric]` as a placeholder.
-- When quoting feedback or praise, use direct quotes in quotation marks and attribute to role (not necessarily name): e.g., *"This was exactly what we needed."* — Senior Manager
-- If no feedback is available, omit the feedback section entirely. Do not fabricate quotes.
-
-**Grouping Logic**
-- Group related contributions under a sub-category rather than listing 10 loose bullets.
-- Aim for 3–6 bullets per sub-category.
-- If a project has more than ~8 bullets total, split into sub-categories.
-
-**Handling Missing Data**
-- Missing metrics → insert `[add metric]` inline
-- Missing project context → infer from contribution descriptions and note any assumptions in italics at the end
-- Missing feedback → omit that sub-section silently
-- Missing skills list → infer from contribution descriptions and list them
-- Missing learning section → generate a brief one based on what the contributions imply the person learned
-- Missing side projects → omit that section entirely
+These are guidelines, not quotas. Never pad a section to reach a target.
 
 ---
 
-## Step 4: Final Quality Check
+## 4. Writing Style
 
-Before presenting the output, verify:
+### Voice and tone
 
-- [ ] `WORK ACCOMPLISHMENTS` label is at the top
-- [ ] Every bullet starts with a strong action verb (no "I", no passive)
-- [ ] Every project has at least one sub-category label
-- [ ] Numbers/metrics are included or flagged with `[add metric]`
-- [ ] Highlights & Impact section is present and outcome-focused
-- [ ] Skills & Technologies Applied section is categorised
-- [ ] LEARNING section and UTILIZED SKILLS tag list are at the bottom
-- [ ] No section is missing from the standard order
-- [ ] Tone is consistent: confident, factual, professional
+- Use active voice.
+- Begin accomplishment bullets with a clear verb where natural.
+- Avoid first-person pronouns in bullets.
+- Sound confident, direct, and professional without exaggeration.
+- Prefer familiar wording such as “Built,” “Developed,” “Implemented,” “Participated,” “Explored,” and “Improved.”
+- Preserve the user's natural terminology and project names.
+- Use sentence case and end bullets with periods.
+
+### Concision
+
+- Keep one main idea per bullet.
+- Prefer a clear summary over a catalogue of implementation details.
+- Combine closely related details when doing so improves readability.
+- Remove repeated claims across project bullets, impact summaries, highlights, and learning.
+- Mention a detail again in `Highlights & Impact` only when it is one of the period's most important takeaways.
+- Avoid long parenthetical lists, dense component-name inventories, and implementation minutiae unless essential.
+
+### Avoid inflated language
+
+Use stronger wording only when evidence supports it. Be cautious with:
+
+- engineered
+- shipped
+- launched
+- transformed
+- comprehensive
+- complete
+- production-ready
+- scalable
+- optimized
+- significant
+- end-to-end
+
+Do not turn ordinary implementation evidence into claims such as “improved query performance,” “ensured test accuracy,” “enabled team-wide access,” or “connected the demo experience to production” unless the source explicitly establishes those outcomes.
 
 ---
 
-## Universal Applicability Notes
+## 5. Organize Specific Content Types
 
-This skill works for **any role or industry**. Adapt the language and sub-categories accordingly:
+### Main work projects
 
-| Role type | Typical sub-categories |
-|---|---|
-| Software / Engineering | Feature Development, Backend/Frontend, Infrastructure, Testing, Documentation |
-| Product / Design | Discovery & Research, Feature Design, Stakeholder Alignment, Metrics & Outcomes |
-| Marketing / Content | Campaigns, Content Creation, Analytics, Brand, Partnerships |
-| Operations / Project Management | Process Improvements, Delivery, Risk Management, Reporting, Team Coordination |
-| Healthcare / Clinical | Patient Outcomes, Protocol Adherence, Training, Cross-functional Collaboration |
-| Sales / Customer Success | Pipeline, Closed Deals, Retention, Client Relationships, Enablement |
-| Research / Academia | Studies/Experiments, Publications, Presentations, Grants, Mentorship |
-| Finance / Accounting | Reporting, Compliance, Process Efficiency, Audits, Cost Savings |
+Describe the feature or system in plain language, then summarize the user's major contributions. Focus on capabilities, architecture, quality work, and delivery status—not the chronology of commits.
 
-Regardless of domain: always use the same document structure. Only the sub-category names and vocabulary change.
+### Collaboration or project initiation
+
+Accurately reflect the user's level of involvement. Appropriate verbs include:
+
+- Participated
+- Contributed
+- Collaborated
+- Supported
+- Conducted
+- Explored
+- Researched
+- Shared
+
+Do not recast collaborative participation as leadership unless the user led the work.
+
+### Learning and development projects
+
+Label these clearly, especially when they are personal, experimental, or unfinished. Include `(work in progress)` in the context sentence when supported. Describe what was built and learned without presenting it as a completed business deliverable.
+
+### Skills
+
+Infer skills conservatively from concrete work. Use standard technology names rather than turning filenames, documentation titles, helper class names, or isolated implementation details into standalone skills.
+
+---
+
+## 6. Final Quality Check
+
+Before presenting or saving the document, verify:
+
+- [ ] The document starts with the period title, without an extra header label.
+- [ ] The summary is concise and contains no unsupported statistics.
+- [ ] Every project has a brief context sentence and a simple overview block.
+- [ ] Claims match the user's actual ownership and certainty.
+- [ ] Metrics are meaningful and supported—not commit, line, or file-count vanity metrics.
+- [ ] No `[add metric]` placeholders appear unless requested.
+- [ ] Project-level impact summaries are omitted when they would duplicate the overview.
+- [ ] Highlights recap only the most important work and avoid promotional bold lead-ins.
+- [ ] Skills are readable and conservatively inferred.
+- [ ] Learning is concise and bullet-based.
+- [ ] Bullets use active, direct language and end consistently with periods.
+- [ ] Repetition and low-value implementation trivia have been removed.
+- [ ] The tone is factual, human, and professional.
+
+If forced to choose between a longer impressive-sounding document and a shorter faithful one, choose the shorter faithful version.
+
+---
+
+## Domain Adaptation
+
+Adapt terminology to the user's role and industry while retaining the same restraint. Engineering work may emphasize features, architecture, testing, and documentation; product work may emphasize discovery and alignment; operations may emphasize delivery and process; healthcare may emphasize care and protocol adherence. The evidence, not a rigid template, determines what belongs.
