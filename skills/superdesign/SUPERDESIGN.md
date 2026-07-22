@@ -280,7 +280,7 @@ When using execute-flow-pages:
 
 ## TOOL USE RULE
 
-Default tool while iterating design of a specific page is iterate-design-draf
+Default tool while iterating design of a specific page is iterate-design-draft
 Default mode is branch
 You may ONLY use replace if user request a tiny tweak, you can describe it in one sentence and user is okay overwriting the previous version.
 Default tool while generating new pages based on an existing confirmed page is execute-flow-pages
@@ -476,15 +476,15 @@ function NavBar({ activeItem = 'home' }) {
 | Cover     | YouTube                | Channel Art           | 16:9         | 2560 × 1440           |
 | Thumbnail | YouTube                | Video Thumbnail       | 16:9         | 1280 × 720            |
 | Ads       | Google Display Ads     | Medium Rectangle      | 4:3          | 300 × 250             |
-| Ads       | Google Display Ads     | Large Rectangle       | 336 × 280    |                       |
-| Ads       | Google Display Ads     | Leaderboard           | 728 × 90     |                       |
-| Ads       | Google Display Ads     | Large Leaderboard     | 970 × 90     |                       |
-| Ads       | Google Display Ads     | Billboard             | 970 × 250    |                       |
-| Ads       | Google Display Ads     | Half Page             | 300 × 600    |                       |
-| Ads       | Google Display Ads     | Large Mobile Banner   | 320 × 100    |                       |
-| Ads       | Google Display Ads     | Mobile Banner         | 320 × 50     |                       |
-| Ads       | Google Display Ads     | Square                | 250 × 250    |                       |
-| Ads       | Google Display Ads     | Small Square          | 200 × 200    |                       |
+| Ads       | Google Display Ads     | Large Rectangle       | 1.28:1       | 336 × 280             |
+| Ads       | Google Display Ads     | Leaderboard           | 8.09:1       | 728 × 90              |
+| Ads       | Google Display Ads     | Large Leaderboard     | 10.78:1      | 970 × 90              |
+| Ads       | Google Display Ads     | Billboard             | 3.88:1       | 970 × 250             |
+| Ads       | Google Display Ads     | Half Page             | 1:2          | 300 × 600             |
+| Ads       | Google Display Ads     | Large Mobile Banner   | 3.2:1        | 320 × 100             |
+| Ads       | Google Display Ads     | Mobile Banner         | 6.4:1        | 320 × 50              |
+| Ads       | Google Display Ads     | Square                | 1:1          | 250 × 250             |
+| Ads       | Google Display Ads     | Small Square          | 1:1          | 200 × 200             |
 | Ads       | Google Performance Max | Landscape Image       | 1.91:1       | 1200 × 628            |
 | Ads       | Google Performance Max | Square Image          | 1:1          | 1200 × 1200           |
 | Ads       | Google Performance Max | Portrait Image        | 4:5          | 960 × 1200            |
