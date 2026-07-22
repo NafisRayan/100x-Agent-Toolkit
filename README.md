@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **168 specialized skill workflows** (100 core + 68 GSD sub-skills), **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **169 specialized skill workflows** (101 core + 68 GSD sub-skills), **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 168 specialized skill workflows (100 core + 68 GSD sub-skills)
+├── skills/                # 169 specialized skill workflows (101 core + 68 GSD sub-skills)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation (includes 142 agent personas)
@@ -107,6 +107,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `21st-dev-builder-v2` | Build with 1400+ shadcn/ui components |
 | `impeccable` | Critique, polish, and improve frontend interfaces |
 | `design-system` | Design-system driven by specification files |
+| `superdesign` | Frontend UI/UX design agent — inspiration, drafts, and iterations on an infinite canvas |
 | `accessibility` | WCAG 2.2 audit and compliance |
 | `building-native-ui` | Expo Router native app development |
 | `mobile-developer` | React Native and Expo mobile development |

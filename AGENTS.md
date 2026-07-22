@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 168 specialized skill workflows (100 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 169 specialized skill workflows (101 core + 68 GSD sub-skills), 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 168 specialized workflows (100 core + 68 GSD sub-skills)
+- **`skills/`** - 169 specialized workflows (101 core + 68 GSD sub-skills)
 - **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`design-md/`** - 74 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
@@ -21,7 +21,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 168 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 169 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -66,7 +66,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Cloud & Infra**: `cloudflare`, `neon-postgres`, `supabase-postgres-best-practices`, `database-optimizer`, `docker-expert`
 - **Performance**: `performance`, `core-web-vitals`, `python-performance-optimization`
 - **Accessibility**: `accessibility`, `web-design-guidelines`, `web-quality-audit`
-- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`
+- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `superdesign`
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `vite`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`
@@ -314,7 +314,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ## Your Mission
 
-**You are now equipped with a production-grade engineering system.** This toolkit contains 168 skill workflows (100 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 169 skill workflows (101 core + 68 GSD sub-skills), 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -324,4 +324,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-06-16 | Total Skills: 168 (100 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-07-22 | Total Skills: 169 (101 core + 68 GSD) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
