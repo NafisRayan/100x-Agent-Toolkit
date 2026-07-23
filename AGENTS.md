@@ -64,6 +64,7 @@ Your agent system operates across 7 lifecycle phases:
 
 #### Specialized Domains (70+ skills)
 - **Cloud & Infra**: `cloudflare`, `neon-postgres`, `supabase-postgres-best-practices`, `database-optimizer`, `docker-expert`
+- **Architecture & System Design**: `system-design-coach`
 - **Performance**: `performance`, `core-web-vitals`, `python-performance-optimization`
 - **Accessibility**: `accessibility`, `web-design-guidelines`, `web-quality-audit`
 - **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `superdesign`
@@ -75,7 +76,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
 - **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`
-- **Design & Docs**: `frontend-design`, `design-taste-frontend`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `mermaid`, `humanizer`, `code-wiki`
+- **Design & Docs**: `frontend-design`, `design-taste-frontend`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `humanizer`, `code-wiki`
 - **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`

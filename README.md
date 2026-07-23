@@ -137,6 +137,11 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `supabase-postgres-best-practices` | Postgres performance from Supabase |
 | `neon-postgres` | Serverless Postgres with Neon |
 
+### Architecture & System Design
+| Skill | Description |
+|-------|-------------|
+| `system-design-coach` | System design coach — scalability, distributed systems, and interview prep (28 topics from Alex Xu's books) |
+
 ### Cloud & Infrastructure
 | Skill | Description |
 |-------|-------------|
@@ -171,7 +176,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `docs-writing` | Diataxis framework, Stripe-style clarity |
 | `code-wiki` | Generate wiki docs + Mermaid diagrams for codebase |
 | `doc-coauthoring` | Structured workflow for co-authoring docs |
-| `mermaid` | Flowcharts, sequence diagrams, C4 architecture |
 | `humanizer` | Remove AI writing patterns, make text sound natural |
 | `docx` | Word document generation and manipulation |
 | `pptx` | PowerPoint deck creation and editing |
