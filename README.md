@@ -56,8 +56,27 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 1. Clone the repository and rename the folder to `.agents`, then place it in your home directory:
    - **Windows**: `C:\Users\<YourUsername>\.agents`
    - **macOS / Linux**: `~/.agents`
-2. The `AGENTS.md` file is the entry point — your agent reads it on startup and gains access to all skills and personas.
-3. Skills drive the lifecycle through auto-triggering:
+2. **Make skills available globally in Claude Code** — two options:
+
+   **Option A: Symlink into `~/.claude/skills/`** (recommended — skills auto-load in every session):
+   ```bash
+   # Symlink a single skill
+   ln -s ~/.agents/skills/<skill-name> ~/.claude/skills/<skill-name>
+
+   # Or symlink all skills at once
+   for skill in ~/.agents/skills/*/; do
+     ln -s "$skill" ~/.claude/skills/"$(basename "$skill")"
+   done
+   ```
+   On **Windows**, use directory junctions instead:
+   ```cmd
+   mklink /D "%USERPROFILE%\.claude\skills\<skill-name>" "%USERPROFILE%\.agents\skills\<skill-name>"
+   ```
+
+   **Option B: Use as `AGENTS.md`** — place the `.agents` folder in your home directory and point your AI agent to `AGENTS.md` as its system prompt. This works with Claude Code, Cursor, Copilot, and other AI tools that support custom instructions.
+
+3. The `AGENTS.md` file is the entry point — your agent reads it on startup and gains access to all skills and personas.
+4. Skills drive the lifecycle through auto-triggering:
    - `brainstorming` → define what to build
    - `planning-and-task-breakdown` → plan how to build it
    - `incremental-implementation` → implement incrementally
