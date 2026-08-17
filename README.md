@@ -178,7 +178,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `requesting-code-review` | Get quality feedback before merge |
 | `performance` | Measure-first Core Web Vitals improvement |
 | `core-web-vitals` | Optimize LCP, INP, CLS |
-| `full-code-review` | Deep multi-agent code review across codebase |
 | `ultrareview` | Multi-agent parallel code review |
 | `playwright-cli` | Playwright CLI automation, testing, and session management |
 
@@ -209,6 +208,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `sales-enablement` | Sales collateral, pitch decks, demo scripts |
 | `marketing-psychology` | Behavioral science applied to marketing |
 | `brag-document` | Work accomplishments reports and self-reviews |
+| `product-management` | Product management suite — discovery, strategy, PRDs, roadmaps, prioritization, analytics, go-to-market |
 
 ### Design & Creativity
 | Skill | Description |
@@ -224,7 +224,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `javascript-pro` | Modern ES2023+ JavaScript patterns |
-| `typescript-advanced-types` | Generics, conditional types, mapped types |
 | `python-performance-optimization` | Profile and optimize Python code |
 | `syntax-rules` | Language-specific coding standards for 18 languages |
 
@@ -236,7 +235,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 ### Meta & Dev Tools
 | Skill | Description |
 |-------|-------------|
-| `enhance-prompt` | Transform vague UI ideas into polished prompts |
 | `skill-creator` | Build new skills with evaluation |
 | `find-skills` | Discover skills for specific tasks |
 | `agent-browser` | Browser automation for AI agents |
@@ -339,7 +337,7 @@ During the shift to a skill-first architecture, several top-level directories we
 - **Progressive Disclosure** — Skill metadata loads first; full content loads on demand.
 - **Verification Gates** — Every skill includes proof steps. Never skip "prove it works."
 - **Anti-Rationalization** — Skills rebut common excuses to enforce discipline.
-- **No Meta-Orchestration** — Personas don't call other personas. Commands handle composition.
+- **No Meta-Orchestration** — Personas don't call other personas. Skills handle composition.
 - **Quality Is Not Optional** — Skills enforce standards used by top engineering organizations.
 
 ---

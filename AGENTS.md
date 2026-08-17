@@ -53,8 +53,7 @@ Your agent system operates across 7 lifecycle phases:
 - `receiving-code-review` - Handle feedback with technical rigor
 - `requesting-code-review` - Get quality feedback before merge
 
-#### Review & Quality (3 skills)
-- `full-code-review` - Run a deep multi-agent code review across one or more codebases
+#### Review & Quality (2 skills)
 - `performance` - Measure-first approach with Core Web Vitals improvement
 - `core-web-vitals` - Optimize LCP, INP, CLS for better page experience
 
@@ -72,11 +71,11 @@ Your agent system operates across 7 lifecycle phases:
 - **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`
 - **Databases & ORM**: `prisma-pro`, `sql-pro`, `supabase-postgres-best-practices`
-- **Languages**: `javascript-pro`, `typescript-advanced-types`
+- **Languages**: `javascript-pro`
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
-- **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`
-- **Design & Docs**: `frontend-design`, `design-taste-frontend`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `documentation-writer`, `canvas-design`, `algorithmic-art`, `humanizer`, `code-wiki`
+- **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`, `product-management`
+- **Design & Docs**: `frontend-design`, `design-taste-frontend`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `canvas-design`, `algorithmic-art`, `humanizer`, `code-wiki`
 - **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
@@ -214,7 +213,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 3. **Plan**: `planning-and-task-breakdown` breaks into verifiable tasks
 4. **Build**: `incremental-implementation` implements with feature flags
 5. **Test**: `test-driven-development` validates with comprehensive coverage
-6. **Review**: `full-code-review` + `requesting-code-review` ensures production quality
+6. **Review**: `ultrareview` + `requesting-code-review` ensures production quality
 7. **Ship**: `finishing-a-development-branch` deploys with monitoring
 
 ### Context Engineering
@@ -313,8 +312,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ---
 
 ## Your Mission
-
-**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skill workflows, 142 expert agents, 24 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skill workflows, 142 expert agents, 74 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -324,4 +322,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-07-22 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-08-17 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
