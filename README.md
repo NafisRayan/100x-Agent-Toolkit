@@ -118,6 +118,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `motion-framer` | React animations (Framer Motion / Motion) |
 | `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
+| `taste-skill` | Premium visual design & frontend taste suite |
 | `tailwind-design-system` | Tailwind CSS design tokens and component libraries |
 | `responsive-design` | Container queries, fluid typography, grid |
 | `web-design-guidelines` | UI code review against design best practices |
@@ -166,7 +167,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `cloudflare` | Workers, Pages, D1, R2, KV, AI, Agents SDK |
 | `docker-expert` | Multi-stage builds, orchestration, security hardening |
-| `vite` | Build tool config, plugin API, SSR, Rolldown |
 | `migrate-to-vinext` | Migrate Next.js projects to vinext (Vite-based) |
 
 ### Quality & Testing
@@ -214,7 +214,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `frontend-design` | Guidance for distinctive, intentional visual design for UI |
-| `design-taste-frontend` | Anti-slop frontend skill for landing pages, portfolios, and redesigns |
+| `taste-skill` | Premium visual design & frontend taste suite — brand identity, anti-slop frontend, high-end design, image generation, image-to-code, UI styles (minimalist, brutalist, stitch), GSAP motion, redesign, full output enforcement |
 | `figma-developer` | Figma to React component conversion |
 | `canvas-design` | Visual art in .png and .pdf documents |
 | `algorithmic-art` | Generative art and creative coding with p5.js |
