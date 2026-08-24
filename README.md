@@ -118,6 +118,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `motion-framer` | React animations (Framer Motion / Motion) |
 | `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
+| `taste-skill` | Premium visual design & frontend taste suite |
 | `tailwind-design-system` | Tailwind CSS design tokens and component libraries |
 | `responsive-design` | Container queries, fluid typography, grid |
 | `web-design-guidelines` | UI code review against design best practices |
