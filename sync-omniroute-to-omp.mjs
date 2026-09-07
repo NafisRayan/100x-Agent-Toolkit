@@ -12,10 +12,11 @@ const PROVIDER_BLOCK = `providers:
   omniroute:
     baseUrl: http://localhost:20128/v1
     auth: apiKey
-    apiKey: blank
-    api: openai-completions
+    apiKey: sk-123
+    api: openai-responses
     discovery:
       type: openai-models-list
+
 `;
 
 function main() {
