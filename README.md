@@ -118,7 +118,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `motion-framer` | React animations (Framer Motion / Motion) |
 | `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
-| `taste-skill` | Premium visual design & frontend taste suite |
 | `tailwind-design-system` | Tailwind CSS design tokens and component libraries |
 | `responsive-design` | Container queries, fluid typography, grid |
 | `web-design-guidelines` | UI code review against design best practices |
@@ -208,13 +207,13 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `sales-enablement` | Sales collateral, pitch decks, demo scripts |
 | `marketing-psychology` | Behavioral science applied to marketing |
 | `brag-document` | Work accomplishments reports and self-reviews |
+| `linkedin-post-writer` | Technical LinkedIn posts that read like hands-on developer results |
 | `product-management` | Product management suite — discovery, strategy, PRDs, roadmaps, prioritization, analytics, go-to-market |
 
 ### Design & Creativity
 | Skill | Description |
 |-------|-------------|
 | `frontend-design` | Guidance for distinctive, intentional visual design for UI |
-| `taste-skill` | Premium visual design & frontend taste suite — brand identity, anti-slop frontend, high-end design, image generation, image-to-code, UI styles (minimalist, brutalist, stitch), GSAP motion, redesign, full output enforcement |
 | `figma-developer` | Figma to React component conversion |
 | `canvas-design` | Visual art in .png and .pdf documents |
 | `algorithmic-art` | Generative art and creative coding with p5.js |
