@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 100 specialized skill workflows — 120 total, counting the 21-skill `hyperframes` video suite nested in `skills/hyperframes/` — plus 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 100 specialized skill workflows, 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 100 specialized workflows (the `hyperframes` skill nests a 21-part video-production suite as sub-folders)
+- **`skills/`** - 100 specialized workflows
 - **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`design-md/`** - 74 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
@@ -21,7 +21,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 100 specialized skill workflows cover every aspect of software development.** The `hyperframes` skill is a suite: its folder holds the entry-point `SKILL.md` plus 20 nested sibling skills for video production (120 skills in total). Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 100 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -79,7 +79,7 @@ Your agent system operates across 7 lifecycle phases:
 - **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
-- **Video & Motion (hyperframes suite)**: `hyperframes` - entry point for the HyperFrames video framework; routes any video/animation request to the owning workflow. Nests 20 sub-skills inside `skills/hyperframes/`: `hyperframes-core` (composition contract), `hyperframes-cli` (dev loop, render, publish), `hyperframes-animation` (motion rules, blueprints, adapters), `hyperframes-audio` (mixing, effects, automation), `hyperframes-creative` (design specs, narration, beats), `hyperframes-keyframes` (camera moves, GSAP/WAAPI), `hyperframes-registry` (400+ hosted blocks), `hyperframes-studio` (timeline layout, safe zones), `media-use` (media OS: resolve/generate audio, images, LUTs), `general-video`, `motion-graphics`, `product-launch-video`, `pr-to-video`, `music-to-video`, `faceless-explainer`, `embedded-captions`, `talking-head-recut`, `slideshow`, `remotion-to-hyperframes`, `figma`
+- **Video & Motion**: `remotion-best-practices` - router for all Remotion skills (v4.0.526); loads the matching `./remotion-<module>/REFERENCE.md` per task. Modules: `remotion-create` (new videos), `remotion-captions`, `remotion-docs`, `remotion-interactivity`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`. Self-contained (relative refs only) — replaces the former hyperframes suite.
 - **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
@@ -313,7 +313,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ---
 
 ## Your Mission
-**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skill workflows (120 with the nested `hyperframes` video suite), 142 expert agents, 74 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skill workflows, 142 expert agents, 74 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -323,4 +323,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-09-21 | Total Skills: 100 top-level / 120 with nested (21-skill `hyperframes` suite in `skills/hyperframes/`) | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-09-21 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
