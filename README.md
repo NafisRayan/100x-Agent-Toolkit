@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows** (120 total — the `hyperframes` skill nests a 21-part video-production suite in `skills/hyperframes/`), **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,13 +25,19 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 100 specialized skill workflows
+├── skills/                # 100 specialized skill workflows (hyperframes nests 20 more)
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation (includes 142 agent personas)
 │       ├── scripts/       # Automation scripts (Python, JS, Shell)
 │       ├── assets/        # Starter projects, templates, images
 │       └── evals/         # Evaluation test cases
+│   └── hyperframes/       # 21-skill video suite: entry SKILL.md + 20 nested skills
+│                          #   (hyperframes-core, -cli, -animation, -audio, -creative,
+│                          #    -keyframes, -registry, -studio, media-use, general-video,
+│                          #    motion-graphics, product-launch-video, pr-to-video,
+│                          #    music-to-video, faceless-explainer, embedded-captions,
+│                          #    talking-head-recut, slideshow, remotion-to-hyperframes, figma)
 │   └── ...
 │
 ├── mcps/
@@ -114,7 +120,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `next-best-practices` | File conventions, RSC boundaries, data patterns |
 | `vercel-react-best-practices` | React/Next.js performance optimization |
 | `shadcn` | Component management for shadcn/ui |
-| `motion` | React animations with Motion (bundle-optimized) |
+| `motion-skill-jezweb` | React animations with Motion (bundle-optimized) |
 | `motion-framer` | React animations (Framer Motion / Motion) |
 | `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
@@ -186,6 +192,34 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `3d-web-experience` | Three.js, React Three Fiber, Spline, WebGL |
 | `threejs-webgl` | Interactive 3D scenes, materials, lighting |
 | `algorithmic-art` | Generative art and creative coding |
+
+### Video & Motion (hyperframes suite)
+
+All video/motion skills live as one consolidated suite under `skills/hyperframes/`. The `hyperframes` skill is the mandatory entry point; the other 20 are nested sub-skills it routes to.
+
+| Skill | Description |
+|-------|-------------|
+| `hyperframes` | Entry point for the HyperFrames video framework — resumes project state, captures intent, routes to the owning workflow |
+| `hyperframes/hyperframes-core` | Composition contract — HTML structure, `data-*` timing, clips, tracks, deterministic-render rules |
+| `hyperframes/hyperframes-cli` | CLI dev loop — init, add, capture, lint, check, preview, render, publish, cloud rendering |
+| `hyperframes/hyperframes-animation` | Atomic motion rules, scene blueprints, transitions, 7 runtime adapters (GSAP, Lottie, Three.js, ...) |
+| `hyperframes/hyperframes-audio` | Audio mixing — fades, ducking, effects chains, automation envelopes, submix buses |
+| `hyperframes/hyperframes-creative` | Creative direction — design specs, palettes, narration, beat planning |
+| `hyperframes/hyperframes-keyframes` | Seek-safe 2D/3D keyframes — punch-in, Ken Burns, camera moves, diagnostics |
+| `hyperframes/hyperframes-registry` | Search and install ~400 hosted registry blocks and components |
+| `hyperframes/hyperframes-studio` | Studio timeline layout — track discipline, caption safe zones |
+| `hyperframes/media-use` | Media OS — resolve BGM/SFX/images/LUTs, TTS/music/image generation, background removal |
+| `hyperframes/general-video` | Longer or multi-scene compositions, brand reels, montages |
+| `hyperframes/motion-graphics` | Short design-led motion graphics (<10s) — kinetic type, stat hits, logo stings |
+| `hyperframes/product-launch-video` | Product/marketing URLs or briefs → promo videos |
+| `hyperframes/pr-to-video` | GitHub PRs → code-change explainer videos |
+| `hyperframes/music-to-video` | Music tracks → beat-synced lyric/promo videos |
+| `hyperframes/faceless-explainer` | Text, articles, or notes → faceless explainer videos |
+| `hyperframes/embedded-captions` | Talking-head videos + embedded caption styles (35-style catalog) |
+| `hyperframes/talking-head-recut` | Talking-head footage + synced graphic overlay cards |
+| `hyperframes/slideshow` | Navigable presentation decks with presenter mode |
+| `hyperframes/remotion-to-hyperframes` | One-way port of Remotion compositions to HyperFrames HTML |
+| `hyperframes/figma` | Figma designs and motion → HyperFrames compositions |
 
 ### Documentation
 | Skill | Description |
@@ -328,6 +362,10 @@ During the shift to a skill-first architecture, several top-level directories we
 | `mirror-website` | Empty skill directory with no SKILL.md — never had content. |
 | `prisma` + `prisma-expert` | Overlapped significantly. Consolidated into a single `prisma-pro` skill covering schema design, migrations, query optimization, and relations modeling. |
 | `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
+
+### Hyperframes suite → `skills/hyperframes/` (consolidated)
+
+21 sibling skill folders installed from `heygen-com/hyperframes` were consolidated into a single `skills/hyperframes/` folder: the entry-point skill's `SKILL.md` stays at the folder root, and the 20 sibling skills (`hyperframes-core`, `hyperframes-cli`, `hyperframes-animation`, `hyperframes-audio`, `hyperframes-creative`, `hyperframes-keyframes`, `hyperframes-registry`, `hyperframes-studio`, `media-use`, `general-video`, `motion-graphics`, `product-launch-video`, `pr-to-video`, `music-to-video`, `faceless-explainer`, `embedded-captions`, `talking-head-recut`, `slideshow`, `remotion-to-hyperframes`, `figma`) moved inside it with contents unchanged. `.skill-lock.json` `skillPath` entries were updated to the nested locations so registry lookups keep working.
 
 ---
 
