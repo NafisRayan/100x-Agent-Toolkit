@@ -67,7 +67,7 @@ npx hyperframes grade-compare \
 - `--timeout <ms>` changes the render-ready timeout for the generated comparison composition.
 - Use `--json` for machine-readable output.
 
-This command helps select a grade. It does not apply the selected grade to the composition or replace `/media-use` provenance and LUT validation.
+This command helps select a grade. It does not apply the selected grade to the composition or replace `/hyperframes/media-use` provenance and LUT validation.
 
 ## Batch template renders
 

@@ -16,8 +16,8 @@ Run commands as `npx hyperframes ...` unless project instructions provide a wrap
 ## Development loop
 
 1. **Scaffold:** `npx hyperframes init <project>` (centered blank). Or capture a site. Pass `--example=<name>` only to start from a named example.
-2. **Find the move:** before authoring motion by hand, search for a primitive that already does it: `npx hyperframes catalog --query "reveal a headline one line at a time"`. Ask for the effect you want rather than the mechanism you have in mind. Install with `npx hyperframes add <name>` (see `/hyperframes-registry`). Author by hand only once nothing fits.
-3. **Author:** write the composition using `/hyperframes-core`. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline --json` instead of reading `index.html` and every sub-composition file: nested rows carry absolute main-timeline `absStart`/`absEnd` and their owning `file`, not just their local, per-sub-composition time. Prefer `--json` over the text form; it costs fewer tokens for the same or better correctness. See `references/upgrade-info-misc.md` for one-liners that answer common questions without reading the whole output.
+2. **Find the move:** before authoring motion by hand, search for a primitive that already does it: `npx hyperframes catalog --query "reveal a headline one line at a time"`. Ask for the effect you want rather than the mechanism you have in mind. Install with `npx hyperframes add <name>` (see `/hyperframes/hyperframes-registry`). Author by hand only once nothing fits.
+3. **Author:** write the composition using `/hyperframes/hyperframes-core`. To know what is on a project's timeline (tracks, clips, starts, ends, what plays), run `npx hyperframes timeline --json` instead of reading `index.html` and every sub-composition file: nested rows carry absolute main-timeline `absStart`/`absEnd` and their owning `file`, not just their local, per-sub-composition time. Prefer `--json` over the text form; it costs fewer tokens for the same or better correctness. See `references/upgrade-info-misc.md` for one-liners that answer common questions without reading the whole output.
 4. **Get fast feedback while editing:** run `npx hyperframes lint` after the first HTML pass and after structural changes.
 5. **Run the final gate:** run `npx hyperframes check`; it reruns lint before opening the browser. Do not prepend a redundant standalone lint invocation. Add `--snapshots` for annotated overview frames and finding crops.
 6. **Inspect sub-compositions:** when `index.html` mounts `data-composition-src`, capture midpoint snapshots and inspect each mounted scene.
@@ -28,16 +28,16 @@ Run commands as `npx hyperframes ...` unless project instructions provide a wrap
 ## Mandatory creator-edit cross-references
 
 - Before authoring or diagnosing a zoom, punch-in/punch-out, reframe, camera
-  move, or any keyframe motion, read `/hyperframes-keyframes` first.
-- Before `hyperframes keyframes`, read `/hyperframes-keyframes`; the command
+  move, or any keyframe motion, read `/hyperframes/hyperframes-keyframes` first.
+- Before `hyperframes keyframes`, read `/hyperframes/hyperframes-keyframes`; the command
   surfaces animation trajectories and does not diagnose clip cuts.
 - For a cut, trim, splice, reorder, or source timing edit, read
-  `/hyperframes-core` and use its clip/timeline contract.
+  `/hyperframes/hyperframes-core` and use its clip/timeline contract.
 - For fade-in/fade-out, crossfade, track gain, volume automation, ducking,
-  voiceover carve, or FX on placed audio, read `/hyperframes-audio`. Load core
+  voiceover carve, or FX on placed audio, read `/hyperframes/hyperframes-audio`. Load core
   alongside it when clip placement or picture timing also changes.
-- Use `/media-use` only to source/generate media or preprocess a derived asset.
-  Copy creator edit markup from `/hyperframes-core` → `references/creator-editing-recipes.md`.
+- Use `/hyperframes/media-use` only to source/generate media or preprocess a derived asset.
+  Copy creator edit markup from `/hyperframes/hyperframes-core` → `references/creator-editing-recipes.md`.
 
 ```bash
 # Fast iteration check; repeat while authoring as needed.
@@ -142,7 +142,7 @@ The following references and owning skills are mandatory command contracts, not 
 | Google Cloud Run deployment and rendering                                                          | `references/cloudrun.md`              |
 | `info`, `upgrade`, `compositions`, `timeline`, `docs`, `benchmark`, telemetry, media preprocessing | `references/upgrade-info-misc.md`     |
 
-For composition variables, also read `/hyperframes-core` → `references/variables-and-media.md`. For `hyperframes add` and `hyperframes catalog`, use `/hyperframes-registry`. Before `hyperframes present`, read `/slideshow`; before `hyperframes keyframes`, read `/hyperframes-keyframes`. For TTS, transcription, captions, or background removal choices, use `/media-use`.
+For composition variables, also read `/hyperframes/hyperframes-core` → `references/variables-and-media.md`. For `hyperframes add` and `hyperframes catalog`, use `/hyperframes/hyperframes-registry`. Before `hyperframes present`, read `/hyperframes/slideshow`; before `hyperframes keyframes`, read `/hyperframes/hyperframes-keyframes`. For TTS, transcription, captions, or background removal choices, use `/hyperframes/media-use`.
 
 The specialized commands are deliberately documented by their owning workflows:
 
@@ -154,7 +154,7 @@ npx hyperframes media-treatment --capabilities
 npx hyperframes figma asset KEY:10-20
 ```
 
-`present` serves a navigable deck with presenter and audience synchronization. `beats` is the standalone Studio beat-grid utility defined in `references/beats.md`. `keyframes` surfaces seek-safe animation and motion-path diagnostics. `media-treatment` discovers, applies, and clears deterministic looks on local footage — start with `--capabilities` for the overview and `--capability <name>` for one family; `/media-use` owns which treatment a brief is asking for. `figma` imports over the REST API with the `asset`, `tokens`, and `component` subcommands and needs `FIGMA_TOKEN`; motion and shader import have no REST endpoint and are agent-only, so `/figma` owns those.
+`present` serves a navigable deck with presenter and audience synchronization. `beats` is the standalone Studio beat-grid utility defined in `references/beats.md`. `keyframes` surfaces seek-safe animation and motion-path diagnostics. `media-treatment` discovers, applies, and clears deterministic looks on local footage — start with `--capabilities` for the overview and `--capability <name>` for one family; `/hyperframes/media-use` owns which treatment a brief is asking for. `figma` imports over the REST API with the `asset`, `tokens`, and `component` subcommands and needs `FIGMA_TOKEN`; motion and shader import have no REST endpoint and are agent-only, so `/hyperframes/figma` owns those.
 
 ## Commands you should not run
 

@@ -18,11 +18,11 @@ Use `hyperframes-animation` for broad scene recipes. Use `hyperframes-cli` for f
 ## Creator editing boundary
 
 Keyframes own visual motion, not clip assembly. Source-range hard cuts, trim,
-splice, and reorder belong to `/hyperframes-core`: author one media element per
+splice, and reorder belong to `/hyperframes/hyperframes-core`: author one media element per
 kept range, place it with `data-start` and `data-duration`, and select its source
 offset with `data-media-start`. Adjacent ranges make a hard cut. A crossfade
 uses overlapping clips on different tracks plus visual opacity keyframes; sound
-fades use `/hyperframes-audio`.
+fades use `/hyperframes/hyperframes-audio`.
 
 | Creator request                         | Truthful mechanism                                                                                                                                                                                                          |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,22 +30,22 @@ fades use `/hyperframes-audio`.
 | Smooth multi-state zoom or reframe      | Keep one subject wrapper alive and author multiple zoom/reframe states as a pose ladder with per-segment easing.                                                                                                            |
 | Pan, reframe, or Ken Burns camera move  | Animate wrapper translation plus scale. Geometry is authored; this is not face tracking or automatic semantic reframing.                                                                                                    |
 | Chained camera moves                    | Chain labeled transform beats on one registered seek-safe timeline.                                                                                                                                                         |
-| Match cut or whip pan                   | `/hyperframes-animation` owns the visual handoff; `/hyperframes-registry` supplies primitives; keyframes preserve authored geometry, direction, and velocity. There is no automatic matching-frame discovery.               |
+| Match cut or whip pan                   | `/hyperframes/hyperframes-animation` owns the visual handoff; `/hyperframes/hyperframes-registry` supplies primitives; keyframes preserve authored geometry, direction, and velocity. There is no automatic matching-frame discovery.               |
 | Crop and mask reframe                   | Interpolate `clip-path` or a mask on an inner visual wrapper to crop/reframe without changing source time. Polygon keyframes can form a polygon/mask transition.                                                            |
-| Directional wipe cut or iris/reveal cut | Animate a mask/clip boundary across overlapping visual clips; `/hyperframes-animation` owns the handoff choreography.                                                                                                       |
+| Directional wipe cut or iris/reveal cut | Animate a mask/clip boundary across overlapping visual clips; `/hyperframes/hyperframes-animation` owns the handoff choreography.                                                                                                       |
 | Split-screen handoff                    | Keep both visual clips placed by core, then keyframe their inner crop/mask wrappers and divider geometry.                                                                                                                   |
-| Constant source retime                  | `/hyperframes-core` owns normalized `data-playback-rate` (`0.1..10`) for render-safe picture and pitch-preserved sound. It is constant for the whole media element.                                                         |
+| Constant source retime                  | `/hyperframes/hyperframes-core` owns normalized `data-playback-rate` (`0.1..10`) for render-safe picture and pitch-preserved sound. It is constant for the whole media element.                                                         |
 | Source speed ramps                      | A `rate` lane in `data-automation` on the `<video>`/`<audio>` (`t` in clip seconds, `v` 0.1..10, log interpolation); it wins over the constant rate.                                                                        |
 | Freeze / hold                           | A visual pose, final source frame, or finished sub-composition can hold. Arbitrary mid-source freeze is not supported; preprocess a still/derived segment, place it as its own clip, then resume with another source range. |
 
-When editing picture and sound together, load `/hyperframes-core`, this skill for
-visual motion, and `/hyperframes-audio` for fades, crossfades, volume automation,
+When editing picture and sound together, load `/hyperframes/hyperframes-core`, this skill for
+visual motion, and `/hyperframes/hyperframes-audio` for fades, crossfades, volume automation,
 ducking/carve, or effects on the placed tracks.
 
 A visual transition or cropping treatment is not a temporal source trim or
-splice. `/hyperframes-core` owns the timeline, clip timing, and source ranges;
+splice. `/hyperframes/hyperframes-core` owns the timeline, clip timing, and source ranges;
 keyframes only animate the visible handoff or crop on wrappers inside those clips.
-For copyable combined picture/sound recipes, use `/hyperframes-core` → `references/creator-editing-recipes.md`.
+For copyable combined picture/sound recipes, use `/hyperframes/hyperframes-core` → `references/creator-editing-recipes.md`.
 
 ## Procedure
 

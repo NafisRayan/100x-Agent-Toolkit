@@ -6,7 +6,7 @@ description: >
   track, one element kind per track, every scene a sub-composition) and where
   captions and key content may sit (safe zones). Don't use for how to perform an
   individual edit (split, trim, retime, volume, copy, swap): that is
-  `creator-editing-recipes.md` in `/hyperframes-core`.
+  `creator-editing-recipes.md` in `/hyperframes/hyperframes-core`.
 ---
 
 # HyperFrames Studio conventions
@@ -14,7 +14,7 @@ description: >
 Studio draws one timeline row per top-level element. A project that follows the
 rules below opens as a short, readable timeline; one that does not opens as a wall
 of unlabeled rows the user cannot edit. These are conventions for what to build.
-For how to change a clip, follow `/hyperframes-core` `references/creator-editing-recipes.md`
+For how to change a clip, follow `/hyperframes/hyperframes-core` `references/creator-editing-recipes.md`
 and never invent a different form of the same edit.
 
 ## 1. Every scene is a sub-composition
@@ -35,7 +35,7 @@ Author as if a structure lint rejects any violation.
   marked `data-track-kind="captions"` that carries every caption group in order.
 - Never one row per caption group, and never captions mixed onto a track with
   another kind.
-- Word-timing rules are unchanged: see `/embedded-captions` and the `caption_*` lint rules.
+- Word-timing rules are unchanged: see `/hyperframes/embedded-captions` and the `caption_*` lint rules.
 
 ## 3. One element kind per track
 
