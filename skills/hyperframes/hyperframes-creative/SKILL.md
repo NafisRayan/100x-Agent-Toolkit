@@ -58,7 +58,7 @@ For motion patterns, scene blueprints, transitions, and CSS marker effects, use 
 Run from the repo root with explicit paths, for example:
 
 ```bash
-python skills/hyperframes-creative/scripts/extract-audio-data.py <audio-file>
+python skills/hyperframes/hyperframes-creative/scripts/extract-audio-data.py <audio-file>
 ```
 
 Animation analysis (`animation-map.mjs`) lives in `hyperframes-animation/scripts/`.

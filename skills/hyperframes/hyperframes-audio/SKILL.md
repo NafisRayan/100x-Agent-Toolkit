@@ -9,8 +9,8 @@ description: >
   parameter, or one submix bus carrying a chain, a fader and an automation clock
   for several tracks at once (`<hf-audio-group>`).
   Don't use for sourcing or generating audio — finding BGM, SFX, or making a
-  voiceover is `/media-use`. Don't use for clip timing or track layout, which is
-  `/hyperframes-core`.
+  voiceover is `/hyperframes/media-use`. Don't use for clip timing or track layout, which is
+  `/hyperframes/hyperframes-core`.
 ---
 
 # HyperFrames Audio
@@ -25,11 +25,11 @@ same Web Audio graph — the studio in a live context, the engine in an offline 
 inside the browser it already drives. There is one implementation of each effect,
 so what you hear while scrubbing is what gets written. You never tune twice.
 
-Clip timing remains `/hyperframes-core`: audio/video trims and source ranges use
+Clip timing remains `/hyperframes/hyperframes-core`: audio/video trims and source ranges use
 `data-start`, `data-duration`, and `data-media-start`, and crossfades overlap
 clips on different tracks. This skill owns placed-track fade-in/fade-out,
 crossfade envelopes, track gain/track volume, volume and effect automation,
-ducking/voiceover carve, and the effect chain. `/media-use` owns sourcing,
+ducking/voiceover carve, and the effect chain. `/hyperframes/media-use` owns sourcing,
 generation, and preprocessing.
 
 Constant `data-playback-rate` (`0.1..10`) is render-safe for picture and
@@ -38,7 +38,7 @@ source offset, and rate. A speed ramp is a `rate` lane in `data-automation`
 (see `docs/reference/speed-ramps`); it wins over the constant and keeps pitch
 in preview and render. HyperFrames does not
 provide automatic waveform sync or drift correction.
-For copyable cut/crossfade/retime recipes, use `/hyperframes-core` → `references/creator-editing-recipes.md`.
+For copyable cut/crossfade/retime recipes, use `/hyperframes/hyperframes-core` → `references/creator-editing-recipes.md`.
 
 Three attributes carry everything, on the audio/video element itself — or, for
 the first two, on an `<hf-audio-group>` bus (see "One bus for many tracks"):

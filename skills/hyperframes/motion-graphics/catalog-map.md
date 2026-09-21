@@ -11,7 +11,7 @@ directory, with no project, no prior `add`, and no account. The table below is a
 part of that registry and it under-covers by design — treat a miss here as unproven, and only the search's
 own empty result as evidence the catalog lacks the move. When it does, say so with
 `npx hyperframes feedback --search-miss "<query>" --wanted "<the move>" --tier <tier from the envelope>`
-before hand-authoring. Full flags and tiers: `/hyperframes-registry` → § Discovery.
+before hand-authoring. Full flags and tiers: `/hyperframes/hyperframes-registry` → § Discovery.
 
 The Builder's **default is to compose existing HF catalog blocks, not hand-author.** `npx hyperframes add <block>` drops a block's source into `compositions/`; the Builder then **customizes in place** — most blocks bake their content/data into their own script (only a few expose CSS-var `params`), so reuse = **add + edit**, not pure variable injection. Hand-author only (a) gaps no block covers and (b) the asset-fusion affordance binding.
 

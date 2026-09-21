@@ -2,7 +2,7 @@
 
 Step 3 of the product-launch flow. Output: `STORYBOARD.md` (the narrative plan, one frame per beat) and `SCRIPT.md` (the locked spoken narration).
 
-This step decides **what the video says, in what order, and how each beat is said** — and it says each beat in the SHAPE of a proven script. It does not design layout, composition, or motion (that is Step 4). For exact file syntax follow `../hyperframes/references/storyboard-format.md` and `../hyperframes/references/script-format.md`.
+This step decides **what the video says, in what order, and how each beat is said** — and it says each beat in the SHAPE of a proven script. It does not design layout, composition, or motion (that is Step 4). For exact file syntax follow `../references/storyboard-format.md` and `../references/script-format.md`.
 
 ## What story design produces
 
@@ -437,7 +437,7 @@ Step 3 only TAGS the candidate id and writes the shaped VO. Step 4 (visual desig
 2. Use only filenames listed there; write as `assets/<basename>`.
 3. One line, candidates separated by semicolons, a short description after `—`.
 4. Prefer `[video]` assets when motion proves the product better than a still.
-5. Use content assets (UI, screenshots, product photos, charts, demos). Skip tiny icons, favicons, badges, decorative chrome, repeated logo variants — unless the beat needs them. Partner / third-party logos come from `/media-use` (`resolve --type logo --entity <brand>`) — never redrawn by hand.
+5. Use content assets (UI, screenshots, product photos, charts, demos). Skip tiny icons, favicons, badges, decorative chrome, repeated logo variants — unless the beat needs them. Partner / third-party logos come from `/hyperframes/media-use` (`resolve --type logo --entity <brand>`) — never redrawn by hand.
 6. Pure-typography beats may use an empty asset list. Do not use nested lists.
 
 Example:

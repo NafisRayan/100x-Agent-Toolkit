@@ -49,7 +49,7 @@ These recipes keep sound on a separate `<audio>` element with the `<video>` mute
 ></audio>
 ```
 
-Timeline math: B starts at A start + duration. Source math: each range starts at `data-media-start`; consumed source = timeline duration × rate. Audio follows: duplicate matching `<audio>` ranges/timing. Owner: `/hyperframes-core`. Limit: adjacent windows only; author the two windows edge to edge. Same-track overlap is valid; both clips paint in CSS order.
+Timeline math: B starts at A start + duration. Source math: each range starts at `data-media-start`; consumed source = timeline duration × rate. Audio follows: duplicate matching `<audio>` ranges/timing. Owner: `/hyperframes/hyperframes-core`. Limit: adjacent windows only; author the two windows edge to edge. Same-track overlap is valid; both clips paint in CSS order.
 
 ## Trim in/out
 
@@ -74,7 +74,7 @@ Timeline math: B starts at A start + duration. Source math: each range starts at
 ></audio>
 ```
 
-Timeline math: visible window is `[1,4]`. Source math: in=6, out=6+3 at 1x; never invent source-end syntax. Audio follows: matching separate audio track uses the same three attributes. Owner: `/hyperframes-core`. Limit: use another clip for another range.
+Timeline math: visible window is `[1,4]`. Source math: in=6, out=6+3 at 1x; never invent source-end syntax. Audio follows: matching separate audio track uses the same three attributes. Owner: `/hyperframes/hyperframes-core`. Limit: use another clip for another range.
 
 ## Split / splice
 
@@ -117,7 +117,7 @@ Timeline math: visible window is `[1,4]`. Source math: in=6, out=6+3 at 1x; neve
 ></audio>
 ```
 
-Timeline math: splice at t=2. Source math: independent source offsets select kept pieces. Audio follows: split matching audio identically. Owner: `/hyperframes-core`. Limit: source cuts are core, never keyframes.
+Timeline math: splice at t=2. Source math: independent source offsets select kept pieces. Audio follows: split matching audio identically. Owner: `/hyperframes/hyperframes-core`. Limit: source cuts are core, never keyframes.
 
 ## Duplicate / reuse same source
 
@@ -160,7 +160,7 @@ Timeline math: splice at t=2. Source math: independent source offsets select kep
 ></audio>
 ```
 
-Timeline math: copies may occupy different starts. Source math: identical offsets reuse identical source. Audio follows: duplicate the separate audio track too. Owner: `/hyperframes-core`. Limit: every element needs a unique id when ids are present.
+Timeline math: copies may occupy different starts. Source math: identical offsets reuse identical source. Audio follows: duplicate the separate audio track too. Owner: `/hyperframes/hyperframes-core`. Limit: every element needs a unique id when ids are present.
 
 ## Reorder
 
@@ -203,7 +203,7 @@ Timeline math: copies may occupy different starts. Source math: identical offset
 ></audio>
 ```
 
-Timeline math: `data-start` defines authored order. Source math: source offsets need not be chronological. Audio follows: reorder identical matching audio windows. Owner: `/hyperframes-core`. Limit: reordering changes placement only, not source ranges.
+Timeline math: `data-start` defines authored order. Source math: source offsets need not be chronological. Audio follows: reorder identical matching audio windows. Owner: `/hyperframes/hyperframes-core`. Limit: reordering changes placement only, not source ranges.
 
 ## Freeze / hold
 
@@ -211,7 +211,7 @@ Timeline math: `data-start` defines authored order. Source math: source offsets 
 <img src="held-frame.png" data-start="2" data-duration="1" data-track-index="0" class="clip" />
 ```
 
-Timeline math: the still owns its hold duration. Source math: final-source frame, subcomp final state, and visual pose holds are supported. Audio follows: continue, trim, or silence audio deliberately. Owner: `/hyperframes-core` + `/media-use`. Limit: arbitrary mid-source freeze requires preprocess of a still/segment.
+Timeline math: the still owns its hold duration. Source math: final-source frame, subcomp final state, and visual pose holds are supported. Audio follows: continue, trim, or silence audio deliberately. Owner: `/hyperframes/hyperframes-core` + `/hyperframes/media-use`. Limit: arbitrary mid-source freeze requires preprocess of a still/segment.
 
 ## Constant speed / slow motion
 
@@ -229,7 +229,7 @@ Timeline math: the still owns its hold duration. Source math: final-source frame
 ></video>
 ```
 
-Timeline math: duration is authored timeline time. Source math: consumed source = timeline duration × rate; natural timeline duration = remaining source / rate. Audio follows: matching separate audio track uses the same constant rate. Owner: `/hyperframes-core`. Limit: normalized 0.1..10. For a speed ramp put a `rate` lane in `data-automation`, e.g. `{"version":1,"lanes":[{"target":"rate","points":[{"t":0,"v":1},{"t":2,"v":4}]}]}`; it wins over the constant.
+Timeline math: duration is authored timeline time. Source math: consumed source = timeline duration × rate; natural timeline duration = remaining source / rate. Audio follows: matching separate audio track uses the same constant rate. Owner: `/hyperframes/hyperframes-core`. Limit: normalized 0.1..10. For a speed ramp put a `rate` lane in `data-automation`, e.g. `{"version":1,"lanes":[{"target":"rate","points":[{"t":0,"v":1},{"t":2,"v":4}]}]}`; it wins over the constant.
 
 ## Zoom / punch
 
@@ -237,7 +237,7 @@ Timeline math: duration is authored timeline time. Source math: consumed source 
 tl.to("#clip .inner", { scale: 1.35, xPercent: -8, duration: 0.18 }, 1);
 ```
 
-Timeline math: tween positions are composition seconds. Source math: unchanged; the core clip still selects source time. Audio follows: unchanged unless separately edited. Owner: `/hyperframes-keyframes`. Limit: target the inner wrapper, not the timed clip element.
+Timeline math: tween positions are composition seconds. Source math: unchanged; the core clip still selects source time. Audio follows: unchanged unless separately edited. Owner: `/hyperframes/hyperframes-keyframes`. Limit: target the inner wrapper, not the timed clip element.
 
 ## Pan / Ken Burns
 
@@ -250,7 +250,7 @@ tl.fromTo(
 );
 ```
 
-Timeline math: move spans four authored seconds. Source math: unchanged. Audio follows: matching clip timing remains separate. Owner: `/hyperframes-keyframes`. Limit: authored geometry, not automatic face tracking.
+Timeline math: move spans four authored seconds. Source math: unchanged. Audio follows: matching clip timing remains separate. Owner: `/hyperframes/hyperframes-keyframes`. Limit: authored geometry, not automatic face tracking.
 
 ## Crop / reframe
 
@@ -258,7 +258,7 @@ Timeline math: move spans four authored seconds. Source math: unchanged. Audio f
 tl.to("#clip .inner", { clipPath: "inset(8% 12% 6% 10%)", xPercent: -4, duration: 1 }, 2);
 ```
 
-Timeline math: crop interpolates over `[2,3]`. Source math: unchanged. Audio follows: no automatic change. Owner: `/hyperframes-keyframes`. Limit: inner wrapper only, not temporal trim.
+Timeline math: crop interpolates over `[2,3]`. Source math: unchanged. Audio follows: no automatic change. Owner: `/hyperframes/hyperframes-keyframes`. Limit: inner wrapper only, not temporal trim.
 
 ## Clip-path wipe / reveal / mask / split-screen
 
@@ -271,7 +271,7 @@ tl.fromTo(
 );
 ```
 
-Timeline math: overlap placed clips for the 0.5s handoff. Source math: each clip keeps its own range. Audio follows: place matching audio on its own tracks. Owner: `/hyperframes-keyframes` + `/hyperframes-animation`. Limit: visual mask/polygon/split-screen only; source cuts stay `/hyperframes-core`.
+Timeline math: overlap placed clips for the 0.5s handoff. Source math: each clip keeps its own range. Audio follows: place matching audio on its own tracks. Owner: `/hyperframes/hyperframes-keyframes` + `/hyperframes/hyperframes-animation`. Limit: visual mask/polygon/split-screen only; source cuts stay `/hyperframes/hyperframes-core`.
 
 ## Crossfade
 
@@ -323,7 +323,7 @@ Timeline math: overlap placed clips for the 0.5s handoff. Source math: each clip
 </script>
 ```
 
-Timeline math: distinct tracks overlap by 0.5s with opposing opacity envelopes. Source math: each source range remains independent. Audio follows: opposing volume envelopes on distinct audio tracks. Owner: `/hyperframes-core` + `/hyperframes-keyframes` + `/hyperframes-audio`. Limit: the crossfade is the opacity/volume envelopes, not a source-level dissolve.
+Timeline math: distinct tracks overlap by 0.5s with opposing opacity envelopes. Source math: each source range remains independent. Audio follows: opposing volume envelopes on distinct audio tracks. Owner: `/hyperframes/hyperframes-core` + `/hyperframes/hyperframes-keyframes` + `/hyperframes/hyperframes-audio`. Limit: the crossfade is the opacity/volume envelopes, not a source-level dissolve.
 
 ## Volume fades / ducking
 
@@ -338,7 +338,7 @@ Timeline math: distinct tracks overlap by 0.5s with opposing opacity envelopes. 
 ></audio>
 ```
 
-Timeline math: lane `t` is clip-local authored time: fade-in 0–1, duck down 2–2.2, hold 2.2–3, duck up 3–3.2, fade-out 4–5. Source math: source selection still uses core attributes. Audio follows: the explicit down-hold-up envelope affects this separate audio track. Owner: `/hyperframes-audio`. Limit: automation is not source retiming.
+Timeline math: lane `t` is clip-local authored time: fade-in 0–1, duck down 2–2.2, hold 2.2–3, duck up 3–3.2, fade-out 4–5. Source math: source selection still uses core attributes. Audio follows: the explicit down-hold-up envelope affects this separate audio track. Owner: `/hyperframes/hyperframes-audio`. Limit: automation is not source retiming.
 
 **One rule for volume over time: use the lane.** `lint` accepts a timeline tween on `volume` too, but when a track has both, the lane wins and the tween is ignored (`audio_volume_double_automation`). Never add a lane to a track that already has a `volume` tween, and never add a tween to a track that has a lane; edit the one that exists. To ramp 0.1 to 0.5 over ten seconds, write `{"t":0,"v":0.1},{"t":10,"v":0.5}`. `t` is seconds from the clip's own start, so a ramp past `data-duration` never finishes: check the clip's length before choosing the times. `data-volume` stays as the static level of the clip and combines with nothing else you author here.
 
@@ -367,7 +367,7 @@ Timeline math: lane `t` is clip-local authored time: fade-in 0–1, duck down 2�
 ></audio>
 ```
 
-Timeline math: picture and sound share start/duration. Source math: both consume four source seconds. Audio follows: identical timing, range, and rate on the separate audio track. Owner: `/hyperframes-core` + `/hyperframes-audio`. Limit: no waveform auto-sync or drift correction.
+Timeline math: picture and sound share start/duration. Source math: both consume four source seconds. Audio follows: identical timing, range, and rate on the separate audio track. Owner: `/hyperframes/hyperframes-core` + `/hyperframes/hyperframes-audio`. Limit: no waveform auto-sync or drift correction.
 
 ## Align a sound to an on-screen event
 
@@ -382,7 +382,7 @@ Timeline math: picture and sound share start/duration. Source math: both consume
 ></audio>
 ```
 
-Timeline math: an audio element in the root composition has `data-start` in absolute root time; audio inside a scene file uses scene-local time and the host's `data-start` is added for you. An event inside a sub-composition happens at the host's `data-start` plus the event's local time in that sub-composition's own timeline, so `data-start = host start + local time`. Move only the audio's `data-start`; leave the picture alone. Source math: if the sound's transient is not at the file's first sample, subtract that lead-in from `data-start` (or trim it with `data-media-start`). Audio follows: nothing links audio to picture, so re-derive after every retime of the host. Owner: `/hyperframes-core`. Limit: no waveform auto-sync; for a beat grid use `hyperframes beats` and place each start on a beat time.
+Timeline math: an audio element in the root composition has `data-start` in absolute root time; audio inside a scene file uses scene-local time and the host's `data-start` is added for you. An event inside a sub-composition happens at the host's `data-start` plus the event's local time in that sub-composition's own timeline, so `data-start = host start + local time`. Move only the audio's `data-start`; leave the picture alone. Source math: if the sound's transient is not at the file's first sample, subtract that lead-in from `data-start` (or trim it with `data-media-start`). Audio follows: nothing links audio to picture, so re-derive after every retime of the host. Owner: `/hyperframes/hyperframes-core`. Limit: no waveform auto-sync; for a beat grid use `hyperframes beats` and place each start on a beat time.
 
 ## Copy a group of clips to another time
 
@@ -417,7 +417,7 @@ Timeline math: an audio element in the root composition has `data-start` in abso
 ></audio>
 ```
 
-Timeline math: pick the clips first and say which ones you picked (by id) if the request does not match the file exactly; then add one `delta` to every member's `data-start`, so relative spacing is preserved (here `delta = 40`). Give each copy a new unique `id` and the next unused `data-track-index`; keep `src`, `data-duration`, `data-media-start`, `data-volume` and any `data-automation` as they are. Leave the originals untouched. Check the copies still end inside the composition's duration. Owner: `/hyperframes-core`. Limit: copies of a `<video>` or a sub-composition host follow the same rule, and a copied sub-composition needs its own host `id`.
+Timeline math: pick the clips first and say which ones you picked (by id) if the request does not match the file exactly; then add one `delta` to every member's `data-start`, so relative spacing is preserved (here `delta = 40`). Give each copy a new unique `id` and the next unused `data-track-index`; keep `src`, `data-duration`, `data-media-start`, `data-volume` and any `data-automation` as they are. Leave the originals untouched. Check the copies still end inside the composition's duration. Owner: `/hyperframes/hyperframes-core`. Limit: copies of a `<video>` or a sub-composition host follow the same rule, and a copied sub-composition needs its own host `id`.
 
 ## Add media (image, video, audio)
 
@@ -467,7 +467,7 @@ Write what Studio writes when a person drops a file on the timeline, so an agent
 ></audio>
 ```
 
-Inside a sub-composition file, `data-start` is scene-local (see `## Align a sound to an on-screen event`). Owner: `/hyperframes-core`.
+Inside a sub-composition file, `data-start` is scene-local (see `## Align a sound to an on-screen event`). Owner: `/hyperframes/hyperframes-core`.
 
 ## Swap a media file
 
@@ -484,7 +484,7 @@ Inside a sub-composition file, `data-start` is scene-local (see `## Align a soun
 ></video>
 ```
 
-Timeline math: change only `src`. Source math: reset `data-media-start` to the offset you want in the NEW file, and set `data-duration` no longer than the new file's remaining length (probe it with `ffprobe`). Audio follows: a separate `<audio>` that pointed at the old file needs the same `src` swap. Keep `id`, `data-start`, `data-track-index` and any `data-automation` so nothing else moves. Run `lint`: `audio_src_not_found` and `media_src_kind_mismatch` catch a wrong path or kind. Owner: `/hyperframes-core`. Limit: a still swapped for a video (or the reverse) is a tag change, not a swap.
+Timeline math: change only `src`. Source math: reset `data-media-start` to the offset you want in the NEW file, and set `data-duration` no longer than the new file's remaining length (probe it with `ffprobe`). Audio follows: a separate `<audio>` that pointed at the old file needs the same `src` swap. Keep `id`, `data-start`, `data-track-index` and any `data-automation` so nothing else moves. Run `lint`: `audio_src_not_found` and `media_src_kind_mismatch` catch a wrong path or kind. Owner: `/hyperframes/hyperframes-core`. Limit: a still swapped for a video (or the reverse) is a tag change, not a swap.
 
 ## Split a section and change its speed
 

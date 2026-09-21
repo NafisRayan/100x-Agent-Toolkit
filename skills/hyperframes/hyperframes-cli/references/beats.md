@@ -16,4 +16,4 @@ If no beats are detected, the command fails and writes nothing. If Chrome is una
 npx hyperframes browser ensure
 ```
 
-For a complete beat-synced video, route through `/music-to-video`. That workflow owns a different audio-driven pipeline and its `audiomap.json`; do not replace its analyzer with this Studio utility.
+For a complete beat-synced video, route through `/hyperframes/music-to-video`. That workflow owns a different audio-driven pipeline and its `audiomap.json`; do not replace its analyzer with this Studio utility.

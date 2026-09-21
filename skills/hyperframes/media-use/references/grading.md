@@ -155,6 +155,6 @@ validates generated or downloaded cubes as it freezes them under
 `.media/luts/`.
 
 ```bash
-node skills/media-use/scripts/resolve.mjs --type lut --intent "teal orange blockbuster" --project . --json
-node skills/media-use/scripts/lib/cube-validate.mjs .media/luts/lut_001.cube
+node skills/hyperframes/media-use/scripts/resolve.mjs --type lut --intent "teal orange blockbuster" --project . --json
+node skills/hyperframes/media-use/scripts/lib/cube-validate.mjs .media/luts/lut_001.cube
 ```

@@ -4,7 +4,7 @@ Read this reference when installing or updating skills, diagnosing unexpected wo
 
 HyperFrames installs the core set eagerly and workflow skills lazily.
 
-- **Core set:** `/hyperframes`, the `hyperframes-*` domain skills, and `/media-use`.
+- **Core set:** `/hyperframes`, the `hyperframes-*` domain skills, and `/hyperframes/media-use`.
 - **Workflow skills:** installed when routing selects them through `npx hyperframes skills update <workflow-name>`.
 
 ## What `init` does

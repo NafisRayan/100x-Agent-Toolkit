@@ -38,4 +38,4 @@ Opacity-gate delayed elements (set hidden until their entrance). Clamp at tween 
 
 ## Hand off for verification
 
-Self-check the authored file, then return it to the orchestrator. Step 5 runs `hyperframes lint`, `hyperframes check`, and proof snapshots on the assembled project. Do not render. When redispatched with a finding, fix the offending element and never change a fixed `data-duration` during repair. Remotion-source migrations use `/remotion-to-hyperframes` and its SSIM harness instead.
+Self-check the authored file, then return it to the orchestrator. Step 5 runs `hyperframes lint`, `hyperframes check`, and proof snapshots on the assembled project. Do not render. When redispatched with a finding, fix the offending element and never change a fixed `data-duration` during repair. Remotion-source migrations use `/hyperframes/remotion-to-hyperframes` and its SSIM harness instead.

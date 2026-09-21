@@ -70,7 +70,7 @@ Animation-craft additions on top of core's contract:
 ## Scripts
 
 ```bash
-node skills/hyperframes-animation/scripts/animation-map.mjs <composition-dir> \
+node skills/hyperframes/hyperframes-animation/scripts/animation-map.mjs <composition-dir> \
   --out <composition-dir>/.hyperframes/anim-map
 ```
 

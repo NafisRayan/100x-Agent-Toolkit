@@ -14,7 +14,7 @@ Three terms describe different concerns. Do not substitute one for another.
 
 | Term         | Values                          | Owns                                                                                          |
 | ------------ | ------------------------------- | --------------------------------------------------------------------------------------------- |
-| `flow`       | `automation` or `companion`     | Who drives execution. `companion` always executes in `/general-video`.                        |
+| `flow`       | `automation` or `companion`     | Who drives execution. `companion` always executes in `/hyperframes/general-video`.                        |
 | `storyboard` | `yes` or `no`                   | Whether the plan and layouts are reviewed before building (`review-loop.md`).                 |
 | `mode`       | `collaborative` or `autonomous` | How later preference and checkpoint gates behave. The user never chooses this label directly. |
 
@@ -26,7 +26,7 @@ Derive `mode` once from the confirmed run shape:
 | `automation` | `yes`        | `collaborative` |
 | `automation` | `no`         | `autonomous`    |
 
-Default to `collaborative` only when a legacy project lacks enough state to derive a mode. `/motion-graphics` is autonomous by design and does not need the two run-shape questions.
+Default to `collaborative` only when a legacy project lacks enough state to derive a mode. `/hyperframes/motion-graphics` is autonomous by design and does not need the two run-shape questions.
 
 ### Signals and persistence
 
@@ -75,7 +75,7 @@ Ask only fields used by the selected route. Route entries identify their must-ha
 
 ### Remembered defaults
 
-Let `<MEDIA_DIR>` be the installed `/media-use` skill directory. Let `<MEMORY_ROOT>` be the existing project root. Before scaffolding, use a deliberately nonexistent probe path with no `.media` ancestor, such as `/tmp/hyperframes-intent-memory-<run-id>`; never use the current workspace as the probe. Read merged preferences with:
+Let `<MEDIA_DIR>` be the installed `/hyperframes/media-use` skill directory. Let `<MEMORY_ROOT>` be the existing project root. Before scaffolding, use a deliberately nonexistent probe path with no `.media` ancestor, such as `/tmp/hyperframes-intent-memory-<run-id>`; never use the current workspace as the probe. Read merged preferences with:
 
 ```bash
 node <MEDIA_DIR>/scripts/prefs.mjs get --hyperframes <MEMORY_ROOT> --json
@@ -85,7 +85,7 @@ For the pre-project probe, `<MEMORY_ROOT>` is the nonexistent probe path, so onl
 
 A remembered value becomes the recommended answer and names its source. It never overrides the current request and never skips a required question. A confirmed recipe is different: adopting the bundle may fill the fields it contains because adoption itself is the confirmation.
 
-Record only values the user confirmed, never values merely inferred or defaulted. Recording happens after the workflow writes `BRIEF.md`; supported keys are listed in `brief-format.md`. A user who sees the recommendation and accepts it has confirmed it. Personal defaults promote only according to `/media-use` memory rules.
+Record only values the user confirmed, never values merely inferred or defaulted. Recording happens after the workflow writes `BRIEF.md`; supported keys are listed in `brief-format.md`. A user who sees the recommendation and accepts it has confirmed it. Personal defaults promote only according to `/hyperframes/media-use` memory rules.
 
 The first time a project records a preference, say one short line that it will be remembered for future runs. Do not re-record a remembered value merely because an autonomous build reused it; only a confirmation in the current run creates a new memory event.
 
