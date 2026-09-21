@@ -120,7 +120,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `next-best-practices` | File conventions, RSC boundaries, data patterns |
 | `vercel-react-best-practices` | React/Next.js performance optimization |
 | `shadcn` | Component management for shadcn/ui |
-| `motion` | React animations with Motion (bundle-optimized) |
+| `motion-skill-jezweb` | React animations with Motion (bundle-optimized) |
 | `motion-framer` | React animations (Framer Motion / Motion) |
 | `gsap` | GSAP animation reference and patterns |
 | `modern-web-design` | 2024-2025 design trends and implementation |
