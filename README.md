@@ -181,6 +181,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `performance` | Measure-first Core Web Vitals improvement |
 | `core-web-vitals` | Optimize LCP, INP, CLS |
 | `ultrareview` | Multi-agent parallel code review |
+| `security-audit` | Security guidance and vulnerability audits — codebases, APIs, services; full audit/pen-test workflow with report schema and validators |
 | `playwright-cli` | Playwright CLI automation, testing, and session management |
 
 ### 3D & Graphics
@@ -337,6 +338,7 @@ During the shift to a skill-first architecture, several top-level directories we
 | `mirror-website` | Empty skill directory with no SKILL.md — never had content. |
 | `prisma` + `prisma-expert` | Overlapped significantly. Consolidated into a single `prisma-pro` skill covering schema design, migrations, query optimization, and relations modeling. |
 | `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
+| `book-to-skill` | Python CLI for converting books (PDF/EPUB/DOCX/HTML/RTF) into skills, removed in the same change that added `security-audit`. Top-level count stays at **100**. |
 
 ### Hyperframes suite → `skills/hyperframes/` (consolidated)
 
