@@ -1,5 +1,5 @@
 ---
-name: antislop-combo
+name: antislop-suite
 description: "Anti-Slop Suite: Complete anti-AI-slop rules, craftsmanship standards, and filters for UI design, responsive mobile layouts, human accessibility (WCAG), copywriting, and code comment hygiene. Routes tasks to dedicated sub-skills."
 version: 3.2.20
 allowed-tools:
@@ -12,7 +12,7 @@ allowed-tools:
   - Bash(python3 *)
 ---
 
-# Anti-Slop Suite (`antislop-combo`)
+# Anti-Slop Suite (`antislop-suite`)
 
 > **Anti Slop: Production Craftsmanship & Anti-AI-Slop Rules for Coding Agents**  
 > Version: 3.2.20  
@@ -30,7 +30,7 @@ allowed-tools:
 - Holds the output to a **liveliness bar**: The result must feel **crafted by a designer and engineer**, alive and specific.
 
 ```
-antislop-combo/
+antislop-suite/
 ├── SKILL.md                          # Master router and unified standard (this file)
 ├── antislop/SKILL.md                 # Core filter, 38 rules (R-01..R-38), 2 modes, delivery gate
 ├── antislop-ui/SKILL.md              # Deep dive: color, gradients, layout, cards, decoration, motion

@@ -130,6 +130,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `impeccable` | Critique, polish, and improve frontend interfaces |
 | `design-system` | Design-system driven by specification files |
 | `superdesign` | Frontend UI/UX design agent — inspiration, drafts, and iterations on an infinite canvas |
+| `antislop-suite` | Complete anti-AI-slop suite and craftsmanship router (v3.2.20) — UI visual filter, mobile reflow, WCAG contrast checking CLI/MCP, copywriting, and code comment hygiene |
 | `accessibility` | WCAG 2.2 audit and compliance |
 | `building-native-ui` | Expo Router native app development |
 | `mobile-developer` | React Native and Expo mobile development |
@@ -147,7 +148,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | `fastapi-expert` | Async Python APIs with FastAPI + Pydantic V2 |
 | `nodejs-express-server` | Production-ready Express.js servers |
 | `nodejs-backend-patterns` | Express/Fastify middleware, auth, API design |
-| `nodejs-best-practices` | Node.js development principles and decision-making |
 | `nestjs-best-practices` | NestJS architecture and DI patterns |
 | `shopify-expert` | Shopify themes, apps, and Storefront API |
 
@@ -339,6 +339,7 @@ During the shift to a skill-first architecture, several top-level directories we
 | `prisma` + `prisma-expert` | Overlapped significantly. Consolidated into a single `prisma-pro` skill covering schema design, migrations, query optimization, and relations modeling. |
 | `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
 | `book-to-skill` | Python CLI for converting books (PDF/EPUB/DOCX/HTML/RTF) into skills, removed in the same change that added `security-audit`. Top-level count stays at **100**. |
+| `nodejs-best-practices` | Conceptual decision-making guidance that overlapped heavily with `nodejs-backend-patterns` and `javascript-pro`; removed in the same change that added `antislop-suite`. Top-level count stays at **100**. |
 
 ### Hyperframes suite → `skills/hyperframes/` (consolidated)
 
@@ -347,6 +348,10 @@ During the shift to a skill-first architecture, several top-level directories we
 ### hyperframes suite → `remotion-best-practices` (replaced)
 
 The entire 21-skill hyperframes suite (`skills/hyperframes/`) was removed and replaced by the single self-contained `remotion-best-practices` router skill — one folder, 12 relative-reference modules, no sibling-skill dependencies, so it cannot trigger the flattening/nesting issues the hyperframes suite had. Top-level count stays at 100.
+
+### `antislop` suite → `skills/antislop-suite/` (bundled)
+
+The 6-part Anti-Slop system (`antislop` core filter, `antislop-ui`, `antislop-layoutmobile`, `antislop-human` with WCAG contrast checker CLI/MCP tools, `antislop-copywriting`, and `antislop-code`) was bundled into a single self-contained `skills/antislop-suite/` router skill with a unified root `SKILL.md`. Swapped in place of `nodejs-best-practices` to keep the top-level count at **100**.
 
 ---
 

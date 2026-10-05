@@ -66,9 +66,9 @@ Your agent system operates across 7 lifecycle phases:
 - **Architecture & System Design**: `system-design-coach`
 - **Performance**: `performance`, `core-web-vitals`, `python-performance-optimization`
 - **Accessibility**: `accessibility`, `web-design-guidelines`, `web-quality-audit`
-- **UI/UX**: `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `superdesign`
+- **UI/UX**: `antislop-suite`, `impeccable`, `theme-factory`, `ui-ux-pro-max`, `responsive-design`, `design-system`, `tailwind-design-system`, `shadcn`, `modern-web-design`, `superdesign`
 - **Frontend Frameworks**: `nextjs-developer`, `next-best-practices`, `vercel-react-best-practices`, `motion-skill-jezweb`, `motion-framer`, `gsap`, `threejs-skills`, `threejs-webgl`, `3d-web-experience`, `migrate-to-vinext`, `building-native-ui`, `mobile-developer`, `vercel-react-native-skills`, `mui`
-- **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `nodejs-best-practices`, `shopify-expert`
+- **Backend Frameworks**: `fastapi-expert`, `nestjs-best-practices`, `nodejs-backend-patterns`, `nodejs-express-server`, `shopify-expert`
 - **Automation & Workflow**: `n8n-code-javascript`
 - **Databases & ORM**: `prisma-pro`, `sql-pro`, `supabase-postgres-best-practices`
 - **Languages**: `javascript-pro`
@@ -81,6 +81,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Video & Motion**: `remotion-best-practices` - router for all Remotion skills (v4.0.526); loads the matching `./remotion-<module>/REFERENCE.md` per task. Modules: `remotion-create` (new videos), `remotion-captions`, `remotion-docs`, `remotion-interactivity`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`. Self-contained (relative refs only) — replaces the former hyperframes suite.
+- **Anti-Slop & Craftsmanship**: `antislop-suite` - router for all Anti-Slop skills (v3.2.20); bundles core filter (`antislop`), `antislop-ui`, `antislop-layoutmobile`, `antislop-human` (with WCAG contrast checker CLI/MCP tools), `antislop-copywriting`, and `antislop-code`. Self-contained router replacing `nodejs-best-practices`.
 - **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
 ### Using Skills Effectively
@@ -324,4 +325,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-09-24 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-10-05 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
