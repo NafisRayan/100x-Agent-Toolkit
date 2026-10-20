@@ -1,13 +1,13 @@
 ---
 name: vox-reel
-description: Dựng reel dọc 30s phong cách Vox (ảnh thật tách nền, film look, dolly chậm, voice AI, subtitle 2-3 từ) bằng HyperFrames + Vivibe, không dùng AI tạo ảnh. Dùng khi user nói "làm reel kiểu Vox", "video explainer từ ảnh", "làm video như MoSidd/Netflix Blockbuster", hoặc đưa một câu chuyện ngắn muốn kể bằng video ảnh động.
+description: Dựng reel dọc 30s phong cách Vox (ảnh thật tách nền, film look, dolly chậm, Edge TTS miễn phí, subtitle 2-3 từ) bằng HyperFrames + Edge TTS (pure JS), không dùng AI tạo ảnh, không tốn phí TTS. Dùng khi user nói "làm reel kiểu Vox", "video explainer từ ảnh", "làm video như MoSidd/Netflix Blockbuster", hoặc đưa một câu chuyện ngắn muốn kể bằng video ảnh động.
 ---
 
-# vox-reel: reel 30s kiểu Vox bằng HyperFrames + Vivibe
+# vox-reel: reel 30s kiểu Vox bằng HyperFrames + Edge TTS (100% JavaScript)
 
-Một reel = 6 dòng voiceover, mỗi dòng là 1 scene 4-6s. Ảnh thật tải từ Wikimedia/Pixabay, tách nền bằng rembg, dựng bằng HTML + GSAP (HyperFrames), voice bằng Vivibe, subtitle sinh từ file srt. Không generate ảnh bằng AI.
+Một reel = 6 dòng voiceover, mỗi dòng là 1 scene 4-6s. Ảnh thật tải từ Wikimedia/Pixabay, tách nền bằng JavaScript, dựng bằng HTML + GSAP (HyperFrames), voice miễn phí bằng Edge TTS (male: en-US-AndrewNeural, female: en-IE-EmilyNeural), subtitle sinh từ file srt. Không generate ảnh bằng AI. 100% JavaScript, không cần Python.
 
-Cần có sẵn: Node 22+, Python 3 + `rembg` + `Pillow`, `ffmpeg`, Chrome. Key trong `.env` (xem `.env.example`): `PIXABAY_API_KEY`, `VIVIBE_API_KEY`, `VIVIBE_VOICE`. Đọc `references/pitfalls.md` trước khi viết HTML lần đầu.
+Cần có sẵn: Node 22+, `ffmpeg`, Chrome. Key Pixabay trong `.env` (xem `.env.example`). Edge TTS 100% miễn phí không cần API key. Đọc `references/pitfalls.md` trước khi viết HTML lần đầu.
 
 ## 2 điểm dừng bắt buộc
 
@@ -28,22 +28,24 @@ Dừng và chờ user duyệt ở 2 chỗ. Không được đi tiếp khi chưa 
 ```
 node scripts/fetch-wikimedia.mjs cand <slug> "<query>"      # người thật, công trình, logo (có license)
 node scripts/fetch-pixabay.mjs cand <slug> "<query>" [photo|video] [vertical|horizontal]
-py -3 scripts/montage.py <slug>                              # ghép ứng viên có đánh số để chọn
+node scripts/montage.mjs <slug>                             # ghép ứng viên có đánh số để chọn
 node scripts/fetch-pixabay.mjs pick <slug> <i> assets/raw/<slug>.jpg
-py -3 scripts/remove-bg.py assets/raw/x.jpg assets/sceneN/x.png [u2net|u2net_human_seg|isnet-general-use] [maxpx] [nomat]
-py -3 scripts/checker-sheet.py assets/_check.jpg assets/scene*/*.png
+node scripts/remove-bg.mjs assets/raw/x.jpg assets/sceneN/x.png [ai|floodfill] [maxpx]
+node scripts/checker-sheet.mjs assets/_check.jpg assets/scene*/*.png
 ```
 
 Quy tắc: người thật dùng `u2net_human_seg` + `nomat` (alpha matting làm mờ viền). Đồ vật nền trắng: flood-fill từ mép bằng PIL thay vì rembg. Mọi file ghi vào `assets/_manifest.json` (slug, url, tác giả, license). Ảnh CC BY phải có tác giả trong credit. Texture `grain.jpg`, `grunge.jpg` bắt buộc (Pixabay "film grain", "grunge texture").
 
 Sinh trang duyệt: sửa mảng VO/beat ở đầu `scripts/build-review.mjs` rồi `node scripts/build-review.mjs`. **Dừng 1.**
 
-### 3. Voice Vivibe
+### 3. Voice Edge TTS (Miễn phí)
 
 ```
-node scripts/tts-vivibe.mjs vo.txt assets/audio/vo.mp3     # ra vo.mp3 + vo.srt
+node scripts/tts-edge.mjs vo.txt assets/audio/vo.mp3 [--voice male|female]   # ra vo.mp3 + vo.srt
 ```
 
+- Giọng nam mặc định: `en-US-AndrewNeural` (`--voice male`)
+- Giọng nữ: `en-IE-EmilyNeural` (`--voice female`)
 Mốc cắt scene = khoảng nghỉ giữa các dòng trong `vo.srt`. Ghi vào bảng Timing của `STORYBOARD.md`: start, duration từng scene, tổng = duration root (làm tròn lên 0.5s).
 
 ### 4. Mockup tĩnh rồi mới dựng scene

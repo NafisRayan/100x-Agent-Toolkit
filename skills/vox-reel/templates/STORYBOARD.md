@@ -1,6 +1,6 @@
 # Storyboard · <tên reel>
 
-Engine: HyperFrames. VO: Vivibe (voice EN). Không AI gen ảnh.
+Engine: HyperFrames. VO: Edge TTS (en-US-AndrewNeural / en-IE-EmilyNeural). Không AI gen ảnh, 100% JavaScript.
 
 ## Voiceover (6 dòng)
 1.

@@ -26,15 +26,14 @@ Một lỗi lint làm tắt luôn layout/contrast audit: `check` báo `0 sample(
 
 ## Assets
 
-- rembg alpha matting làm mờ nền quanh tóc/tay: người thật dùng `u2net_human_seg` + tham số `nomat`.
-- Đồ vật nền trắng (khung, bàn tay foam): flood-fill từ 4 mép bằng PIL, không rembg.
+- Đồ vật nền trắng (khung, bàn tay foam, logo): dùng `node scripts/remove-bg.mjs <src> <dst> floodfill`.
 - Wikimedia SVG: lấy `thumburl` qua API với `iiurlwidth=1600`, đừng tải link thumb trực tiếp (400).
 
 ## Render
 
 - Ổ C còn dưới 5GB: render lỗi vì hết temp. Xoá `%TEMP%\hf-render-*`, chạy với `--low-memory-mode`.
 - File master 100MB: nén web `ffmpeg -crf 20 -preset slow -movflags +faststart`.
-- Playwright không mở được `file://`: chạy `python -m http.server 8899` rồi chụp qua localhost.
+- Playwright không mở được `file://`: chạy `npx http-server -p 8899` rồi chụp qua localhost.
 
 ## Subtitle
 

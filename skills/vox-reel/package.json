@@ -5,6 +5,8 @@
   "description": "Vox-style reel skill using Edge TTS, HyperFrames, and pure JS",
   "scripts": {},
   "dependencies": {
+    "@imgly/background-removal-node": "^1.4.5",
+    "jimp": "^1.6.1",
     "ws": "^8.22.0"
   }
 }

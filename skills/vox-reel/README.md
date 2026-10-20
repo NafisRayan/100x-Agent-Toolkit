@@ -1,6 +1,6 @@
 # vox-reel skill cho Claude Code
 
-Skill giúp Claude Code dựng reel dọc 30 giây theo phong cách Vox. Ảnh thật tải từ Wikimedia và Pixabay, tách nền bằng rembg, voice AI bằng Vivibe, dựng bằng HTML + GSAP qua HyperFrames. Subtitle 2-3 từ sinh tự động từ file srt. Không dùng AI tạo ảnh.
+Skill giúp Claude Code dựng reel dọc 30 giây theo phong cách Vox. Ảnh thật tải từ Wikimedia và Pixabay, tách nền bằng JavaScript, voice AI miễn phí bằng Edge TTS (en-US-AndrewNeural / en-IE-EmilyNeural), dựng bằng HTML + GSAP qua HyperFrames. Subtitle 2-3 từ sinh tự động từ file srt. Không dùng AI tạo ảnh, không tốn phí TTS, 100% JavaScript (không cần Python).
 
 ![6 frame từ reel mẫu Netflix vs Blockbuster: khung ảnh vàng, slot 50 MILLION, tờ báo CUSTOMER FIRST, tiệm Blockbuster đóng cửa, thư phòng 45 tỷ, tay foam đỏ](docs/media/showcase.jpg)
 
@@ -9,24 +9,24 @@ Skill giúp Claude Code dựng reel dọc 30 giây theo phong cách Vox. Ảnh t
   <img src="docs/media/scene-lamp.gif" width="240" alt="Scene 5: đèn treo đu đưa, chữ Forty five billion hiện dần">
 </p>
 
-Reel mẫu dài 29 giây, 1080x1920, 30fps, 6 scene. Quy trình dựa trên video "I Made This Viral Reel Using ONLY Remotion & Claude Code" của MoSidd, đổi Remotion thành HyperFrames và ElevenLabs thành Vivibe.
+Reel mẫu dài 29 giây, 1080x1920, 30fps, 6 scene. Quy trình dựa trên video "I Made This Viral Reel Using ONLY Remotion & Claude Code" của MoSidd, đổi Remotion thành HyperFrames và ElevenLabs thành Edge TTS (hoàn toàn miễn phí).
 
 ## Cần có
 
 | Thứ | Kiểm tra |
 |---|---|
 | Node 22+ | `node -v` |
-| Python 3 + rembg + Pillow | `pip install rembg pillow` |
 | ffmpeg | `ffmpeg -version` |
 | Chrome | HyperFrames render bằng Chrome |
-| Key Pixabay (miễn phí) và Vivibe | điền vào `.env` |
+| Key Pixabay (miễn phí) | điền vào `.env` |
+| Edge TTS | Tích hợp sẵn, không cần API key |
 
 ## Cài đặt
 
 ```bash
 git clone https://github.com/thanhthuduc99/vox-reel-skill ~/.claude/skills/vox-reel
 cd ~/.claude/skills/vox-reel
-cp .env.example .env    # điền PIXABAY_API_KEY, VIVIBE_API_KEY, VIVIBE_VOICE
+cp .env.example .env    # điền PIXABAY_API_KEY (Edge TTS miễn phí không cần key)
 ```
 
 Trên Windows, thư mục skill là `C:\Users\<bạn>\.claude\skills\vox-reel\`. Script đọc `.env` trong thư mục project trước, không có thì đọc `.env` cạnh `SKILL.md`. Đừng dán key vào chat.
@@ -49,7 +49,7 @@ Claude chạy 6 bước và dừng 2 lần để bạn duyệt.
 
 ![Trang duyệt assets: ảnh cutout trên nền caro, kèm tác giả và license](docs/media/asset-review.jpg)
 
-3. **Voice.** Vivibe ra `vo.mp3` và `vo.srt`. Mốc từng dòng trong srt là mốc cắt scene.
+3. **Voice.** Edge TTS ra `vo.mp3` và `vo.srt` (chọn `--voice male` hoặc `--voice female`). Mốc từng dòng trong srt là mốc cắt scene.
 4. **Mockup rồi dựng scene.** Mỗi scene 1 file HTML tĩnh để duyệt bố cục. **Dừng 2.** Sau đó mới viết animation.
 
 ![Mockup tĩnh bên trái, frame render thật bên phải](docs/media/mockup-vs-render.jpg)
@@ -71,7 +71,7 @@ Vox không rung khung hình. Đo từ short "How Vox makes images look like vide
 |---|---|
 | `SKILL.md` | Quy trình 6 bước, 2 điểm dừng, quy tắc bắt buộc |
 | `references/` | Số đo chuyển động, film look CSS, 6 prompt scene, lỗi thường gặp |
-| `scripts/` | Tải ảnh Pixabay/Wikimedia, tách nền, TTS Vivibe, sinh subtitle, trang duyệt |
+| `scripts/` | Tải ảnh Pixabay/Wikimedia, tách nền JS, Edge TTS, sinh subtitle, trang duyệt |
 | `templates/` | Khung `index.html`, `scene.html`, `STORYBOARD.md` |
 
 ## Credit ảnh trong README

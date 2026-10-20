@@ -108,10 +108,10 @@ const html = `<!doctype html>
   .approve ul{margin:8px 0 0;padding-left:20px}
 </style></head><body><div class="wrap">
 <h1>Netflix vs Blockbuster · Asset review</h1>
-<p class="lead">Làm lại reel trong video MoSidd. Đổi Remotion → <b>HyperFrames</b>, ElevenLabs → <b>Vivibe</b>. Trang này để duyệt asset trước khi dựng scene.</p>
+<p class="lead">Làm lại reel trong video MoSidd. Đổi Remotion → <b>HyperFrames</b>, ElevenLabs → <b>Edge TTS</b> (miễn phí). Trang này để duyệt asset trước khi dựng scene.</p>
 
 <h2><span class="num">00</span> Voiceover script (6 dòng, ~5s mỗi dòng)</h2>
-<div class="vo"><span class="tag">Vivibe · voice EN</span> Một file VO đọc liền 6 dòng. Mỗi scene cắt theo khoảng lặng giữa các dòng.
+<div class="vo"><span class="tag">Edge TTS · voice EN</span> Một file VO đọc liền 6 dòng. Mỗi scene cắt theo khoảng lặng giữa các dòng.
 <ol>${VO.map((l) => `<li>${esc(l)}</li>`).join('')}</ol></div>
 
 <h2><span class="num">01</span> Beat sheet</h2>
@@ -135,7 +135,7 @@ ${SCENES.map((s, i) => `<div class="scene"><div class="head"><span class="tag">S
 <h2><span class="num">03</span> Khác so với video gốc</h2>
 <table><thead><tr><th>Hạng mục</th><th>Video gốc</th><th>Bản này</th></tr></thead><tbody>
 <tr><td>Render engine</td><td>Remotion (React)</td><td>HyperFrames (HTML + GSAP), <code>npx hyperframes render</code></td></tr>
-<tr><td>Voiceover</td><td>ElevenLabs</td><td>Vivibe, voice tiếng Anh</td></tr>
+<tr><td>Voiceover</td><td>ElevenLabs</td><td>Edge TTS (en-US-AndrewNeural / en-IE-EmilyNeural), hoàn toàn miễn phí</td></tr>
 <tr><td>Ảnh nhân vật</td><td>AI generate</td><td>Ảnh thật: Reed Hastings (Wikimedia CC BY), stock Pixabay. Cigar boss / exec là người mẫu stock, không phải nhân vật lịch sử.</td></tr>
 <tr><td>Trang báo</td><td>3 ảnh riêng</td><td>1 ảnh báo cũ + headline dựng bằng HTML text</td></tr>
 <tr><td>SFX / nhạc</td><td>ElevenLabs SFX</td><td>Pixabay sound effects (tải ở giai đoạn dựng)</td></tr>
@@ -143,14 +143,14 @@ ${SCENES.map((s, i) => `<div class="scene"><div class="head"><span class="tag">S
 
 <div class="approve"><b>Cần bạn duyệt</b><ul>
 <li>Asset nào không ưng: nói tên file, mình tìm lại.</li>
-<li>OK toàn bộ → mình bắt đầu: VO Vivibe → engine → 6 scene → render.</li>
+<li>OK toàn bộ → mình bắt đầu: VO Edge TTS → engine → 6 scene → render.</li>
 </ul></div>
 </div></body></html>`;
 writeFileSync('assets-review.html', html);
 
 const md = `# Storyboard · Netflix vs Blockbuster
 
-Nguồn: video MoSidd (xem HUONG-DAN.md). Engine: HyperFrames. VO: Vivibe (voice EN).
+Nguồn: video MoSidd (xem HUONG-DAN.md). Engine: HyperFrames. VO: Edge TTS (voice EN - en-US-AndrewNeural / en-IE-EmilyNeural).
 
 ## Voiceover (6 dòng)
 ${VO.map((l, i) => `${i + 1}. ${l}`).join('\n')}
