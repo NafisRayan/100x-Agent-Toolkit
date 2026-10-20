@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **99 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 100 specialized skill workflows
+├── skills/                # 99 specialized skill workflows
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation (includes 142 agent personas)
@@ -189,13 +189,13 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `3d-web-experience` | Three.js, React Three Fiber, Spline, WebGL |
 | `threejs-webgl` | Interactive 3D scenes, materials, lighting |
-| `algorithmic-art` | Generative art and creative coding |
 
 ### Video & Motion
 
 | Skill | Description |
 |-------|-------------|
 | `remotion-best-practices` | Router for all Remotion skills (v4.0.526) — loads the matching `remotion-<module>/REFERENCE.md` per task: create, captions, docs, interactivity, maps, markup, multimedia, render, saas, studio, upgrade. Self-contained (relative refs only). Replaced the former hyperframes suite. |
+| `roughjs-character-video` | Programmatic hand-drawn character animation videos (MP4) and still images (PNG) — rough.js + node canvas + ffmpeg, IK skeleton rig, walk/run cycles, handoffs, story scenes |
 
 ### Documentation
 | Skill | Description |
@@ -225,8 +225,6 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `frontend-design` | Guidance for distinctive, intentional visual design for UI |
 | `figma-developer` | Figma to React component conversion |
-| `canvas-design` | Visual art in .png and .pdf documents |
-| `algorithmic-art` | Generative art and creative coding with p5.js |
 | `theme-factory` | Styling artifacts with pre-set themes |
 
 ### Languages
@@ -340,6 +338,7 @@ During the shift to a skill-first architecture, several top-level directories we
 | `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
 | `book-to-skill` | Python CLI for converting books (PDF/EPUB/DOCX/HTML/RTF) into skills, removed in the same change that added `security-audit`. Top-level count stays at **100**. |
 | `nodejs-best-practices` | Conceptual decision-making guidance that overlapped heavily with `nodejs-backend-patterns` and `javascript-pro`; removed in the same change that added `antislop-suite`. Top-level count stays at **100**. |
+| `canvas-design`, `algorithmic-art` | Deprecated generative-art skills removed (87 files, including the bundled OFL font payload). Programmatic hand-drawn image/video generation is now covered by `roughjs-character-video` (rough.js + node canvas + ffmpeg), added in the follow-up commit. Net top-level count: **99** (−2, +1). |
 
 ### Hyperframes suite → `skills/hyperframes/` (consolidated)
 

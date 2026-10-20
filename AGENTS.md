@@ -1,6 +1,6 @@
 # AI Agent Power System
 
-**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 100 specialized skill workflows, 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
+**Welcome to your comprehensive AI agent toolkit.** This is your command center for building software at production-grade quality. You have access to 99 specialized skill workflows, 142 expert agent personas embedded in the `agent-personas` skill, 9 MCP server integrations, and 74 design system specifications.
 
 **One look at this file, and you're ready to rock.** Let's make you unstoppable.
 
@@ -12,7 +12,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Define** -> **Plan** -> **Build** -> **Verify** -> **Review** -> **Ship** -> **Scale**
 
 ### Core Architecture
-- **`skills/`** - 100 specialized workflows
+- **`skills/`** - 99 specialized workflows
 - **Agent Personas** - 142 expert personas embedded in `skills/agent-personas/` (core, dev, data-ai, infra, QA, security, reviewers, build-resolvers, specialized, orchestrators, etc.)
 - **`mcps/`** - 9 MCP server configurations for external tool integration
 - **`design-md/`** - 74 design system specifications (Figma, Airbnb, Apple, Stripe, Vercel, etc.)
@@ -21,7 +21,7 @@ Your agent system operates across 7 lifecycle phases:
 
 ## Skills Directory (`skills/`)
 
-**Your 100 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
+**Your 99 specialized skill workflows cover every aspect of software development.** Each skill is a battle-tested workflow that enforces professional engineering practices.
 
 ### How Skills Work
 - **Triggering**: Skills activate automatically based on context or user intent
@@ -75,12 +75,13 @@ Your agent system operates across 7 lifecycle phases:
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
 - **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`, `product-management`, `linkedin-post-writer`
-- **Design & Docs**: `frontend-design`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `canvas-design`, `algorithmic-art`, `humanizer`, `code-wiki`
+- **Design & Docs**: `frontend-design`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `humanizer`, `code-wiki`
 - **Security**: `security-audit` - Security guidance and vulnerability review for codebases, APIs, and services; full audit/pen-test workflow with report schema and validator scripts
 - **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Video & Motion**: `remotion-best-practices` - router for all Remotion skills (v4.0.526); loads the matching `./remotion-<module>/REFERENCE.md` per task. Modules: `remotion-create` (new videos), `remotion-captions`, `remotion-docs`, `remotion-interactivity`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`. Self-contained (relative refs only) — replaces the former hyperframes suite.
+- **Hand-Drawn Animation**: `roughjs-character-video` - Programmatic hand-drawn character animation videos (MP4) and still images (PNG) via rough.js + `@napi-rs/canvas` + ffmpeg. Skeleton rig with two-bone IK, foot-planted walk/run cycles, handoffs, multi-scene stories; everything generated in code.
 - **Anti-Slop & Craftsmanship**: `antislop-suite` - router for all Anti-Slop skills (v3.2.20); bundles core filter (`antislop`), `antislop-ui`, `antislop-layoutmobile`, `antislop-human` (with WCAG contrast checker CLI/MCP tools), `antislop-copywriting`, and `antislop-code`. Self-contained router replacing `nodejs-best-practices`.
 - **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
@@ -315,7 +316,7 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 ---
 
 ## Your Mission
-**You are now equipped with a production-grade engineering system.** This toolkit contains 100 skill workflows, 142 expert agents, 74 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
+**You are now equipped with a production-grade engineering system.** This toolkit contains 99 skill workflows, 142 expert agents, 74 design specs, 9 MCP integrations, and quality gates that separate prototype code from production software.
 
 **Use it relentlessly.** Every feature you build should go through planning -> implementation -> testing -> review -> deployment. Every decision should be grounded in the relevant skills and references.
 
@@ -325,4 +326,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-10-05 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-10-21 | Total Skills: 99 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
