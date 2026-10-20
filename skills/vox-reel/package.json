@@ -1,0 +1,10 @@
+{
+  "name": "vox-reel-skill",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Vox-style reel skill using Edge TTS, HyperFrames, and pure JS",
+  "scripts": {},
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}
