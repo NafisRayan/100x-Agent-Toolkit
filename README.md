@@ -1,6 +1,6 @@
 # 100x Agent Toolkit
 
-A production-grade engineering toolkit for AI-assisted software development. Contains **99 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
+A production-grade engineering toolkit for AI-assisted software development. Contains **100 specialized skill workflows**, **142 expert agent personas**, **74 design system specifications**, and **9 MCP server integrations** — all designed to enforce professional engineering standards across the full development lifecycle: **Define → Plan → Build → Verify → Review → Ship → Scale**.
 
 ---
 
@@ -25,7 +25,7 @@ Personas don't call other personas. The orchestrator skill handles composition.
 ├── AGENTS.md              # System prompt — the master configuration
 ├── README.md              # This file
 │
-├── skills/                # 99 specialized skill workflows
+├── skills/                # 100 specialized skill workflows
 │   └── <skill-name>/
 │       ├── SKILL.md       # Skill definition (YAML frontmatter + instructions)
 │       ├── references/    # Domain-specific documentation (includes 142 agent personas)
@@ -196,6 +196,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 |-------|-------------|
 | `remotion-best-practices` | Router for all Remotion skills (v4.0.526) — loads the matching `remotion-<module>/REFERENCE.md` per task: create, captions, docs, interactivity, maps, markup, multimedia, render, saas, studio, upgrade. Self-contained (relative refs only). Replaced the former hyperframes suite. |
 | `roughjs-character-video` | Programmatic hand-drawn character animation videos (MP4) and still images (PNG) — rough.js + node canvas + ffmpeg, IK skeleton rig, walk/run cycles, handoffs, story scenes |
+| `video-report` | Record video evidence with FFmpeg after a visual bug fix or for a recorded demo (web, native app, game) — window-scoped capture, preflight, graceful lifecycle, decode verification |
 
 ### Documentation
 | Skill | Description |
