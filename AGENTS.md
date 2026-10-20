@@ -75,12 +75,14 @@ Your agent system operates across 7 lifecycle phases:
 - **Coding Standards**: `syntax-rules` - Language-specific coding rules for 18 languages (TypeScript, Python, Rust, Go, Java, Kotlin, Swift, C++, C#, PHP, Dart, Angular, ArkTS, F#, Perl, web, zh) with common universal principles
 - **Agent Personas**: `agent-personas` - 142 expert personas across 23 categories (core, development, data-ai, infrastructure, quality-testing, security, reviewers, build-resolvers, specialized, orchestrators, spec-agents, opensource, utility, universal, and more)
 - **Business**: `business-analyst`, `cold-email`, `sales-enablement`, `marketing-psychology`, `brag-document`, `product-management`, `linkedin-post-writer`
-- **Design & Docs**: `frontend-design`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `canvas-design`, `algorithmic-art`, `humanizer`, `code-wiki`
+- **Design & Docs**: `frontend-design`, `figma-developer`, `docx`, `pdf`, `pptx`, `xlsx`, `doc-coauthoring`, `docs-writing`, `humanizer`, `code-wiki`
 - **Security**: `security-audit` - Security guidance and vulnerability review for codebases, APIs, and services; full audit/pen-test workflow with report schema and validator scripts
 - **SEO**: `seo-audit`
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Video & Motion**: `remotion-best-practices` - router for all Remotion skills (v4.0.526); loads the matching `./remotion-<module>/REFERENCE.md` per task. Modules: `remotion-create` (new videos), `remotion-captions`, `remotion-docs`, `remotion-interactivity`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`. Self-contained (relative refs only) — replaces the former hyperframes suite.
+- **Hand-Drawn Animation**: `roughjs-character-video` - Programmatic hand-drawn character animation videos (MP4) and still images (PNG) via rough.js + `@napi-rs/canvas` + ffmpeg. Skeleton rig with two-bone IK, foot-planted walk/run cycles, handoffs, multi-scene stories; everything generated in code.
+- **Video Evidence**: `video-report` - Record video evidence with FFmpeg after a visual bug fix or for a recorded demo of a web page, native application, or game. Window-scoped privacy-safe capture, preflight, lifecycle management, decode-verify, and delivery; see `ffmpeg-capture.md` for source/encoder details.
 - **Anti-Slop & Craftsmanship**: `antislop-suite` - router for all Anti-Slop skills (v3.2.20); bundles core filter (`antislop`), `antislop-ui`, `antislop-layoutmobile`, `antislop-human` (with WCAG contrast checker CLI/MCP tools), `antislop-copywriting`, and `antislop-code`. Self-contained router replacing `nodejs-best-practices`.
 - **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
 
@@ -325,4 +327,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-10-05 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-10-21 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
