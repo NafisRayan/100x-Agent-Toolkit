@@ -195,7 +195,7 @@ This repository is a **skill bundle** — it configures your AI agent (Claude Co
 | Skill | Description |
 |-------|-------------|
 | `remotion-best-practices` | Router for all Remotion skills (v4.0.526) — loads the matching `remotion-<module>/REFERENCE.md` per task: create, captions, docs, interactivity, maps, markup, multimedia, render, saas, studio, upgrade. Self-contained (relative refs only). Replaced the former hyperframes suite. |
-| `roughjs-character-video` | Programmatic hand-drawn character animation videos (MP4) and still images (PNG) — rough.js + node canvas + ffmpeg, IK skeleton rig, walk/run cycles, handoffs, story scenes |
+| `rossark-motion-skill` | Bring anything drawn to life with calm, believable motion — characters, creatures, plants, fabric, fire/smoke/water, machines, icons, logos, charts, whole scenes; motion engine + templates for React Native (Reanimated) and SwiftUI (Canvas), reference-video frame measurement tools |
 | `video-report` | Record video evidence with FFmpeg after a visual bug fix or for a recorded demo (web, native app, game) — window-scoped capture, preflight, graceful lifecycle, decode verification |
 
 ### Documentation
@@ -339,7 +339,8 @@ During the shift to a skill-first architecture, several top-level directories we
 | `gsd` (68 sub-skills) | Get Shit Done project-management skill removed in full — 1 parent skill + 68 sub-skills (11 agents, 34 commands, 7 references, 16 workflows). Its milestone/phase/checkpoint workflow duplicated the generic lifecycle skills already in the toolkit (`brainstorming`, `planning-and-task-breakdown`, `writing-plans`/`executing-plans`, `incremental-implementation`, `test-driven-development`, `finishing-a-development-branch`), so it added a parallel vocabulary without new capability. Removing it collapses the "101 core + 68 GSD" count down to **100 skills**. |
 | `book-to-skill` | Python CLI for converting books (PDF/EPUB/DOCX/HTML/RTF) into skills, removed in the same change that added `security-audit`. Top-level count stays at **100**. |
 | `nodejs-best-practices` | Conceptual decision-making guidance that overlapped heavily with `nodejs-backend-patterns` and `javascript-pro`; removed in the same change that added `antislop-suite`. Top-level count stays at **100**. |
-| `canvas-design`, `algorithmic-art` | Deprecated generative-art skills removed (87 files, including the bundled OFL font payload). Programmatic hand-drawn image/video generation is now covered by `roughjs-character-video` (rough.js + node canvas + ffmpeg), added in the follow-up commit. Net top-level count: **99** (−2, +1). |
+| `canvas-design`, `algorithmic-art` | Deprecated generative-art skills removed (87 files, including the bundled OFL font payload). Programmatic hand-drawn image/video generation is now covered by `rossark-motion-skill` (which replaced `roughjs-character-video`). Net top-level count: **99** (−2, +1). |
+| `roughjs-character-video` | rough.js hand-drawn animation skill (IK skeleton rig, walk/run cycles, story scenes), removed in the same change that added `rossark-motion-skill` — a broader motion method (characters, creatures, objects, whole scenes) with a motion engine and React Native/SwiftUI templates. Top-level count stays at **100**. |
 
 ### Hyperframes suite → `skills/hyperframes/` (consolidated)
 

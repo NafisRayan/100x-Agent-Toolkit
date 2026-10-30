@@ -81,7 +81,7 @@ Your agent system operates across 7 lifecycle phases:
 - **Dev Tools**: `agent-browser`, `mcp-builder`, `context7`, `duckduckgo-search`, `find-skills`, `skill-creator`, `clone-website`, `playwright-cli`
 - **Agent Orchestration**: `dispatching-parallel-agents`, `subagent-driven-development`, `executing-plans`, `using-git-worktrees`, `finishing-a-development-branch`, `ultrareview`
 - **Video & Motion**: `remotion-best-practices` - router for all Remotion skills (v4.0.526); loads the matching `./remotion-<module>/REFERENCE.md` per task. Modules: `remotion-create` (new videos), `remotion-captions`, `remotion-docs`, `remotion-interactivity`, `remotion-maps`, `remotion-markup`, `remotion-multimedia`, `remotion-render`, `remotion-saas`, `remotion-studio`, `remotion-upgrade`. Self-contained (relative refs only) — replaces the former hyperframes suite.
-- **Hand-Drawn Animation**: `roughjs-character-video` - Programmatic hand-drawn character animation videos (MP4) and still images (PNG) via rough.js + `@napi-rs/canvas` + ffmpeg. Skeleton rig with two-bone IK, foot-planted walk/run cycles, handoffs, multi-scene stories; everything generated in code.
+- **Hand-Drawn Animation**: `rossark-motion-skill` - Bring anything drawn to life with calm, believable motion — characters, creatures, plants, fabric, fire/smoke/water, machines, vehicles, icons, logos, charts and whole scenes. Motion engine + templates for React Native (react-native-svg + Reanimated) and SwiftUI (TimelineView + Canvas), tools that measure a reference video frame by frame, per-project `MOTION.md` notes; everything generated in code.
 - **Video Evidence**: `video-report` - Record video evidence with FFmpeg after a visual bug fix or for a recorded demo of a web page, native application, or game. Window-scoped privacy-safe capture, preflight, lifecycle management, decode-verify, and delivery; see `ffmpeg-capture.md` for source/encoder details.
 - **Anti-Slop & Craftsmanship**: `antislop-suite` - router for all Anti-Slop skills (v3.2.20); bundles core filter (`antislop`), `antislop-ui`, `antislop-layoutmobile`, `antislop-human` (with WCAG contrast checker CLI/MCP tools), `antislop-copywriting`, and `antislop-code`. Self-contained router replacing `nodejs-best-practices`.
 - **Other**: `caveman`, `karpathy-guidelines`, `verification-before-completion`, `grill-me`, `brainstorming`, `using-superpowers`
@@ -327,4 +327,4 @@ Reference skills directly: "Use the `test-driven-development` skill for this imp
 
 ---
 
-*Last updated: 2026-10-21 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
+*Last updated: 2026-10-30 | Total Skills: 100 | Agents: 142 (in agent-personas skill) | MCPs: 9 | Designs: 74*
