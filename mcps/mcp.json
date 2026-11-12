@@ -74,6 +74,10 @@
 			],
 			"type": "stdio"
 		},
+		"polyfork": {
+			"url": "https://polyfork.dev/mcp",
+			"type": "http"
+		},
 		"vercel": {
 			"command": "npx",
 			"args": [
